@@ -1,6 +1,6 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
-milk package, version 0
+milk package, version 1.01
 
 
 ---
@@ -12,37 +12,46 @@ IMPORTANT NOTE: milk uses git submodules. Use `git clone --recursive` (see Downl
 
 
 
-## Downloading and installing 
+## Download and Installing 
 
 
-The MILK package follows the standard git clone steps and GNU build process :
+### Download
 
-	git clone https://github.com/milk-org/milk
+	git clone --recursive https://github.com/milk-org/milk-package milk
+
+
+### Compile
+
 	cd milk
-	git submodule init
-	git submodule update
-	autoreconf -i
-	./configure
+	mkdir _build; cd _build
+	cmake ..
 	make
-	make install
-
-Note: On OS X you need to use gcc-mp-5 for openMP:
-
-	./configure "CC=/opt/local/bin/gcc-mp-5" CPPFLAGS="-I/usr/include/malloc/ -I/opt/local/include/readline" LDFLAGS="-L/opt/local/lib/"
-(Replace "/opt/local/" is the location of your installed libraries. )
 
 
+### Install
 
-## Reporting bugs, issues
+	
+	sudo make install
 
-Report bugs and issues on [this page]( https://github.com/milk-org/milk/issues )
+Will install milk in /usr/local/milk-<version>. Multiple versions of milk can coexist in separate milk-<version> directories. To select the version to be used:
+
+	sudo ln -s /usr/local/milk-<version> /usr/local/milk
+
+	
+Add environment variables. Add to .bashrc file or similar :
+
+	export MILK_ROOT=${HOME}/src/milk  # point to source code directory. Edit as needed.
+	export MILK_INSTALLDIR=/usr/local/milk
+	export PATH=${PATH}:${MILK_INSTALLDIR}/bin
 
 
-## Contributing to project
+Ensure linker finds milk libraries :
 
+	echo "/usr/local/milk/lib" > milklibs.conf
+	sudo mv milklibs.conf /etc/ld.so.conf.d/
+	sudo ldconfig -v
 
-See [coding standards]( http://milk-org.github.io/milk/page_coding_standards.html ) 
-
+Note: Use the above method instead of setting up LD_LIBRARY_PATH environment variable. milk is installed with setuid bit. LD_LIBRARY_PATH is ignored at runtime for executables that have their setuid or setgid bit set. In addition, holding library locations in cache is faster than searching LD_LIBRARY_PATH directories.
 
 
 
