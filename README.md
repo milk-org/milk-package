@@ -34,7 +34,7 @@ IMPORTANT NOTE: milk uses git submodules. Use `git clone --recursive` (see Downl
 	
 	sudo make install
 
-Will install milk in /usr/local/milk-<version>. Multiple versions of milk can coexist in separate milk-<version> directories. To select the version to be used:
+Will install milk in /usr/local/milk-&lt;version&gt;. Multiple versions of milk can coexist in separate milk-&lt;version&gt; directories. To select the version to be used:
 
 	sudo ln -s /usr/local/milk-<version> /usr/local/milk
 
