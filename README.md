@@ -55,6 +55,14 @@ Ensure linker finds milk libraries :
 Note: Use the above method instead of setting up LD_LIBRARY_PATH environment variable. milk is installed with setuid bit. LD_LIBRARY_PATH is ignored at runtime for executables that have their setuid or setgid bit set. In addition, holding library locations in cache is faster than searching LD_LIBRARY_PATH directories.
 
 
+### Creating tmpfs disk (optional)
+
+Create tmpfs disk for high performance I/O:
+
+    echo "tmpfs /milk/shm tmpfs rw,nosuid,nodev" | sudo tee -a /etc/fstab
+    sudo mkdir -p /milk/shm
+    sudo mount /milk/shm
+
 
 
 ## Documentation
