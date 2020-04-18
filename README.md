@@ -15,7 +15,7 @@ IMPORTANT NOTE: milk uses git submodules. Use `git clone --recursive` (see Downl
 |     branch       |   version             |  status                     | latest        |
 |------------------|-----------------------|-----------------------------|---------------|
 **master** | [![latesttag](https://img.shields.io/github/tag/milk-org/milk-package.svg)](https://github.com/milk-org/milk-package/tree/master) | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
-[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.02 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
+[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.01 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
 
 
 
