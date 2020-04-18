@@ -42,7 +42,7 @@ set ( VERSION_MINOR 02 )
 set ( VERSION_PATCH 00 )
 set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
 set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
-#set ( VERSION_OPTION "-dev" )
+set ( VERSION_OPTION "-dev" )
 
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
