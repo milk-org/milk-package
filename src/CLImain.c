@@ -1,4 +1,4 @@
-#include "Config.h"
+#include "milkconfig.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -55,7 +55,7 @@ int main(
     strcpy(data.package_name, PACKAGE_NAME);
 
     char versionstring[200];
-    sprintf(versionstring, "%d.%d.%02d%s",
+    sprintf(versionstring, "%d.%02d.%02d%s",
             VERSION_MAJOR, VERSION_MINOR,
             VERSION_PATCH, VERSION_OPTION);
     strcpy(data.package_version, versionstring);

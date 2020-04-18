@@ -10,8 +10,6 @@
 # USING GPU libraries
 # ===============================
 # cmake .. -DUSE_MAGMA=ON
-# cmake .. -DUSE_QDWHPARTIAL=ON
-#
 #
 #
 # BUILD TYPE
@@ -42,6 +40,8 @@ project (milk C)
 set ( VERSION_MAJOR 1 )
 set ( VERSION_MINOR 01 )
 set ( VERSION_PATCH 00 )
+set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
+set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
 #set ( VERSION_OPTION "-dev" )
 
 # turn VERBOSE ON
@@ -53,15 +53,70 @@ set(CMAKE_INSTALL_PREFIX "/usr/local/milk-${VERSION_MAJOR}.${VERSION_MINOR}")
 # Configure a header file to pass some of the CMake settings
 # to the source code
 configure_file (
-  "${PROJECT_SOURCE_DIR}/src/Config.h.in"
-  "${PROJECT_SOURCE_DIR}/src/Config.h"
+  "${PROJECT_SOURCE_DIR}/src/milk_config.h.in"
+  "${PROJECT_SOURCE_DIR}/src/milk_config.h"
   )
 
 
 
 
+
+
+#
+# main libraries
+# linked to executable by default
+#
+
+list(APPEND libsrcdir src/CommandLineInterface)
+list(APPEND libname CLIcore)
+
+list(APPEND libsrcdir src/ImageStreamIO)
+list(APPEND libname ImageStreamIO)
+
+
 # =======================================
-# PERFORMANCE ORIENTED COMPILING OPTIONS
+# MODULES INCLUDED
+# =======================================
+# modules are added to two lists:
+# libsrcdir : source code directory
+# libname   : shared object name
+
+# CORE MODULES
+list(APPEND modulelist COREMOD_arith COREMOD_iofits COREMOD_memory COREMOD_tools)
+
+#
+# Additional modules
+#
+list(APPEND modulelist image_basic)
+list(APPEND modulelist info)
+list(APPEND modulelist ZernikePolyn)
+list(APPEND modulelist image_filter)
+list(APPEND modulelist image_gen)
+list(APPEND modulelist statistic)
+list(APPEND modulelist image_format)
+list(APPEND modulelist img_reduce)
+list(APPEND modulelist psf)
+list(APPEND modulelist fft)
+list(APPEND modulelist cudacomp)
+list(APPEND modulelist kdtree)
+list(APPEND modulelist linARfilterPred)
+list(APPEND modulelist linopt_imtools)
+
+
+
+
+foreach(mname IN LISTS modulelist)
+string(REPLACE "_" "" mname1 "${mname}")
+list(APPEND libsrcdir src/${mname})
+list(APPEND libname milk${mname1})
+message("======= adding module  ${mname}")
+endforeach()
+
+
+
+
+# =======================================
+# BUILD TYPE
 # =======================================
 
 # Set Release build flags
@@ -80,20 +135,14 @@ endif()
 
 message("CMAKE_BUILD_TYPE : ${CMAKE_BUILD_TYPE}")
 
-# Adds options to the compiler command line for targets in the current directory 
-# and below that are added after this command is invoked
+
+
+# =======================================
+# COMPILE OPTIONS
+# =======================================
 
 add_compile_options(-std=gnu11)
 add_compile_options(-march=native)
-
-
-# NOTE: -fstack-usage is incompatible with link-time optimizer
-#add_compile_options(-fstack-usage)
-
-# link-time optimizer
-add_compile_options(-flto)
-add_compile_options(-fwhole-program)
-
 
 # OpenMP
 find_package(OpenMP)
@@ -102,7 +151,11 @@ message("Found OpenMP")
 add_compile_options(-fopenmp)
 endif()
 
-message("COMPILE_OPTIONS:  ${COMPILE_OPTIONS}")
+# link-time optimizer
+add_compile_options(-flto)
+add_compile_options(-fwhole-program)
+# NOTE: -fstack-usage is incompatible with link-time optimizer
+#add_compile_options(-fstack-usage)
 
 
 # A common flag is -pipe. This flag has no effect on the generated code, 
@@ -112,6 +165,7 @@ message("COMPILE_OPTIONS:  ${COMPILE_OPTIONS}")
 # GCC might get killed. In those cases do not use this flag. 
 add_compile_options(-pipe)
 
+message("COMPILE_OPTIONS:  ${COMPILE_OPTIONS}")
 
 
 
@@ -122,24 +176,12 @@ add_compile_options(-pipe)
 # options
 option(USE_CUDA  "Use CUDA        library" OFF)
 option(USE_MAGMA "Use MAGMA       library" OFF)
-option(USE_QDWHPARTIAL  "Use QDWHpartial library" OFF)
 
 
 # MAGMA (optional)
 if(USE_MAGMA)
 set(USE_CUDA ON)
 endif(USE_MAGMA)
-
-
-# QDWH (optional)
-if(USE_QDWHPARTIAL)
-set(USE_QDWHPARTIAL ON)
-set(USE_CUDA ON)
-set(USE_MAGMA ON)
-endif(USE_QDWHPARTIAL)
-set( QDWHPARTIAL_INCLUDE_PATH "/home/guyon/src/subaru/qdwhpartial-svd/magma" )
-set( QDWHPARTIAL_LIBRARIES "psinv" )
-
 
 
 if(USE_CUDA)
@@ -156,17 +198,21 @@ endif(USE_MAGMA)
 
 
 
+# =======================================
+# DEPENDENCIES
+# =======================================
 
 # ncurses
 SET(CURSES_USE_NCURSES TRUE)
 
+find_package( Threads )
 
 
 
 message("====================================================")
 message("VERSION  ${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 message("====================================================")
-
+message("CMAKE_THREAD_LIBS_INIT  :  ${CMAKE_THREAD_LIBS_INIT}")
 message("PROJECT_SOURCE_DIR       = ${PROJECT_SOURCE_DIR}")
 message("PROJECT_BINARY_DIR       = ${PROJECT_BINARY_DIR}")
 
@@ -180,10 +226,6 @@ if(USE_MAGMA)
 message("   MAGMA_LIBRARIES       = ${MAGMA_LIBRARIES}")
 endif(USE_MAGMA)
 
-message("USE QDWHPARTIAL          = ${USE_QDWHPARTIAL}")
-if(USE_QDWHPARTIAL)
-message("   QDWHPARTIAL_LIBRARIES = ${QDWHPARTIAL_LIBRARIES}")
-endif(USE_QDWHPARTIAL)
 
 message("EXTRAMODULES             = ${EXTRAMODULES}")
 
@@ -192,49 +234,13 @@ message("====================================================")
 
 
 
-#                               
+
+# ADD SOURCE DIRECTORIES
 # recursively add libraries to be compiled
-# each library compile as SHARED
-#
 
-
-#
-add_subdirectory ( "src/CommandLineInterface" )
-add_subdirectory ( "src/ImageStreamIO" )
-
-
-# CORE libraries
-# linked to executable by default
-#
-add_subdirectory ( "src/COREMOD_arith" )
-add_subdirectory ( "src/COREMOD_iofits" )
-add_subdirectory ( "src/COREMOD_memory" )
-add_subdirectory ( "src/COREMOD_tools" )
-
-
-
-
-# Additional libraries
-# compiled, but not linked by default
-#
-add_subdirectory ( "src/info" )
-add_subdirectory ( "src/fft" )
-add_subdirectory ( "src/statistic" )
-add_subdirectory ( "src/linopt_imtools" )
-add_subdirectory ( "src/image_gen" )
-add_subdirectory ( "src/image_filter" )
-add_subdirectory ( "src/image_basic" )
-add_subdirectory ( "src/ZernikePolyn" )
-add_subdirectory ( "src/image_format" )
-add_subdirectory ( "src/img_reduce" )
-add_subdirectory ( "src/psf" )
-add_subdirectory ( "src/cudacomp" )
-add_subdirectory ( "src/kdtree" )
-add_subdirectory ( "src/linARfilterPred" ) 
-
-
-
-
+foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+add_subdirectory ( "${lsrcdir}" )
+endforeach()
 
 
 #
@@ -247,11 +253,8 @@ add_subdirectory ( "src/${extramodule}" )
 ENDFOREACH()
 
 
-
-
 # main
-add_executable(milk 
-src/CLImain.c)
+add_executable(milk src/CLImain.c)
 
 target_include_directories(milk PUBLIC
 ${PROJECT_SOURCE_DIR}/src
@@ -274,23 +277,18 @@ set(BUILD_FLAGS "-DPACKAGE_NAME=\\\"milk\\\" -DCONFIGDIR=\\\"${PROJECT_SOURCE_DI
 #
 # link order must satisfy dependancies
 # 
+
+# ADD SOURCE DIRECTORIES
+# recursively add libraries to be compiled
+
+foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+target_link_libraries (milk PUBLIC "${lname}" )
+endforeach()
+
+
+
+
 target_link_libraries (milk PUBLIC
-CLIcore;ImageStreamIO
-milkarith;milkmemory;milktools;milkiofits
-milkimagebasic
-milkinfo
-milkZernikePolyn
-milkimagefilter
-milkimagegen
-milkstatistic
-milkimageformat
-milkimgreduce
-milkpsf
-milkfft
-milkcudacomp
-milkkdtree
-milklinARfilterPred
-milklinoptimtools
 ${EXTRAMODULES}
 m
 readline
@@ -319,13 +317,6 @@ endif(USE_MAGMA)
 
 
 
-if(USE_QDWHPARTIAL)
-target_link_libraries (milk PUBLIC ${QDWHPARTIAL_LIBRARIES})
-target_include_directories(milk PUBLIC ${QDWHPARTIAL_INCLUDE_PATH} )
-set(BUILD_FLAGS "${BUILD_FLAGS} -DHAVE_QDWHpartial" )
-endif(USE_QDWHPARTIAL)
-
-
 set_target_properties(milk PROPERTIES COMPILE_FLAGS "${BUILD_FLAGS}" )
 
 
@@ -346,6 +337,9 @@ message("CMAKE_C_FLAGS_RELEASE         : ${CMAKE_C_FLAGS_RELEASE}")
 message("CMAKE_C_FLAGS_RELWITHDEBINFO  : ${CMAKE_C_FLAGS_RELWITHDEBINFO}")
 message("CMAKE_C_FLAGS_MINSIZEREL      : ${CMAKE_C_FLAGS_MINSIZEREL}")
 
+message("CMAKE_CURRENT_SOURCE_DIR      : ${CMAKE_CURRENT_SOURCE_DIR}")
+message("CMAKE_CURRENT_BINARY_DIR      : ${CMAKE_CURRENT_BINARY_DIR}")
+message("INSTALL_PKGCONFIG_DIR         : ${INSTALL_PKGCONFIG_DIR}")
 message("====================================================")
 
 
@@ -361,8 +355,34 @@ install(TARGETS milk DESTINATION bin PERMISSIONS ${PROGRAM_PERMISSIONS_DEFAULT} 
 
 
 
+# =======================================
+# PKG-CONFIG
+# =======================================
+
+foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+string(APPEND LINKSTRING "-l${lname} ")
+endforeach()
 
 
+if(USE_CUDA)
+string(APPEND DFLAGS "-DMILK_USE_CUDA=ON ")
+endif(USE_CUDA)
+
+if(USE_MAGMA)
+string(APPEND DFLAGS "-DMILK_USE_MAGMA=ON ")
+endif(USE_MAGMA)
+
+
+message("LINKSTRING: ${LINKSTRING}")
+
+set(INSTALL_PKGCONFIG_DIR "lib/pkgconfig"
+    CACHE PATH "Installation directory for pkgconfig (.pc) files")
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/milk.pc.in
+               ${CMAKE_CURRENT_BINARY_DIR}/milk.pc @ONLY)
+
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
+        DESTINATION "${INSTALL_PKGCONFIG_DIR}")
 
 
 
