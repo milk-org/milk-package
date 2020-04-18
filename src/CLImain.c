@@ -33,7 +33,7 @@
 DATA __attribute__((used)) data;
 
 
-
+#define STRINGMAXLEN_VERSIONSTRING 80
 
 
 int main(
@@ -54,8 +54,8 @@ int main(
 
     strcpy(data.package_name, PACKAGE_NAME);
 
-    char versionstring[200];
-    sprintf(versionstring, "%d.%02d.%02d%s",
+    char versionstring[STRINGMAXLEN_VERSIONSTRING];
+    snprintf(versionstring, STRINGMAXLEN_VERSIONSTRING, "%d.%02d.%02d%s",
             VERSION_MAJOR, VERSION_MINOR,
             VERSION_PATCH, VERSION_OPTION);
     strcpy(data.package_version, versionstring);
