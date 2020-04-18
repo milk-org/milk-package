@@ -1,12 +1,12 @@
 ---
 
-IMPORTANT NOTE: milk uses git submodules. Use `git clone --recursive` (see Downloading and Installing section)
+milk: Module Image processing Library tooLkit
 
 ---
 
 
 
-### Source code status
+## Source code status and versions
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f9c4827075c7447db1880f95e2119353)](https://www.codacy.com/gh/milk-org/milk-package)
@@ -15,7 +15,9 @@ IMPORTANT NOTE: milk uses git submodules. Use `git clone --recursive` (see Downl
 |     branch       |   version             |  status                     | latest        |
 |------------------|-----------------------|-----------------------------|---------------|
 **master** | [![latesttag](https://img.shields.io/github/tag/milk-org/milk-package.svg)](https://github.com/milk-org/milk-package/tree/master) | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
-[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.01 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
+[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.1 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
+
+
 
 
 
