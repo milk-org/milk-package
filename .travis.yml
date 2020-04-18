@@ -7,6 +7,7 @@ before_install:
 - sudo apt-get install -qq libcfitsio-dev libreadline6-dev libncurses5-dev libfftw3-dev libgsl0-dev flex bison
 
 script:
+- cmake --version
 - mkdir _build
 - cd _build
 - cmake ..
