@@ -1,15 +1,3 @@
-
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f9c4827075c7447db1880f95e2119353)](https://www.codacy.com/gh/milk-org/milk-package)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-dev branch: [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-master branch: [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package)
-
-
 milk package, version 1.01
 
 
@@ -69,7 +57,7 @@ Add environment variables. Add to .bashrc file or similar :
 	export MILK_ROOT=${HOME}/src/milk  # point to source code directory. Edit as needed.
 	export MILK_INSTALLDIR=/usr/local/milk
 	export PATH=${PATH}:${MILK_INSTALLDIR}/bin
-
+	export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${MILK_INSTALLDIR}/lib/pkgconfig
 
 Ensure linker finds milk libraries :
 
