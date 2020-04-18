@@ -238,7 +238,7 @@ message("====================================================")
 # ADD SOURCE DIRECTORIES
 # recursively add libraries to be compiled
 
-foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+foreach(lsrcdir IN LISTS libsrcdir)
 add_subdirectory ( "${lsrcdir}" )
 endforeach()
 
@@ -281,7 +281,7 @@ set(BUILD_FLAGS "-DPACKAGE_NAME=\\\"milk\\\" -DCONFIGDIR=\\\"${PROJECT_SOURCE_DI
 # ADD SOURCE DIRECTORIES
 # recursively add libraries to be compiled
 
-foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+foreach(lname IN LISTS libname)
 target_link_libraries (milk PUBLIC "${lname}" )
 endforeach()
 
@@ -359,7 +359,7 @@ install(TARGETS milk DESTINATION bin PERMISSIONS ${PROGRAM_PERMISSIONS_DEFAULT} 
 # PKG-CONFIG
 # =======================================
 
-foreach(lsrcdir lname IN ZIP_LISTS libsrcdir libname)
+foreach(lname IN LISTS libname)
 string(APPEND LINKSTRING "-l${lname} ")
 endforeach()
 
