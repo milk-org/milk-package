@@ -1,0 +1,9 @@
+<map id="src/statistic/statistic.h" name="src/statistic/statistic.h">
+<area shape="rect" id="node2" href="$image__basic_8c.html" title="basic image functions " alt="" coords="5,80,161,121"/>
+<area shape="rect" id="node3" href="$image__filter_8c.html" title="Image filtering. " alt="" coords="185,80,336,121"/>
+<area shape="rect" id="node4" href="$image__format_8c.html" title="Convert between image formats. " alt="" coords="361,80,523,121"/>
+<area shape="rect" id="node5" href="$image__gen_8c.html" title="Generate frequently used image(s) " alt="" coords="547,80,694,121"/>
+<area shape="rect" id="node6" href="$linARfilterPred_8c.html" title="linear auto&#45;regressive predictive filter " alt="" coords="718,80,846,121"/>
+<area shape="rect" id="node7" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="871,80,995,121"/>
+<area shape="rect" id="node8" href="$statistic_8c.html" title="statistical tools module " alt="" coords="1019,87,1169,114"/>
+</map>

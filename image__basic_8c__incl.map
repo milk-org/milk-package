@@ -1,0 +1,22 @@
+<map id="src/image_basic/image_basic.c" name="src/image_basic/image_basic.c">
+<area shape="rect" id="node11" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="701,95,858,136"/>
+<area shape="rect" id="node25" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="1619,95,1820,136"/>
+<area shape="rect" id="node26" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="1844,95,2064,136"/>
+<area shape="rect" id="node27" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="2088,95,2289,136"/>
+<area shape="rect" id="node28" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="2313,95,2512,136"/>
+<area shape="rect" id="node29" href="$info_8h_source.html" title="info/info.h" alt="" coords="2536,102,2615,129"/>
+<area shape="rect" id="node30" href="$fft_8h_source.html" title="fft/fft.h" alt="" coords="2639,102,2701,129"/>
+<area shape="rect" id="node31" href="$image__gen_8h_source.html" title="image_gen/image_gen.h" alt="" coords="2725,102,2887,129"/>
+<area shape="rect" id="node32" href="$statistic_8h.html" title="Function prototypes for statistic module. " alt="" coords="2912,102,3041,129"/>
+<area shape="rect" id="node33" href="$linopt__imtools_8h.html" title="Function prototypes for linear algebra tools. " alt="" coords="3065,95,3203,136"/>
+<area shape="rect" id="node34" href="$image__filter_8h_source.html" title="image_filter/image\l_filter.h" alt="" coords="3227,95,3355,136"/>
+<area shape="rect" id="node35" href="$kdtree_8h_source.html" title="kdtree/kdtree.h" alt="" coords="3379,102,3489,129"/>
+<area shape="rect" id="node36" href="$image__basic_8h_source.html" title="image_basic/image_basic.h" alt="" coords="3513,102,3696,129"/>
+<area shape="rect" id="node17" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="618,184,717,211"/>
+<area shape="rect" id="node18" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="1119,184,1341,211"/>
+<area shape="rect" id="node19" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="970,259,1074,285"/>
+<area shape="rect" id="node22" href="$processtools_8h.html" title="Command line interface. " alt="" coords="751,259,858,285"/>
+<area shape="rect" id="node23" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="389,259,497,285"/>
+<area shape="rect" id="node24" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="944,184,1095,211"/>
+<area shape="rect" id="node21" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="1011,333,1164,360"/>
+</map>

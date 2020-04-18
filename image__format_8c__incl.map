@@ -1,0 +1,18 @@
+<map id="src/image_format/image_format.c" name="src/image_format/image_format.c">
+<area shape="rect" id="node8" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="924,95,1082,136"/>
+<area shape="rect" id="node25" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="1614,95,1834,136"/>
+<area shape="rect" id="node26" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="1858,95,2057,136"/>
+<area shape="rect" id="node27" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="2081,95,2282,136"/>
+<area shape="rect" id="node28" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="2306,95,2508,136"/>
+<area shape="rect" id="node29" href="$statistic_8h.html" title="Function prototypes for statistic module. " alt="" coords="2532,102,2661,129"/>
+<area shape="rect" id="node30" href="$image__format_8h_source.html" title="image_format/image\l_format.h" alt="" coords="2685,95,2825,136"/>
+<area shape="rect" id="node31" href="$info_8h_source.html" title="info/info.h" alt="" coords="2849,102,2928,129"/>
+<area shape="rect" id="node32" href="$image__gen_8h_source.html" title="image_gen/image_gen.h" alt="" coords="2952,102,3115,129"/>
+<area shape="rect" id="node17" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="344,184,443,211"/>
+<area shape="rect" id="node18" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="518,184,739,211"/>
+<area shape="rect" id="node19" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="752,259,856,285"/>
+<area shape="rect" id="node22" href="$processtools_8h.html" title="Command line interface. " alt="" coords="1071,259,1178,285"/>
+<area shape="rect" id="node23" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="1304,259,1412,285"/>
+<area shape="rect" id="node24" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="814,184,965,211"/>
+<area shape="rect" id="node21" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="776,333,929,360"/>
+</map>

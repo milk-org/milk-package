@@ -1,0 +1,13 @@
+<map id="src/fft/fft_autocorrelation.c" name="src/fft/fft_autocorrelation.c">
+<area shape="rect" id="node3" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="631,80,789,121"/>
+<area shape="rect" id="node23" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="813,80,1033,121"/>
+<area shape="rect" id="node24" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="1057,80,1256,121"/>
+<area shape="rect" id="node25" href="$fft_8h_source.html" title="fft.h" alt="" coords="1279,87,1325,114"/>
+<area shape="rect" id="node15" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="1234,169,1333,196"/>
+<area shape="rect" id="node16" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="249,169,470,196"/>
+<area shape="rect" id="node17" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="322,244,426,271"/>
+<area shape="rect" id="node20" href="$processtools_8h.html" title="Command line interface. " alt="" coords="515,244,622,271"/>
+<area shape="rect" id="node21" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="65,244,173,271"/>
+<area shape="rect" id="node22" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="1357,169,1508,196"/>
+<area shape="rect" id="node19" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="271,319,424,345"/>
+</map>

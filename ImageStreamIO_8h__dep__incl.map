@@ -1,0 +1,28 @@
+<map id="src/ImageStreamIO/ImageStreamIO.h" name="src/ImageStreamIO/ImageStreamIO.h">
+<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="1983,80,2161,121"/>
+<area shape="rect" id="node3" href="$CLIcore_8c.html" title="main C file " alt="" coords="5,169,184,211"/>
+<area shape="rect" id="node7" href="$standalone__dependencies_8h_source.html" title="src/CommandLineInterface\l/standalone_dependencies.h" alt="" coords="208,169,395,211"/>
+<area shape="rect" id="node27" href="$ImageStreamIO_8c.html" title="Read and Create image. " alt="" coords="2185,87,2428,114"/>
+<area shape="rect" id="node4" href="$templatemodule_8c.html" title="template module " alt="" coords="3200,169,3451,211"/>
+<area shape="rect" id="node5" href="$function__parameters_8c.html" title="Tools to help expose and control function parameters. " alt="" coords="3475,169,3653,211"/>
+<area shape="rect" id="node6" href="$processtools_8c.html" title="Tools to manage processes. " alt="" coords="3677,169,3856,211"/>
+<area shape="rect" id="node8" href="$streamCTRL_8c.html" title="Data streams control panel. " alt="" coords="3880,169,4059,211"/>
+<area shape="rect" id="node9" href="$COREMOD__arith_8c.html" title="Arithmeric operations on images. " alt="" coords="4083,169,4303,211"/>
+<area shape="rect" id="node10" href="$COREMOD__iofits_8c.html" title="I/O for FITS files. " alt="" coords="4328,169,4477,211"/>
+<area shape="rect" id="node11" href="$COREMOD__memory_8c.html" title="milk memory functions " alt="" coords="419,169,587,211"/>
+<area shape="rect" id="node12" href="$COREMOD__tools_8c.html" title="Frequently used tools. " alt="" coords="611,169,834,211"/>
+<area shape="rect" id="node13" href="$cudacomp_8c.html" title="CUDA functions wrapper. " alt="" coords="859,177,1037,203"/>
+<area shape="rect" id="node14" href="$cudacomp__MVMextractModesLoop_8c.html" title="CUDA functions wrapper. " alt="" coords="1061,169,1240,211"/>
+<area shape="rect" id="node15" href="$fft_8c.html" title="Fourier Transform. " alt="" coords="1264,177,1347,203"/>
+<area shape="rect" id="node16" href="$fft__autocorrelation_8c.html" title="Compute autocorrelation using FFT. " alt="" coords="1371,177,1546,203"/>
+<area shape="rect" id="node17" href="$fft__structure__function_8c.html" title="Compute structure function using FFT. " alt="" coords="1571,169,1701,211"/>
+<area shape="rect" id="node18" href="$image__basic_8c.html" title="basic image functions " alt="" coords="1726,169,1882,211"/>
+<area shape="rect" id="node19" href="$image__filter_8c.html" title="Image filtering. " alt="" coords="1906,169,2057,211"/>
+<area shape="rect" id="node20" href="$image__format_8c.html" title="Convert between image formats. " alt="" coords="2081,169,2244,211"/>
+<area shape="rect" id="node21" href="$image__gen_8c.html" title="Generate frequently used image(s) " alt="" coords="2268,169,2415,211"/>
+<area shape="rect" id="node22" href="$img__reduce_8c.html" title="Image analysis functions. " alt="" coords="2439,169,2575,211"/>
+<area shape="rect" id="node23" href="$info_8c.html" title="Information about images. " alt="" coords="2599,177,2700,203"/>
+<area shape="rect" id="node24" href="$linARfilterPred_8c.html" title="linear auto&#45;regressive predictive filter " alt="" coords="2724,169,2852,211"/>
+<area shape="rect" id="node25" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="2877,169,3001,211"/>
+<area shape="rect" id="node26" href="$statistic_8c.html" title="statistical tools module " alt="" coords="3025,177,3175,203"/>
+</map>

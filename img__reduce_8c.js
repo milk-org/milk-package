@@ -1,0 +1,26 @@
+var img__reduce_8c =
+[
+    [ "MODULE_APPLICATION", "img__reduce_8c.html#a205b3ef5e31a32b6795f01c3d87ba844", null ],
+    [ "MODULE_DESCRIPTION", "img__reduce_8c.html#a5b62e7184a709de637eae6370501dac3", null ],
+    [ "MODULE_SHORTNAME_DEFAULT", "img__reduce_8c.html#a5b10534f5a2bc061d385478136c531be", null ],
+    [ "clean_bad_pix", "img__reduce_8c.html#a6066633834a72f5e7df301a91a133985", null ],
+    [ "IMG_REDUCE_centernormim", "img__reduce_8c.html#abc03b1646651730ddae06d87248a3917", null ],
+    [ "IMG_REDUCE_centernormim_cli", "img__reduce_8c.html#abfea55a640c92d4bc1b24c0e18b92757", null ],
+    [ "IMG_REDUCE_cleanbadpix_fast", "img__reduce_8c.html#a3cb9de04ae2a2703259d8601dd9d13a0", null ],
+    [ "IMG_REDUCE_cleanbadpix_fast_cli", "img__reduce_8c.html#a394fa40588e1675cf6386e8ee0da6d5c", null ],
+    [ "IMG_REDUCE_cleanbadpix_fast_precompute", "img__reduce_8c.html#af4a9f056022ae8dae761a0b26367690c", null ],
+    [ "IMG_REDUCE_cleanbadpix_stream_fast_cli", "img__reduce_8c.html#ab53cee378f0e2f0d48594b0801089732", null ],
+    [ "IMG_REDUCE_correlMatrix", "img__reduce_8c.html#a19bcb2bca2fba2e76950dec4ef6410f0", null ],
+    [ "IMG_REDUCE_cubeprocess", "img__reduce_8c.html#a4a2e4fd9003faf73c8afa7af6400a996", null ],
+    [ "IMG_REDUCE_cubeprocess_cli", "img__reduce_8c.html#ab21892717f9ac542835bf60ca418d7ab", null ],
+    [ "IMG_REDUCE_cubesimplestat", "img__reduce_8c.html#ac10bf36f873fa1a35fd5212c3a2067ba", null ],
+    [ "IMG_REDUCE_cubesimplestat_cli", "img__reduce_8c.html#a32b2cda2b1ad4b4e40e869c78d204e72", null ],
+    [ "init_module_CLI", "img__reduce_8c.html#ae7133e80a22451d9d2cc88f143a90b55", null ],
+    [ "badpixclean_array_coeff", "img__reduce_8c.html#a6083ac6424a2cfc28962c693a1fc437f", null ],
+    [ "badpixclean_array_indexin", "img__reduce_8c.html#aa84d9d5a0af4b049bf9ed1af59adcba2", null ],
+    [ "badpixclean_array_indexout", "img__reduce_8c.html#a0746a7b3bbaa6e5f45899a0547f7d744", null ],
+    [ "badpixclean_indexlist", "img__reduce_8c.html#a79cfc6d5350eba73228ce589400240de", null ],
+    [ "badpixclean_init", "img__reduce_8c.html#aceca24b1e53bd0a44dd8e53bde1f5d37", null ],
+    [ "badpixclean_NBbadpix", "img__reduce_8c.html#a09119447635dca00a8e363699be085a6", null ],
+    [ "badpixclean_NBop", "img__reduce_8c.html#ac9d78e77de56d2a097c0344ac6e2c065", null ]
+];

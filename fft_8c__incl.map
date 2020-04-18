@@ -1,0 +1,17 @@
+<map id="src/fft/fft.c" name="src/fft/fft.c">
+<area shape="rect" id="node9" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="479,80,636,121"/>
+<area shape="rect" id="node23" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="1705,80,1925,121"/>
+<area shape="rect" id="node24" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="1949,80,2150,121"/>
+<area shape="rect" id="node25" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="2174,80,2373,121"/>
+<area shape="rect" id="node26" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="2397,80,2598,121"/>
+<area shape="rect" id="node27" href="$fft__autocorrelation_8h.html" title="fft_autocorrelation.h" alt="" coords="2622,87,2760,114"/>
+<area shape="rect" id="node28" href="$fft__structure__function_8h.html" title="fft_structure_function.h" alt="" coords="2784,87,2940,114"/>
+<area shape="rect" id="node29" href="$fft_8h_source.html" title="fft/fft.h" alt="" coords="2964,87,3026,114"/>
+<area shape="rect" id="node16" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="682,169,780,196"/>
+<area shape="rect" id="node17" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="1031,169,1252,196"/>
+<area shape="rect" id="node18" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="942,244,1046,271"/>
+<area shape="rect" id="node20" href="$processtools_8h.html" title="Command line interface. " alt="" coords="322,244,428,271"/>
+<area shape="rect" id="node21" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="138,244,246,271"/>
+<area shape="rect" id="node22" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="805,169,956,196"/>
+<area shape="rect" id="node19" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="917,319,1070,345"/>
+</map>

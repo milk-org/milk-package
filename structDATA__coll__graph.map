@@ -1,0 +1,12 @@
+<map id="DATA" name="DATA">
+<area shape="rect" id="node2" href="$structCMDARGTOKEN.html" title="CMDARGTOKEN" alt="" coords="5,95,133,121"/>
+<area shape="rect" id="node3" href="$structVARIABLE.html" title="VARIABLE" alt="" coords="157,95,245,121"/>
+<area shape="rect" id="node4" href="$structCMD.html" title="CMD" alt="" coords="269,95,323,121"/>
+<area shape="rect" id="node5" href="$structIMAGE.html" title="IMAGE structure The IMAGE structure includes : " alt="" coords="347,95,413,121"/>
+<area shape="rect" id="node6" href="$structcomplex__float.html" title="complex_float" alt="" coords="97,5,199,32"/>
+<area shape="rect" id="node7" href="$structIMAGE__METADATA.html" title="Image metadata. " alt="" coords="223,5,369,32"/>
+<area shape="rect" id="node8" href="$structIMAGE__KEYWORD.html" title="Keyword The IMAGE_KEYWORD structure includes : " alt="" coords="393,5,535,32"/>
+<area shape="rect" id="node9" href="$structcomplex__double.html" title="complex_double" alt="" coords="559,5,675,32"/>
+<area shape="rect" id="node10" href="$structPROCESSINFO.html" title="PROCESSINFO" alt="" coords="437,95,557,121"/>
+<area shape="rect" id="node11" href="$structMODULE.html" title="MODULE" alt="" coords="582,95,661,121"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="src/COREMOD_memory/COREMOD_memory.c" name="src/COREMOD_memory/COREMOD_memory.c">
+<area shape="rect" id="node25" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="698,95,855,136"/>
+<area shape="rect" id="node35" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="3071,95,3272,136"/>
+<area shape="rect" id="node36" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="3296,95,3516,136"/>
+<area shape="rect" id="node37" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="3540,95,3741,136"/>
+<area shape="rect" id="node28" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="522,184,621,211"/>
+<area shape="rect" id="node29" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="922,184,1143,211"/>
+<area shape="rect" id="node30" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="913,259,1017,285"/>
+<area shape="rect" id="node32" href="$processtools_8h.html" title="Command line interface. " alt="" coords="781,259,887,285"/>
+<area shape="rect" id="node33" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="29,259,137,285"/>
+<area shape="rect" id="node34" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="645,184,796,211"/>
+<area shape="rect" id="node31" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="891,333,1044,360"/>
+</map>

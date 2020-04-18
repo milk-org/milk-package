@@ -1,0 +1,16 @@
+<map id="src/cudacomp/cudacomp.c" name="src/cudacomp/cudacomp.c">
+<area shape="rect" id="node16" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="928,80,1085,121"/>
+<area shape="rect" id="node27" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="1916,80,2136,121"/>
+<area shape="rect" id="node28" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="2160,80,2362,121"/>
+<area shape="rect" id="node29" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="2386,80,2584,121"/>
+<area shape="rect" id="node30" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="2608,80,2810,121"/>
+<area shape="rect" id="node31" href="$cudacomp_8h.html" title="Function prototypes for CUDA/MAGMA wrapper. " alt="" coords="2834,87,2992,114"/>
+<area shape="rect" id="node32" href="$linopt__imtools_8h.html" title="Function prototypes for linear algebra tools. " alt="" coords="3016,80,3154,121"/>
+<area shape="rect" id="node20" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="524,169,622,196"/>
+<area shape="rect" id="node21" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="697,169,918,196"/>
+<area shape="rect" id="node22" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="865,244,969,271"/>
+<area shape="rect" id="node24" href="$processtools_8h.html" title="Command line interface. " alt="" coords="1044,244,1150,271"/>
+<area shape="rect" id="node25" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="434,244,542,271"/>
+<area shape="rect" id="node26" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="1095,169,1246,196"/>
+<area shape="rect" id="node23" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="840,319,994,345"/>
+</map>
