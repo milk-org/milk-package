@@ -1,4 +1,4 @@
-#include "milkconfig.h"
+#include "milk_config.h"
 
 #include <stdio.h>
 #include <stdlib.h>
