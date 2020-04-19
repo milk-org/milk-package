@@ -387,4 +387,9 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
 
 
 
+include(CTest)
+
+add_test(milkCLIlaunch ls -l)
+
+
 

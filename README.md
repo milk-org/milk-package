@@ -1,6 +1,6 @@
 ---
 
-milk: Module Image processing Library tooLkit
+milk: Modular Image processing Library tooLkit
 
 ---
 
@@ -9,9 +9,11 @@ milk: Module Image processing Library tooLkit
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
+Latest release: [![latesttag](https://img.shields.io/github/tag/milk-org/milk-package.svg)](https://github.com/milk-org/milk-package/tree/master) 
+
 |     branch       |   version             |  status                     | latest        |
 |------------------|-----------------------|-----------------------------|---------------|
-**master** | [![latesttag](https://img.shields.io/github/tag/milk-org/milk-package.svg)](https://github.com/milk-org/milk-package/tree/master) | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
+**master** | 1.1.0 | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
 [**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.1 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
 
 
