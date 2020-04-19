@@ -6,11 +6,8 @@ milk: Module Image processing Library tooLkit
 
 
 
-## Source code status and versions
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f9c4827075c7447db1880f95e2119353)](https://www.codacy.com/gh/milk-org/milk-package)
-
 
 |     branch       |   version             |  status                     | latest        |
 |------------------|-----------------------|-----------------------------|---------------|
@@ -20,7 +17,7 @@ milk: Module Image processing Library tooLkit
 
 
 
-
+---
 
 ## Download and Installing 
 
