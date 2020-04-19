@@ -79,8 +79,7 @@ Create tmpfs disk for high performance I/O:
 
 ## Documentation
 
-[Online documentation]( http://milk-org.github.io/milk/index.html ) 
-
+[Documentation](https://milk-org.github.io/milk-package/)
 
 
 ## LICENCE
