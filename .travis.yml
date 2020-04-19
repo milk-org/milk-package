@@ -25,4 +25,4 @@ script:
 - echo "/usr/local/milk/lib" > milklibs.conf
 - sudo mv milklibs.conf /etc/ld.so.conf.d/
 - sudo ldconfig
-- make test
+- ctest
