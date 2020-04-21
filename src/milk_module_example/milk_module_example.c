@@ -54,7 +54,7 @@
 // If functions are in separate .c files, include here the corresponding .h files
 //
 #include "create_example_image.h"
-
+#include "stream_process_loop_simple.h"
 
 
 
@@ -130,6 +130,30 @@ errno_t milk_module_example__create_image_with_value__cli()
 
 
 
+errno_t milk_module_example__stream_process_loop_simple__cli()
+{
+    if(0
+            + CLI_checkarg(1, CLIARG_IMG)
+            + CLI_checkarg(2, CLIARG_IMG)
+            + CLI_checkarg(3, CLIARG_LONG)
+            == 0)
+    {
+        milk_module_example__stream_process_loop_simple(
+            data.cmdargtoken[1].val.string,
+            data.cmdargtoken[2].val.string,
+            data.cmdargtoken[3].val.numl);
+
+        return CLICMD_SUCCESS;
+    }
+    else
+    {
+        return CLICMD_INVALID_ARG;
+    }
+}
+
+
+
+
 /* ================================================================== */
 /* ================================================================== */
 /*  MODULE CLI INITIALIZATION                                             */
@@ -150,13 +174,23 @@ static errno_t init_module_CLI()
 
 
     RegisterCLIcommand(
-        "func1",                                                                       // function call name from CLI
+        "createim",                                                                    // function call name from CLI
         __FILE__,                                                                      // this file, used to track where function comes from
         milk_module_example__create_image_with_value__cli,                             // function to call
         "creates image with specified value",                                          // short description
         "<image> <value>",                                                             // arguments
-        "mexfunc im1 3.5",                                                             // example use
+        "createim im1 3.5",                                                            // example use
         "milk_module_example__create_image_with_value(char *imname, double value)");   // source code call
+
+
+    RegisterCLIcommand(
+        "streamloop",                                                                    
+        __FILE__,                                                                     
+        milk_module_example__stream_process_loop_simple__cli,
+        "simple stream loop",
+        "<streamA> <stramB> <NBiter>",                  
+        "streamloop imA imB 10000",
+        "milk_module_example__stream_process_loop_simple(char *streamA_name, char *streamB_name, long loopNBiter)");
 
 
     // optional: add atexit functions here

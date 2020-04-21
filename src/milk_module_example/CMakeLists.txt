@@ -4,7 +4,8 @@
 set(LIBNAME "milk_module_example")
 
 set(SOURCEFILES
-	create_example_image.c)
+	create_example_image.c
+	stream_process_loop_simple.c)
 
 
 
