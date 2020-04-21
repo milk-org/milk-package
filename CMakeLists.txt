@@ -391,7 +391,7 @@ include(CTest)
 
 
 # test that milk CLI launches and list modules
-add_test(milkCLIlaunch milk-exec "m?")
+add_test(milkCLIlaunch milk-exec "-T" "m?")
 #set(CTEST_CUSTOM_MAXIMUM_PASSED_TEST_OUTPUT_SIZE 0)
 #set(CTEST_CUSTOM_MAXIMUM_FAILED_TEST_OUTPUT_SIZE 0)
 set_tests_properties(milkCLIlaunch
@@ -400,6 +400,6 @@ set_tests_properties(milkCLIlaunch
 		)
 
 
-add_test(milksemspeedtest milk-semtestspeed -T 100000 1)
+add_test(milksemspeedtest milk-semtestspeed "100000" "1")
 
 
