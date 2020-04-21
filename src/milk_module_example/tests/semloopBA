@@ -1,0 +1,10 @@
+#!/bin/bash
+
+milk << EOF
+mloadas milk_module_example mex
+readshmim imA
+readshmim imB
+mex.streamloop imB imA 10000
+exitCLI
+EOF
+

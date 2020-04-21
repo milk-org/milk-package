@@ -24,11 +24,10 @@
 errno_t milk_module_example__stream_process_loop_simple(
     char *streamA_name,
     char *streamB_name,
-    long loopNBiter
+    long loopNBiter,
+    int semtrig
 )
 {
-    int semtrig = 2;  // semaphore index for triggering processing
-
     // collect image identifiers
     // note: imageID type is long
     imageID streamA_ID = image_ID(streamA_name);
@@ -49,9 +48,11 @@ errno_t milk_module_example__stream_process_loop_simple(
         exit(0);
     }
 
-	printf("Running stream loop, %ld iterations\n", loopNBiter);
-	printf("ID : %ld -> %ld \n", streamA_ID, streamB_ID);
-	
+
+
+	// run loop
+	// In this simple example, loop waits on streamA to update streamB
+	//
     for(long iter = 0; iter < loopNBiter; iter++)
     {
 		

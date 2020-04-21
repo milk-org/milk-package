@@ -136,12 +136,14 @@ errno_t milk_module_example__stream_process_loop_simple__cli()
             + CLI_checkarg(1, CLIARG_IMG)
             + CLI_checkarg(2, CLIARG_IMG)
             + CLI_checkarg(3, CLIARG_LONG)
+            + CLI_checkarg(4, CLIARG_LONG)
             == 0)
     {
         milk_module_example__stream_process_loop_simple(
             data.cmdargtoken[1].val.string,
             data.cmdargtoken[2].val.string,
-            data.cmdargtoken[3].val.numl);
+            data.cmdargtoken[3].val.numl,
+            data.cmdargtoken[4].val.numl);
 
         return CLICMD_SUCCESS;
     }
@@ -189,8 +191,8 @@ static errno_t init_module_CLI()
         milk_module_example__stream_process_loop_simple__cli,
         "simple stream loop",
         "<streamA> <stramB> <NBiter>",                  
-        "streamloop imA imB 10000",
-        "milk_module_example__stream_process_loop_simple(char *streamA_name, char *streamB_name, long loopNBiter)");
+        "streamloop imA imB 10000 2",
+        "milk_module_example__stream_process_loop_simple(char *streamA_name, char *streamB_name, long loopNBiter, int semtrig)");
 
 
     // optional: add atexit functions here
