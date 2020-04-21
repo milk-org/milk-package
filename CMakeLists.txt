@@ -385,6 +385,8 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
         DESTINATION "${INSTALL_PKGCONFIG_DIR}")
 
 
+install(FILES milk_config.h 
+        DESTINATION include)
 
 
 include(CTest)
