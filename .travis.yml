@@ -7,6 +7,9 @@ before_install:
 - sudo apt-get install -qq libcfitsio-dev libreadline6-dev libncurses5-dev libfftw3-dev libgsl0-dev flex bison
 
 before_script:
+- echo "tmpfs /milk/shm tmpfs rw,nosuid,nodev" | sudo tee -a /etc/fstab
+- sudo mkdir -p /milk/shm
+- sudo mount /milk/shm
 - mkdir _build
 - cd _build
 - cmake ..
