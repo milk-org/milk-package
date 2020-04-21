@@ -400,6 +400,6 @@ set_tests_properties(milkCLIlaunch
 		)
 
 
-add_test(milksemspeedtest milk-semtestspeed 100000 1)
+add_test(milksemspeedtest milk-semtestspeed -T 100000 1)
 
 
