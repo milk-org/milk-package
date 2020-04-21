@@ -390,13 +390,16 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
 include(CTest)
 
 
+# test that milk CLI launches and list modules
 add_test(milkCLIlaunch milk-exec "m?")
 #set(CTEST_CUSTOM_MAXIMUM_PASSED_TEST_OUTPUT_SIZE 0)
 #set(CTEST_CUSTOM_MAXIMUM_FAILED_TEST_OUTPUT_SIZE 0)
 set_tests_properties(milkCLIlaunch
 		PROPERTIES
 		TIMEOUT 120
-		CTEST_CUSTOM_MAXIMUM_FAILED_TEST_OUTPUT_SIZE 0)
+		)
+
+
 add_test(milksemspeedtest milk-semtestspeed 100000 1)
 
 
