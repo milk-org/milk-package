@@ -8,9 +8,11 @@
 
 #include "CommandLineInterface/CLIcore.h"
 
-// required for create_2Dimage_ID
+// required for create_2Dimage_ID()
 #include "COREMOD_memory/COREMOD_memory.h"
 
+// required for timespec_diff()
+#include "COREMOD_tools/COREMOD_tools.h"
 
 
 
@@ -34,6 +36,11 @@ errno_t milk_module_example__stream_process_loop_simple(
     imageID streamB_ID = image_ID(streamB_name);
 
 
+	
+	struct timespec *tarray;
+	tarray = (struct timespec*) malloc(sizeof(struct timespec)*loopNBiter);
+	
+
     // check that streams are in memory
     //
     if(streamA_ID == -1)
@@ -54,8 +61,10 @@ errno_t milk_module_example__stream_process_loop_simple(
 	// In this simple example, loop waits on streamA to update streamB
 	//
     for(long iter = 0; iter < loopNBiter; iter++)
-    {
-		
+    {		
+		clock_gettime(CLOCK_REALTIME, &tarray[iter]);
+        
+        
         // Wait for semaphore # semtrig of stream A
         // The call will block until semaphore is > 0, and
         // then decrement it and proceed
@@ -78,6 +87,35 @@ errno_t milk_module_example__stream_process_loop_simple(
         data.image[streamB_ID].md[0].write = 0;
     }
 
+	// timing analysis
+	struct timespec tdiff;
+	
+	// average
+	tdiff = timespec_diff(tarray[0], tarray[loopNBiter-1]);
+	float loopFrequencyHz = 1.0*loopNBiter/(1.0 * tdiff.tv_sec + 1.0e-9 * tdiff.tv_nsec);
+	printf("loopfrequency   : %.3f Hz\n", loopFrequencyHz);
+	printf("Average latency : %9.3f nanosec\n", 1.0e9/loopFrequencyHz/2.0); // divide by two for sinle process latency
+
+
+	int file_output_mode = 0;
+	if( file_output_mode == 1 )
+	{
+	// detailed analysis, print to text
+	float *tdiff_nanosec;
+	FILE *fp;
+	
+	fp = fopen("timinglog.txt", "w");
+	tdiff_nanosec = (float*) malloc(sizeof(float)*(loopNBiter-1));
+	for(long iter=0; iter<loopNBiter-1; iter++)
+	{
+		tdiff = timespec_diff(tarray[iter], tarray[iter+1]);
+		tdiff_nanosec[iter] = 1.0e9 * tdiff.tv_sec + 1.0*tdiff.tv_nsec;
+		fprintf(fp, "%6ld  %6.3f \n", iter, tdiff_nanosec[iter]);
+	}
+	fclose(fp);
+	}
+
+	free(tarray);
 
     return RETURN_SUCCESS;
 }
