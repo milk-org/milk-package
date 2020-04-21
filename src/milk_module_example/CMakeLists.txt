@@ -27,3 +27,7 @@ add_library(${LIBNAME} SHARED ${LIBNAME}.c ${SOURCEFILES})
 install(TARGETS ${LIBNAME} DESTINATION lib)
 install(FILES ${LIBNAME}.h DESTINATION include)
 
+install(PROGRAMS
+	scripts/milk-semtestspeed
+	DESTINATION bin)
+

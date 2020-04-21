@@ -12,7 +12,7 @@ before_script:
 - cmake ..
 
 script:
-- cmake ..
+- cmake .. -DEXTRAMODULES="milk_module_example"
 - make
 - sudo make install
 - ls -l /usr/local/
@@ -26,3 +26,4 @@ script:
 - sudo mv milklibs.conf /etc/ld.so.conf.d/
 - sudo ldconfig
 - ctest -D Experimental
+

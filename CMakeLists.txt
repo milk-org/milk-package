@@ -390,6 +390,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
 include(CTest)
 
 add_test(milkCLIlaunch milk-exec "m?")
-
+add_test(milksemspeedtest milk-semtestspeed 100000 1)
 
 
