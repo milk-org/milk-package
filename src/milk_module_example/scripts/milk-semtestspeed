@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "CTEST_FULL_OUTPUT"
+
 SEMTRIG="1"
 NBLOOP="$1"
 
