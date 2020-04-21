@@ -80,13 +80,13 @@ var NAVTREEINDEX =
 "COREMOD__arith_8c.html#a6c3acb9ac0e5a0a1cd31925cffc9776e",
 "COREMOD__memory_8c.html#a78dc9e7339180cc4abdb28b899b314b3",
 "COREMOD__tools_8h_source.html",
-"fft_8c.html#aef49f9202a140629a5d2986860de2a9a",
-"function__parameters_8h.html#a80b697a49f9a33edf517257b8b82c06e",
-"image__basic_8c.html#afc39d379695497775f9aa5a5ca226161",
-"linopt__imtools_8c.html#a2aaeb93356ce94f024e47e47b31644f8",
-"streamCTRL_8c.html#a95adb4c2ba2ce77d4139fef3ef8c3db1",
-"structIMAGE.html#ac6ed28d7d6fcd7e6985f1ceda85495df",
-"structSTRINGLISTENTRY.html"
+"fft_8c.html#ab3fe145c0484fc3b208e8959ac572e40",
+"function__parameters_8h.html#a765f1bd2ed775058283fdc962f5bb227",
+"image__basic_8c.html#ae9e7602a9890b09aad6dca8855cd3210",
+"linopt__imtools_8c.html#a05e6847679b5d1fedf8b5f13bd37417c",
+"statistic_8h.html#ab7ac1e1d30224f2ad6b02a2bbc575153",
+"structIMAGE.html#a17ebc0b18068d1abcaba9cc77a9ea8e4",
+"structSTREAMINFOPROC.html#a2dfe5523fe51cb07a3985eddcd35f74a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

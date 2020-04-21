@@ -1,5 +1,5 @@
 <map id="src/CommandLineInterface/processtools.h" name="src/CommandLineInterface/processtools.h">
-<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="2363,95,2541,136"/>
+<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="2593,95,2772,136"/>
 <area shape="rect" id="node6" href="$processtools_8c.html" title="Tools to manage processes. " alt="" coords="5,184,184,225"/>
 <area shape="rect" id="node3" href="$CLIcore_8c.html" title="main C file " alt="" coords="208,184,387,225"/>
 <area shape="rect" id="node4" href="$templatemodule_8c.html" title="template module " alt="" coords="411,184,661,225"/>
@@ -23,5 +23,8 @@
 <area shape="rect" id="node23" href="$info_8c.html" title="Information about images. " alt="" coords="3900,191,4001,218"/>
 <area shape="rect" id="node24" href="$linARfilterPred_8c.html" title="linear auto&#45;regressive predictive filter " alt="" coords="4025,184,4153,225"/>
 <area shape="rect" id="node25" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="4178,184,4302,225"/>
-<area shape="rect" id="node26" href="$statistic_8c.html" title="statistical tools module " alt="" coords="4326,191,4477,218"/>
+<area shape="rect" id="node26" href="$create__example__image_8c.html" title="example : create image " alt="" coords="4327,184,4500,225"/>
+<area shape="rect" id="node27" href="$milk__module__example_8c.html" title="example milk module " alt="" coords="4524,184,4697,225"/>
+<area shape="rect" id="node28" href="$stream__process__loop__simple_8c.html" title="template for simple stream processing loop " alt="" coords="4722,184,4929,225"/>
+<area shape="rect" id="node29" href="$statistic_8c.html" title="statistical tools module " alt="" coords="4953,191,5103,218"/>
 </map>

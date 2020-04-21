@@ -23,6 +23,8 @@ var searchData=
   ['statistic_2eh',['statistic.h',['../statistic_8h.html',1,'']]],
   ['statistic_5fbirch_5fclustering',['statistic_BIRCH_clustering',['../statistic_8c.html#a009f6a336fd4c11e8a1ce527233cadc2',1,'statistic.c']]],
   ['status',['status',['../structIMAGE__METADATA.html#a3d1038aa94af4a8526d574ed928f0ee5',1,'IMAGE_METADATA']]],
+  ['stream_5fprocess_5floop_5fsimple_2ec',['stream_process_loop_simple.c',['../stream__process__loop__simple_8c.html',1,'']]],
+  ['stream_5fprocess_5floop_5fsimple_2eh',['stream_process_loop_simple.h',['../stream__process__loop__simple_8h.html',1,'']]],
   ['streamctrl_2ec',['streamCTRL.c',['../streamCTRL_8c.html',1,'']]],
   ['streamctrl_2eh',['streamCTRL.h',['../streamCTRL_8h.html',1,'']]],
   ['streamctrl_5fctrlscreen',['streamCTRL_CTRLscreen',['../streamCTRL_8c.html#ae47e701b56c205e55ee6353b99ed39e1',1,'streamCTRL_CTRLscreen():&#160;streamCTRL.c'],['../streamCTRL_8h.html#ae47e701b56c205e55ee6353b99ed39e1',1,'streamCTRL_CTRLscreen():&#160;streamCTRL.c']]],

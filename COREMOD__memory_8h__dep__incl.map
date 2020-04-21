@@ -20,5 +20,7 @@
 <area shape="rect" id="node20" href="$info_8c.html" title="Information about images. " alt="" coords="3487,102,3588,129"/>
 <area shape="rect" id="node21" href="$linARfilterPred_8c.html" title="linear auto&#45;regressive predictive filter " alt="" coords="3612,95,3740,136"/>
 <area shape="rect" id="node22" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="3765,95,3889,136"/>
-<area shape="rect" id="node23" href="$statistic_8c.html" title="statistical tools module " alt="" coords="3913,102,4063,129"/>
+<area shape="rect" id="node23" href="$create__example__image_8c.html" title="example : create image " alt="" coords="3913,95,4087,136"/>
+<area shape="rect" id="node24" href="$stream__process__loop__simple_8c.html" title="template for simple stream processing loop " alt="" coords="4111,95,4318,136"/>
+<area shape="rect" id="node25" href="$statistic_8c.html" title="statistical tools module " alt="" coords="4342,102,4493,129"/>
 </map>

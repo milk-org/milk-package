@@ -47,6 +47,8 @@ var searchData=
   ['coremod_5ftools_2ec',['COREMOD_tools.c',['../COREMOD__tools_8c.html',1,'']]],
   ['cpuset',['cpuset',['../structPROCESSINFODISP.html#a17f699092af617d8f3898820e37879f2',1,'PROCESSINFODISP']]],
   ['cr2tofits',['CR2toFITS',['../image__format_8c.html#a7e823fa737991c7086050e35c0658bd6',1,'image_format.c']]],
+  ['create_5fexample_5fimage_2ec',['create_example_image.c',['../create__example__image_8c.html',1,'']]],
+  ['create_5fexample_5fimage_2eh',['create_example_image.h',['../create__example__image_8h.html',1,'']]],
   ['create_5fvariable_5fid',['create_variable_ID',['../COREMOD__memory_8c.html#a800f8a13e83fbe2dbc960144f1ab2b06',1,'create_variable_ID(const char *name, double value):&#160;COREMOD_memory.c'],['../COREMOD__memory_8h.html#a800f8a13e83fbe2dbc960144f1ab2b06',1,'create_variable_ID(const char *name, double value):&#160;COREMOD_memory.c']]],
   ['create_5fvariable_5flong_5fid',['create_variable_long_ID',['../COREMOD__memory_8c.html#a46cfb68e0fdb8581e1742df92237d90e',1,'create_variable_long_ID(const char *name, long value):&#160;COREMOD_memory.c'],['../COREMOD__memory_8h.html#a46cfb68e0fdb8581e1742df92237d90e',1,'create_variable_long_ID(const char *name, long value):&#160;COREMOD_memory.c']]],
   ['create_5fvariable_5fstring_5fid',['create_variable_string_ID',['../COREMOD__memory_8c.html#a32d69a2e1e6f7e57233035e54df8a4d1',1,'create_variable_string_ID(const char *name, const char *value):&#160;COREMOD_memory.c'],['../COREMOD__memory_8h.html#a32d69a2e1e6f7e57233035e54df8a4d1',1,'create_variable_string_ID(const char *name, const char *value):&#160;COREMOD_memory.c']]],
