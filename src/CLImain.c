@@ -55,10 +55,14 @@ int main(
     strcpy(data.package_name, PACKAGE_NAME);
 
     char versionstring[STRINGMAXLEN_VERSIONSTRING];
-    snprintf(versionstring, STRINGMAXLEN_VERSIONSTRING, "%d.%02d.%02d%s",
-            VERSION_MAJOR, VERSION_MINOR,
-            VERSION_PATCH, VERSION_OPTION);
+    snprintf(versionstring, STRINGMAXLEN_VERSIONSTRING, "%d.%02d.%02d%s", VERSION_MAJOR, VERSION_MINOR, VERSION_PATCH, VERSION_OPTION);
+
+    data.package_version_major = VERSION_MAJOR;
+    data.package_version_minor = VERSION_MINOR;
+    data.package_version_patch = VERSION_PATCH;
+
     strcpy(data.package_version, versionstring);
+
     strcpy(data.sourcedir, SOURCEDIR);
     strcpy(data.configdir, CONFIGDIR);
 

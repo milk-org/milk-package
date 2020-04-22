@@ -42,7 +42,7 @@ set ( VERSION_MINOR 01 )
 set ( VERSION_PATCH 00 )
 set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
 set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
-set ( VERSION_OPTION "-alpha" )
+set ( MILK_VERSION_OPTION "-alpha" )
 
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -57,7 +57,10 @@ configure_file (
   "${PROJECT_SOURCE_DIR}/src/milk_config.h"
   )
 
-
+configure_file (
+  "${PROJECT_SOURCE_DIR}/src/config.h.in"
+  "${PROJECT_SOURCE_DIR}/src/config.h"
+  )
 
 
 
