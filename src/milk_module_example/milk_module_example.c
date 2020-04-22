@@ -29,8 +29,6 @@
 // Module short description
 #define MODULE_DESCRIPTION       "Example module: template for creating new modules"
 
-// Application to which module belongs
-#define MODULE_APPLICATION       "milk"
 
 
 
