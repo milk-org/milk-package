@@ -42,7 +42,7 @@ set ( VERSION_MINOR 01 )
 set ( VERSION_PATCH 00 )
 set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
 set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
-set ( VERSION_OPTION "-alpha" )
+set ( MILK_VERSION_OPTION "-alpha" )
 
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
@@ -57,7 +57,10 @@ configure_file (
   "${PROJECT_SOURCE_DIR}/src/milk_config.h"
   )
 
-
+configure_file (
+  "${PROJECT_SOURCE_DIR}/src/config.h.in"
+  "${PROJECT_SOURCE_DIR}/src/config.h"
+  )
 
 
 
@@ -385,11 +388,19 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/milk.pc
         DESTINATION "${INSTALL_PKGCONFIG_DIR}")
 
 
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/milk_config.h 
+        DESTINATION include
+        )
 
 
 include(CTest)
 
-add_test(milkCLIlaunch milk-exec "m?")
 
+# test that milk CLI launches and list modules
+add_test(milkCLIlaunch milk-exec "-T" "m?")
+set_tests_properties(milkCLIlaunch PROPERTIES TIMEOUT 120)
 
+add_test(milksemspeedtest milk-semtestspeed "100000" "1")
+
+add_test(milktestfftspeed milk-exec "-T" "fft.testfftspeed 10")
 

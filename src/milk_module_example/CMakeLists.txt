@@ -4,7 +4,8 @@
 set(LIBNAME "milk_module_example")
 
 set(SOURCEFILES
-	create_example_image.c)
+	create_example_image.c
+	stream_process_loop_simple.c)
 
 
 
@@ -25,4 +26,8 @@ add_library(${LIBNAME} SHARED ${LIBNAME}.c ${SOURCEFILES})
 
 install(TARGETS ${LIBNAME} DESTINATION lib)
 install(FILES ${LIBNAME}.h DESTINATION include)
+
+install(PROGRAMS
+	scripts/milk-semtestspeed
+	DESTINATION bin)
 
