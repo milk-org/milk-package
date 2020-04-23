@@ -35,7 +35,9 @@ errno_t milk_module_example__stream_process_loop_simple(
     imageID streamA_ID = image_ID(streamA_name);
     imageID streamB_ID = image_ID(streamB_name);
 
-
+	uint64_t NBelem;
+	
+	NBelem = data.image[streamA_ID].md[0].size[0] * data.image[streamA_ID].md[0].size[0];
 	
 	struct timespec *tarray;
 	tarray = (struct timespec*) malloc(sizeof(struct timespec)*loopNBiter);
@@ -76,7 +78,7 @@ errno_t milk_module_example__stream_process_loop_simple(
         data.image[streamB_ID].md[0].write = 1;
 
         // processing and computations can be inserted here to update stream B
-
+		memcpy(data.image[streamB_ID].array.F, data.image[streamA_ID].array.F, sizeof(float)*NBelem);
 
 
         // increment image counter
