@@ -359,6 +359,25 @@ install(TARGETS milk DESTINATION bin PERMISSIONS ${PROGRAM_PERMISSIONS_DEFAULT} 
 
 
 # =======================================
+# MAKE DEFAULT
+# =======================================
+
+set(CMAKE_INSTALL_PREFIX_LINK "/usr/local/${PROJECT_NAME}")
+if(INSTALLMAKEDEFAULT)
+    install(CODE "
+    EXECUTE_PROCESS(COMMAND ln -sf ${CMAKE_INSTALL_PREFIX} ${CMAKE_INSTALL_PREFIX_LINK})
+    ")
+endif(INSTALLMAKEDEFAULT)
+
+
+
+
+
+
+
+
+
+# =======================================
 # PKG-CONFIG
 # =======================================
 
@@ -392,6 +411,14 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/milk_config.h
         DESTINATION include
         )
 
+
+
+
+
+
+# ====================================
+# TESTING
+# ====================================
 
 include(CTest)
 

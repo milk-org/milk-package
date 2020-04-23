@@ -10,12 +10,12 @@ before_script:
 - echo "tmpfs /milk/shm tmpfs rw,nosuid,nodev" | sudo tee -a /etc/fstab
 - sudo mkdir -p /milk/shm
 - sudo mount /milk/shm
-- mkdir _build
-- cd _build
-- cmake ..
+
 
 script:
-- cmake .. -DEXTRAMODULES="milk_module_example"
+- mkdir _build
+- cd _build
+- cmake .. -DEXTRAMODULES="milk_module_example" -DINSTALLMAKEDEFAULT=ON
 - make
 - sudo make install
 - ls -l /usr/local/
