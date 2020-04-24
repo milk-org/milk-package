@@ -3,7 +3,7 @@
 if [ $TRAVIS_EVENT_TYPE = "cron" ]; then
 echo "Test  : Nightly"
 ctest -D Nightly
-else if [ $TRAVIS_EVENT_TYPE = "push" ]
+elif [ $TRAVIS_EVENT_TYPE = "push" ]; then
 echo "Test: Continuous"
 ctest -D Continuous
 else
