@@ -29,5 +29,6 @@ script:
 - sudo mv milklibs.conf /etc/ld.so.conf.d/
 - sudo ldconfig
 - echo ${MILK_SHM_DIR}
-- ctest -D Experimental
+- bash ../test.bash
+
 
