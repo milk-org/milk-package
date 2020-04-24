@@ -27,9 +27,3 @@ sudo make install
 # export MILK_INSTALLDIR=/usr/local/milk
 # export PATH=${PATH}:${MILK_INSTALLDIR}/bin
 # export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${MILK_INSTALLDIR}/lib/pkgconfig
-#
-# # And link for milk
-# echo "/usr/local/milk/lib" > milklibs.conf
-# sudo mv milklibs.conf /etc/ld.so.conf.d/
-# sudo ldconfig -v
-
