@@ -1,1 +1,6 @@
 dochtml/
+_build
+src/config.h
+src/milk_config.h
+/build/
+Testing

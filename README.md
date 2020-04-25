@@ -57,13 +57,6 @@ Add environment variables. Add to .bashrc file or similar :
 	export PATH=${PATH}:${MILK_INSTALLDIR}/bin
 	export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:${MILK_INSTALLDIR}/lib/pkgconfig
 
-Ensure linker finds milk libraries :
-
-	echo "/usr/local/milk/lib" > milklibs.conf
-	sudo mv milklibs.conf /etc/ld.so.conf.d/
-	sudo ldconfig -v
-
-Note: Use the above method instead of setting up LD_LIBRARY_PATH environment variable. milk is installed with setuid bit. LD_LIBRARY_PATH is ignored at runtime for executables that have their setuid or setgid bit set. In addition, holding library locations in cache is faster than searching LD_LIBRARY_PATH directories.
 
 
 ### Creating tmpfs disk (optional)

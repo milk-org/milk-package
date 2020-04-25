@@ -256,8 +256,12 @@ add_subdirectory ( "src/${extramodule}" )
 ENDFOREACH()
 
 
+set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 # main
 add_executable(milk src/CLImain.c)
+
 
 target_include_directories(milk PUBLIC
 ${PROJECT_SOURCE_DIR}/src
@@ -322,8 +326,6 @@ endif(USE_MAGMA)
 
 set_target_properties(milk PROPERTIES COMPILE_FLAGS "${BUILD_FLAGS}" )
 
-
-
 message("====================================================")
 get_target_property(milkcompopts milk COMPILE_OPTIONS)
 
@@ -350,6 +352,7 @@ set(PROGRAM_PERMISSIONS_DEFAULT
     OWNER_WRITE OWNER_READ OWNER_EXECUTE
     GROUP_READ GROUP_EXECUTE
     WORLD_READ WORLD_EXECUTE)
+
 
 install(TARGETS milk DESTINATION bin PERMISSIONS ${PROGRAM_PERMISSIONS_DEFAULT} SETUID)
 
