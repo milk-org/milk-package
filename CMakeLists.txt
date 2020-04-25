@@ -425,7 +425,6 @@ install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/milk_config.h
 
 include(CTest)
 
-
 # test that milk CLI launches and list modules
 add_test(milkCLIlaunch milk-exec "-T" "m?")
 set_tests_properties(milkCLIlaunch PROPERTIES TIMEOUT 120)
