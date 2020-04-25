@@ -39,10 +39,10 @@ project (milk C)
 # Version number
 set ( VERSION_MAJOR 1 )
 set ( VERSION_MINOR 01 )
-set ( VERSION_PATCH 00 )
+set ( VERSION_PATCH 01 )
 set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
 set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
-set ( MILK_VERSION_OPTION "-alpha" )
+set ( MILK_VERSION_OPTION "" )
 
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
