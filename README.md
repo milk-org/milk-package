@@ -13,8 +13,8 @@ Latest release: [![latesttag](https://img.shields.io/github/tag/milk-org/milk-pa
 
 |     branch       |   version             |  status                     | latest        |
 |------------------|-----------------------|-----------------------------|---------------|
-**master** | 1.1.0 | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
-[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.1 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
+**master** | 1.01.01 | [![Build Status](https://travis-ci.org/milk-org/milk-package.svg?branch=master)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/master.svg)
+[**dev**](https://github.com/milk-org/milk-package/tree/dev) | 1.01.02 | [![Build Status dev](https://travis-ci.org/milk-org/milk-package.svg?branch=dev)](https://travis-ci.org/milk-org/milk-package) | ![lastcommit](https://img.shields.io/github/last-commit/milk-org/milk-package/dev.svg)
 
 
 
