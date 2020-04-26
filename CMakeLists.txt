@@ -6,6 +6,9 @@
 # cmake .. -DCMAKE_INSTALL_PREFIX=../_install
 #
 #
+# Don't make this the default version on the system
+# ================================
+# cmake .. -DINSTALLMAKEDEFAULT=OFF
 #
 # USING GPU libraries
 # ===============================
@@ -44,6 +47,8 @@ set ( MILK_VERSION_OPTION "" )
 set ( PROJECT_VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}" )
 set ( PROJECT_DESCRIPTION "Modular Image processing tooLKit" )
 
+
+option ( INSTALLMAKEDEFAULT "Make this installation the system default" ON )
 
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
