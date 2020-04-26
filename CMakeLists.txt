@@ -53,7 +53,7 @@ option ( INSTALLMAKEDEFAULT "Make this installation the system default" ON )
 # turn VERBOSE ON
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 
-set(CMAKE_INSTALL_PREFIX "/usr/local/milk-${VERSION_MAJOR}.${VERSION_MINOR}")
+set(CMAKE_INSTALL_PREFIX "/usr/local/milk-${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}")
 
 
 # Configure a header file to pass some of the CMake settings
