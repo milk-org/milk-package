@@ -25,7 +25,7 @@ include_directories ("${PROJECT_SOURCE_DIR}/..")
 add_library(${LIBNAME} SHARED ${LIBNAME}.c ${SOURCEFILES})
 
 install(TARGETS ${LIBNAME} DESTINATION lib)
-install(FILES ${LIBNAME}.h DESTINATION include)
+install(FILES ${LIBNAME}.h DESTINATION include/${SRCNAME})
 
 install(PROGRAMS
 	scripts/milk-semtestspeed

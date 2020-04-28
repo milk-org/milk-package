@@ -56,6 +56,16 @@
 
 
 
+
+/* ================================================================== */
+/* ================================================================== */
+/*           MACROS, DEFINES                                          */
+/* ================================================================== */
+/* ================================================================== */
+
+
+
+
 /* ================================================================== */
 /* ================================================================== */
 /*            GLOBAL VARIABLES                                        */
@@ -111,7 +121,7 @@ INIT_MODULE_LIB(milk_module_example)
  * - CLIARG_IMG               existing image
  * - CLIARG_STR               string
  */
-errno_t milk_module_example__create_image_with_value__cli()
+static errno_t milk_module_example__create_image_with_value__cli()
 {
     if(0
             + CLI_checkarg(1, CLIARG_STR_NOT_IMG)
@@ -136,7 +146,7 @@ errno_t milk_module_example__create_image_with_value__cli()
 
 
 
-errno_t milk_module_example__stream_process_loop_simple__cli()
+static errno_t milk_module_example__stream_process_loop_simple__cli()
 {
     if(0
             + CLI_checkarg(1, CLIARG_IMG)
