@@ -69,6 +69,9 @@ configure_file (
   )
 
 
+# select most recent version available
+SET(CMAKE_FIND_PACKAGE_SORT_ORDER NATURAL)
+SET(CMAKE_FIND_PACKAGE_SORT_DIRECTION DEC)
 
 
 #
@@ -217,7 +220,6 @@ endif(USE_MAGMA)
 SET(CURSES_USE_NCURSES TRUE)
 
 find_package( Threads )
-
 
 
 message("====================================================")

@@ -112,8 +112,10 @@ int main(
 
 
     runCLI(argc, argv, AppName);
-
-    printf("NORMAL EXIT\n");
+	
+	if(data.quiet == 0) {
+		printf("NORMAL EXIT\n");
+	}
 
 
     // clean-up calling thread
