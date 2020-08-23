@@ -16,6 +16,7 @@ before_script:
 script:
 - mkdir _build
 - cd _build
+- cmake --version
 - cmake .. -DEXTRAMODULES="milk_module_example" -DINSTALLMAKEDEFAULT=ON
 - make
 - sudo make install
