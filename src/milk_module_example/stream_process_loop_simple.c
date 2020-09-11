@@ -14,6 +14,8 @@
 // required for timespec_diff()
 #include "COREMOD_tools/COREMOD_tools.h"
 
+// required for timespec_diff
+#include "CommandLineInterface/timeutils.h"
 
 
 /**
