@@ -1,6 +1,5 @@
 var linARfilterPred_8c =
 [
-    [ "MODULE_APPLICATION", "linARfilterPred_8c.html#a205b3ef5e31a32b6795f01c3d87ba844", null ],
     [ "MODULE_DESCRIPTION", "linARfilterPred_8c.html#a5b62e7184a709de637eae6370501dac3", null ],
     [ "MODULE_SHORTNAME_DEFAULT", "linARfilterPred_8c.html#a5b10534f5a2bc061d385478136c531be", null ],
     [ "init_module_CLI", "linARfilterPred_8c.html#ae7133e80a22451d9d2cc88f143a90b55", null ],

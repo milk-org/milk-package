@@ -1,6 +1,26 @@
 var dir_4b9d01165433dba703e06bc6af058de1 =
 [
+    [ "local", "dir_e95cd3d89567575649668eda58910d46.html", "dir_e95cd3d89567575649668eda58910d46" ],
+    [ "cubeMatchMatrix.c", "cubeMatchMatrix_8c.html", "cubeMatchMatrix_8c" ],
+    [ "cubeMatchMatrix.h", "cubeMatchMatrix_8h.html", "cubeMatchMatrix_8h" ],
+    [ "cubestats.c", "cubestats_8c.html", "cubestats_8c" ],
+    [ "cubestats.h", "cubestats_8h.html", "cubestats_8h" ],
+    [ "image_stats.c", "info_2image__stats_8c.html", "info_2image__stats_8c" ],
+    [ "image_stats.h", "info_2image__stats_8h.html", "info_2image__stats_8h" ],
+    [ "imagemon.c", "imagemon_8c.html", "imagemon_8c" ],
+    [ "imagemon.h", "imagemon_8h.html", "imagemon_8h" ],
+    [ "improfile.c", "improfile_8c.html", "improfile_8c" ],
+    [ "improfile.h", "improfile_8h.html", "improfile_8h" ],
     [ "info.c", "info_8c.html", "info_8c" ],
     [ "info.h", "info_8h_source.html", null ],
-    [ "info_local.h", "info__local_8h_source.html", null ]
+    [ "kbdhit.c", "kbdhit_8c.html", "kbdhit_8c" ],
+    [ "kbdhit.h", "kbdhit_8h.html", "kbdhit_8h" ],
+    [ "percentile.c", "percentile_8c.html", "percentile_8c" ],
+    [ "percentile.h", "percentile_8h.html", "percentile_8h" ],
+    [ "print_header.c", "print__header_8c.html", "print__header_8c" ],
+    [ "print_header.h", "print__header_8h.html", "print__header_8h" ],
+    [ "streamtiming_stats.c", "streamtiming__stats_8c.html", "streamtiming__stats_8c" ],
+    [ "streamtiming_stats.h", "streamtiming__stats_8h.html", "streamtiming__stats_8h" ],
+    [ "timediff.c", "timediff_8c.html", "timediff_8c" ],
+    [ "timediff.h", "timediff_8h.html", "timediff_8h" ]
 ];

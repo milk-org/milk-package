@@ -8,6 +8,14 @@ var processtools_8h =
     [ "MAXNBCPU", "processtools_8h.html#a06cd84218b5b80ef86331f06f872ffcd", null ],
     [ "MAXNBSUBPROCESS", "processtools_8h.html#a538b9c328a3061fe3c95e74db99bdb1d", null ],
     [ "PROCESSINFO_NBtimer", "processtools_8h.html#a7fdb2372bfcda94c6b2174bfc31b73ff", null ],
+    [ "PROCESSINFO_TRIGGERMODE_CNT0", "processtools_8h.html#a5f3e6a87b1283cfc814a2c2a95c950e2", null ],
+    [ "PROCESSINFO_TRIGGERMODE_CNT1", "processtools_8h.html#a0dea144453c74def36c792ea0cc66d08", null ],
+    [ "PROCESSINFO_TRIGGERMODE_DELAY", "processtools_8h.html#a9c02f0dc64a5aa532e7f3a2b07e9a8c4", null ],
+    [ "PROCESSINFO_TRIGGERMODE_IMMEDIATE", "processtools_8h.html#aa2559713d2e443a5d0ee83c5eaef8e89", null ],
+    [ "PROCESSINFO_TRIGGERMODE_SEMAPHORE", "processtools_8h.html#aaa6a9a47b8dededb3e51836c6ed9af21", null ],
+    [ "PROCESSINFO_TRIGGERSTATUS_RECEIVED", "processtools_8h.html#ac7b417983e4127ab657c3953ea81bd0e", null ],
+    [ "PROCESSINFO_TRIGGERSTATUS_TIMEDOUT", "processtools_8h.html#ad229889d5e1dfac05c75bd2d24c835c0", null ],
+    [ "PROCESSINFO_TRIGGERSTATUS_WAITING", "processtools_8h.html#a5196e09b1b158d803ec35e8f5a1f1d06", null ],
     [ "PROCESSINFOLISTSIZE", "processtools_8h.html#aef69b8a63786e578ba8355eba9a1ff82", null ],
     [ "STRINGMAXLEN_PROCESSINFO_DESCRIPTION", "processtools_8h.html#a38a8317766be247af7c7c284d2e153f0", null ],
     [ "STRINGMAXLEN_PROCESSINFO_LOGFILENAME", "processtools_8h.html#af48915a0bbb76cce87754124d90ecc0d", null ],
@@ -32,5 +40,8 @@ var processtools_8h =
     [ "processinfo_shm_create", "processtools_8h.html#a83ebc0c8fd508e27717b0a4b11eafc1b", null ],
     [ "processinfo_shm_link", "processtools_8h.html#a16fbdc89056a8659514c9e5601b83ee3", null ],
     [ "processinfo_SIGexit", "processtools_8h.html#a43158fe11f27c2c4c1d90bfc1002014d", null ],
+    [ "processinfo_update_output_stream", "processtools_8h.html#a2ba8c631777ab45b8cdc42ce88265ebd", null ],
+    [ "processinfo_waitoninputstream", "processtools_8h.html#a6e6cd115648bf837b760414e829882bb", null ],
+    [ "processinfo_waitoninputstream_init", "processtools_8h.html#a49e6e59f8dcae2d60440cf1f254a134c", null ],
     [ "processinfo_WriteMessage", "processtools_8h.html#a8b65e8c0f0375faff7df95846e407a60", null ]
 ];

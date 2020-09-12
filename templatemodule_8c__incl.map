@@ -1,15 +1,52 @@
 <map id="src/CommandLineInterface/doc/templatemodule/templatemodule.c" name="src/CommandLineInterface/doc/templatemodule/templatemodule.c">
-<area shape="rect" id="node6" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="667,102,745,129"/>
-<area shape="rect" id="node26" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="1140,95,1360,136"/>
-<area shape="rect" id="node27" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="1384,95,1585,136"/>
-<area shape="rect" id="node28" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="1609,95,1811,136"/>
-<area shape="rect" id="node29" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="1835,95,2033,136"/>
-<area shape="rect" id="node30" href="$templatemodule_8h.html" title="Function prototypes for templatemodule. " alt="" coords="2058,102,2279,129"/>
-<area shape="rect" id="node17" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="1179,184,1278,211"/>
-<area shape="rect" id="node18" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="295,184,517,211"/>
-<area shape="rect" id="node19" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="382,259,486,285"/>
-<area shape="rect" id="node22" href="$processtools_8h.html" title="Command line interface. " alt="" coords="562,259,669,285"/>
-<area shape="rect" id="node23" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="245,259,353,285"/>
-<area shape="rect" id="node24" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="1303,184,1453,211"/>
-<area shape="rect" id="node21" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="356,333,509,360"/>
+<area shape="rect" id="node1" title="template module" alt="" coords="2026,5,2277,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,68,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="262,363,323,389"/>
+<area shape="rect" id="node4" title=" " alt="" coords="758,102,851,129"/>
+<area shape="rect" id="node5" title=" " alt="" coords="875,102,937,129"/>
+<area shape="rect" id="node6" href="$CLIcore_8h.html" title="Command line interface." alt="" coords="961,102,1040,129"/>
+<area shape="rect" id="node23" title=" " alt="" coords="2080,102,2223,129"/>
+<area shape="rect" id="node24" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions." alt="" coords="3239,95,3459,136"/>
+<area shape="rect" id="node47" href="$COREMOD__iofits_8h_source.html" title=" " alt="" coords="3483,95,3684,136"/>
+<area shape="rect" id="node48" href="$COREMOD__tools_8h_source.html" title=" " alt="" coords="3708,95,3909,136"/>
+<area shape="rect" id="node49" href="$COREMOD__arith_8h_source.html" title=" " alt="" coords="3933,95,4132,136"/>
+<area shape="rect" id="node50" href="$templatemodule_8h.html" title="Function prototypes for templatemodule." alt="" coords="4157,102,4378,129"/>
+<area shape="rect" id="node7" title=" " alt="" coords="852,363,917,389"/>
+<area shape="rect" id="node8" title=" " alt="" coords="824,191,887,218"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1012,363,1080,389"/>
+<area shape="rect" id="node10" title=" " alt="" coords="606,363,670,389"/>
+<area shape="rect" id="node11" title=" " alt="" coords="694,363,785,389"/>
+<area shape="rect" id="node12" title=" " alt="" coords="484,363,581,389"/>
+<area shape="rect" id="node13" title=" " alt="" coords="1115,191,1177,218"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1202,191,1298,218"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1218,363,1285,389"/>
+<area shape="rect" id="node16" title=" " alt="" coords="1373,191,1439,218"/>
+<area shape="rect" id="node17" href="$config_8h_source.html" title=" " alt="" coords="1463,191,1531,218"/>
+<area shape="rect" id="node18" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO." alt="" coords="527,191,749,218"/>
+<area shape="rect" id="node19" href="$ImageStruct_8h.html" title="Image structure definition." alt="" coords="586,281,690,307"/>
+<area shape="rect" id="node20" href="$processtools_8h.html" title="Command line interface." alt="" coords="771,273,929,315"/>
+<area shape="rect" id="node21" href="$streamCTRL_8h.html" title="Data streams control panel." alt="" coords="1003,273,1161,315"/>
+<area shape="rect" id="node22" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters." alt="" coords="346,184,503,225"/>
+<area shape="rect" id="node25" href="$logshmim__types_8h.html" title=" " alt="" coords="3245,184,3452,225"/>
+<area shape="rect" id="node26" href="$clearall_8h.html" title=" " alt="" coords="3477,191,3679,218"/>
+<area shape="rect" id="node27" href="$compute__image__memory_8h.html" title=" " alt="" coords="3703,184,3903,225"/>
+<area shape="rect" id="node28" href="$compute__nb__image_8h.html" title=" " alt="" coords="3927,184,4127,225"/>
+<area shape="rect" id="node29" href="$compute__nb__variable_8h.html" title=" " alt="" coords="4151,184,4351,225"/>
+<area shape="rect" id="node30" href="$create__image_8h.html" title=" " alt="" coords="4375,184,4562,225"/>
+<area shape="rect" id="node31" href="$create__variable_8h.html" title=" " alt="" coords="4586,184,4773,225"/>
+<area shape="rect" id="node32" href="$delete__image_8h.html" title=" " alt="" coords="4797,184,4983,225"/>
+<area shape="rect" id="node33" href="$delete__variable_8h.html" title=" " alt="" coords="5007,184,5192,225"/>
+<area shape="rect" id="node34" href="$fps__create_8h.html" title=" " alt="" coords="5217,184,5385,225"/>
+<area shape="rect" id="node35" href="$fps__ID_8h.html" title=" " alt="" coords="5409,191,5609,218"/>
+<area shape="rect" id="node36" href="$fps__list_8h.html" title=" " alt="" coords="5633,184,5801,225"/>
+<area shape="rect" id="node37" href="$image__checksize_8h.html" title=" " alt="" coords="5825,184,6011,225"/>
+<area shape="rect" id="node38" href="$image__complex_8h.html" title=" " alt="" coords="6035,184,6220,225"/>
+<area shape="rect" id="node39" href="$image__copy_8h.html" title=" " alt="" coords="1555,184,1740,225"/>
+<area shape="rect" id="node40" href="$image__ID_8h.html" title=" " alt="" coords="1764,191,1981,218"/>
+<area shape="rect" id="node41" href="$image__keyword_8h.html" title=" " alt="" coords="2005,184,2191,225"/>
+<area shape="rect" id="node42" href="$image__set__counters_8h_source.html" title=" " alt="" coords="2215,184,2400,225"/>
+<area shape="rect" id="node43" href="$list__image_8h.html" title=" " alt="" coords="2424,184,2591,225"/>
+<area shape="rect" id="node44" href="$list__variable_8h.html" title=" " alt="" coords="2615,184,2781,225"/>
+<area shape="rect" id="node45" href="$logshmim_8h_source.html" title=" " alt="" coords="2805,191,3023,218"/>
+<area shape="rect" id="node46" href="$read__shmim_8h.html" title=" " alt="" coords="3047,184,3221,225"/>
 </map>

@@ -1,6 +1,5 @@
 var image__gen_8c =
 [
-    [ "MODULE_APPLICATION", "image__gen_8c.html#a205b3ef5e31a32b6795f01c3d87ba844", null ],
     [ "MODULE_DESCRIPTION", "image__gen_8c.html#a5b62e7184a709de637eae6370501dac3", null ],
     [ "MODULE_SHORTNAME_DEFAULT", "image__gen_8c.html#a5b10534f5a2bc061d385478136c531be", null ],
     [ "OMP_NELEMENT_LIMIT", "image__gen_8c.html#a2a847307a407427b42689ebaa39aacad", null ],
@@ -25,6 +24,8 @@ var image__gen_8c =
     [ "make_dist_cli", "image__gen_8c.html#aa10fb8f8a6b277981a2eb15036f6eb0d", null ],
     [ "make_double_star", "image__gen_8c.html#a8096cf8cbb18efc131a87283e76f43b2", null ],
     [ "make_Egalaxy", "image__gen_8c.html#a26dfc782b8854bce160f6293bcac366e", null ],
+    [ "make_FiberCouplingOverlap", "image__gen_8c.html#a35e452569e27b419b2d8288b0705fb3a", null ],
+    [ "make_FiberCouplingOverlap_cli", "image__gen_8c.html#a7e26499dbacdf902fd934bb4158b444c", null ],
     [ "make_galaxy", "image__gen_8c.html#ae87bdb14bcd81b957a8f7720efc5cc23", null ],
     [ "make_gauss", "image__gen_8c.html#ababe7cd3604b14df5c1b3a2cdf505e8f", null ],
     [ "make_gauss_cli", "image__gen_8c.html#a402a0ff036f6e87883ff446e90ad7f1b", null ],

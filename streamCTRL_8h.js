@@ -7,6 +7,7 @@ var streamCTRL_8h =
     [ "streamOpenNBpid_MAX", "streamCTRL_8h.html#a4de987c32413ae3f89882658428891e2", null ],
     [ "STRINGLENMAX", "streamCTRL_8h.html#a306748fa89c9df88326433afd1e19287", null ],
     [ "STRINGMAXLEN_STREAMINFO_NAME", "streamCTRL_8h.html#ad2368c70727b032fb338f00099e5dd29", null ],
+    [ "find_streams", "streamCTRL_8h.html#ae2092b05c53689a9d2d22f96b8474e7a", null ],
     [ "get_process_name_by_pid", "streamCTRL_8h.html#a13c2e099f2e2df780754da98e92d1275", null ],
     [ "image_get_first_ID_available_from_images", "streamCTRL_8h.html#a085981c13cbf5811e2d0f6a456e6d514", null ],
     [ "image_ID_from_images", "streamCTRL_8h.html#a40b4a3fa534313c896930e708a0938be", null ],

@@ -1,30 +1,52 @@
 <map id="src/CommandLineInterface/function_parameters.h" name="src/CommandLineInterface/function_parameters.h">
-<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="2593,95,2772,136"/>
-<area shape="rect" id="node5" href="$function__parameters_8c.html" title="Tools to help expose and control function parameters. " alt="" coords="5,184,184,225"/>
-<area shape="rect" id="node3" href="$CLIcore_8c.html" title="main C file " alt="" coords="208,184,387,225"/>
-<area shape="rect" id="node4" href="$templatemodule_8c.html" title="template module " alt="" coords="411,184,661,225"/>
-<area shape="rect" id="node6" href="$processtools_8c.html" title="Tools to manage processes. " alt="" coords="685,184,864,225"/>
-<area shape="rect" id="node7" href="$standalone__dependencies_8h_source.html" title="src/CommandLineInterface\l/standalone_dependencies.h" alt="" coords="888,184,1075,225"/>
-<area shape="rect" id="node8" href="$streamCTRL_8c.html" title="Data streams control panel. " alt="" coords="1099,184,1277,225"/>
-<area shape="rect" id="node9" href="$COREMOD__arith_8c.html" title="Arithmeric operations on images. " alt="" coords="1302,184,1522,225"/>
-<area shape="rect" id="node10" href="$COREMOD__iofits_8c.html" title="I/O for FITS files. " alt="" coords="1547,184,1696,225"/>
-<area shape="rect" id="node11" href="$COREMOD__memory_8c.html" title="milk memory functions " alt="" coords="1720,184,1888,225"/>
-<area shape="rect" id="node12" href="$COREMOD__tools_8c.html" title="Frequently used tools. " alt="" coords="1913,184,2135,225"/>
-<area shape="rect" id="node13" href="$cudacomp_8c.html" title="CUDA functions wrapper. " alt="" coords="2160,191,2339,218"/>
-<area shape="rect" id="node14" href="$cudacomp__MVMextractModesLoop_8c.html" title="CUDA functions wrapper. " alt="" coords="2363,184,2541,225"/>
-<area shape="rect" id="node15" href="$fft_8c.html" title="Fourier Transform. " alt="" coords="2565,191,2648,218"/>
-<area shape="rect" id="node16" href="$fft__autocorrelation_8c.html" title="Compute autocorrelation using FFT. " alt="" coords="2673,191,2847,218"/>
-<area shape="rect" id="node17" href="$fft__structure__function_8c.html" title="Compute structure function using FFT. " alt="" coords="2872,184,3003,225"/>
-<area shape="rect" id="node18" href="$image__basic_8c.html" title="basic image functions " alt="" coords="3027,184,3183,225"/>
-<area shape="rect" id="node19" href="$image__filter_8c.html" title="Image filtering. " alt="" coords="3207,184,3358,225"/>
-<area shape="rect" id="node20" href="$image__format_8c.html" title="Convert between image formats. " alt="" coords="3383,184,3545,225"/>
-<area shape="rect" id="node21" href="$image__gen_8c.html" title="Generate frequently used image(s) " alt="" coords="3569,184,3716,225"/>
-<area shape="rect" id="node22" href="$img__reduce_8c.html" title="Image analysis functions. " alt="" coords="3740,184,3876,225"/>
-<area shape="rect" id="node23" href="$info_8c.html" title="Information about images. " alt="" coords="3900,191,4001,218"/>
-<area shape="rect" id="node24" href="$linARfilterPred_8c.html" title="linear auto&#45;regressive predictive filter " alt="" coords="4025,184,4153,225"/>
-<area shape="rect" id="node25" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="4178,184,4302,225"/>
-<area shape="rect" id="node26" href="$create__example__image_8c.html" title="example : create image " alt="" coords="4327,184,4500,225"/>
-<area shape="rect" id="node27" href="$milk__module__example_8c.html" title="example milk module " alt="" coords="4524,184,4697,225"/>
-<area shape="rect" id="node28" href="$stream__process__loop__simple_8c.html" title="template for simple stream processing loop " alt="" coords="4722,184,4929,225"/>
-<area shape="rect" id="node29" href="$statistic_8c.html" title="statistical tools module " alt="" coords="4953,191,5103,218"/>
+<area shape="rect" id="node1" title="Tools to help expose and control function parameters." alt="" coords="5757,5,5936,47"/>
+<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface." alt="" coords="2592,95,2771,136"/>
+<area shape="rect" id="node28" href="$fps__disconnect_8h.html" title="Disconnect from FPS." alt="" coords="4123,95,4301,136"/>
+<area shape="rect" id="node29" href="$fps__FPCONFexit_8h.html" title="Exit FPS conf process." alt="" coords="5352,95,5531,136"/>
+<area shape="rect" id="node30" href="$fps__FPCONFloopstep_8h.html" title="FPS conf process loop step." alt="" coords="5555,95,5733,136"/>
+<area shape="rect" id="node31" href="$fps__FPCONFsetup_8h.html" title="FPS config setup." alt="" coords="5757,95,5936,136"/>
+<area shape="rect" id="node32" href="$fps__processinfo__entries_8h_source.html" title=" " alt="" coords="5960,95,6139,136"/>
+<area shape="rect" id="node33" href="$fps__RUNexit_8h.html" title="Exit FPS run process." alt="" coords="6163,95,6341,136"/>
+<area shape="rect" id="node34" href="$fps__save2disk_8h.html" title="Save FPS content to disk." alt="" coords="6365,95,6544,136"/>
+<area shape="rect" id="node35" href="$fps__loadstream_8h.html" title="Load image stream." alt="" coords="640,95,819,136"/>
+<area shape="rect" id="node36" href="$fps__GetParamIndex_8h.html" title="Get index of parameter." alt="" coords="1873,95,2052,136"/>
+<area shape="rect" id="node37" href="$fps__process__fpsCMDarray_8h.html" title=" " alt="" coords="4326,95,4517,136"/>
+<area shape="rect" id="node38" href="$fps__process__user__key_8h.html" title="TUI key input processing." alt="" coords="4541,95,4720,136"/>
+<area shape="rect" id="node39" href="$fps__read__fpsCMD__fifo_8h.html" title=" " alt="" coords="4744,95,4923,136"/>
+<area shape="rect" id="node40" href="$fps__scan_8h.html" title="scan and load FPSs" alt="" coords="4947,95,5125,136"/>
+<area shape="rect" id="node41" href="$fps__tmux_8h.html" title="tmux session management" alt="" coords="5149,95,5328,136"/>
+<area shape="rect" id="node42" href="$fps__FPSremove_8h.html" title="remove FPS" alt="" coords="6568,95,6747,136"/>
+<area shape="rect" id="node43" href="$fps__GetFileName_8h.html" title="get FPS filename for entry" alt="" coords="6771,95,6949,136"/>
+<area shape="rect" id="node44" href="$fps__printparameter__valuestring_8h.html" title="print parameter value string" alt="" coords="6974,95,7189,136"/>
+<area shape="rect" id="node45" href="$fps__PrintParameterInfo_8h.html" title="print FPS parameter status/values" alt="" coords="7213,95,7392,136"/>
+<area shape="rect" id="node46" href="$fps__processcmdline_8h.html" title="FPS process command line." alt="" coords="7416,95,7595,136"/>
+<area shape="rect" id="node47" href="$fps__RUNstart_8h.html" title="FPS run process start." alt="" coords="7619,95,7797,136"/>
+<area shape="rect" id="node48" href="$fps__RUNstop_8h.html" title="FPS run process stop." alt="" coords="7821,95,8000,136"/>
+<area shape="rect" id="node49" href="$fps__userinputsetparamvalue_8h.html" title="read user input to set parameter value" alt="" coords="8024,95,8224,136"/>
+<area shape="rect" id="node50" href="$fps__WriteParameterToDisk_8h.html" title=" " alt="" coords="8249,95,8442,136"/>
+<area shape="rect" id="node3" href="$CLIcore_8c.html" title="main C file" alt="" coords="1221,184,1400,225"/>
+<area shape="rect" id="node4" href="$CLIcore__checkargs_8c.html" title="Check CLI command line arguments." alt="" coords="1424,184,1603,225"/>
+<area shape="rect" id="node5" href="$CLIcore__datainit_8c.html" title="data structure init" alt="" coords="1627,184,1805,225"/>
+<area shape="rect" id="node6" href="$CLIcore__modules_8c.html" title="Modules functions." alt="" coords="1829,184,2008,225"/>
+<area shape="rect" id="node7" href="$CLIcore__signals_8c.html" title="signals and debugging" alt="" coords="2032,184,2211,225"/>
+<area shape="rect" id="node8" href="$CLIcore__UI_8c.html" title="User input (UI) functions." alt="" coords="2235,184,2413,225"/>
+<area shape="rect" id="node9" href="$templatemodule_8c.html" title="template module" alt="" coords="2437,184,2688,225"/>
+<area shape="rect" id="node10" href="$fps__add__entry_8c.html" title="add parameter entry to FPS" alt="" coords="2712,184,2891,225"/>
+<area shape="rect" id="node11" href="$fps__CONFstart_8c.html" title="FPS conf process start." alt="" coords="2915,184,3093,225"/>
+<area shape="rect" id="node12" href="$fps__CONFstop_8c.html" title="FPS conf process stop." alt="" coords="3117,184,3296,225"/>
+<area shape="rect" id="node13" href="$fps__connect_8c.html" title="connect to FPS" alt="" coords="5,184,184,225"/>
+<area shape="rect" id="node14" href="$fps__connectExternalFPS_8c.html" title="connect to external FPS" alt="" coords="3321,184,3503,225"/>
+<area shape="rect" id="node15" href="$fps__CTRLscreen_8c.html" title="FPS control TUI." alt="" coords="4744,184,4923,225"/>
+<area shape="rect" id="node16" href="$fps__disconnect_8c.html" title="Disconnect from FPS." alt="" coords="3528,184,3707,225"/>
+<area shape="rect" id="node17" href="$fps__execFPScmd_8c.html" title="Execute FPS command." alt="" coords="5048,184,5227,225"/>
+<area shape="rect" id="node18" href="$fps__FPCONFexit_8c.html" title="Exit FPS conf process." alt="" coords="4339,184,4517,225"/>
+<area shape="rect" id="node19" href="$fps__FPCONFloopstep_8c.html" title="FPS conf process loop step." alt="" coords="3731,184,3909,225"/>
+<area shape="rect" id="node20" href="$fps__FPCONFsetup_8c.html" title="FPS config setup." alt="" coords="4541,184,4720,225"/>
+<area shape="rect" id="node21" href="$fps__FPSremove_8c.html" title="remove FPS" alt="" coords="3933,184,4112,225"/>
+<area shape="rect" id="node22" href="$fps__GetFileName_8c.html" title="get FPS filename for entry" alt="" coords="4136,184,4315,225"/>
+<area shape="rect" id="node23" href="$fps__getFPSargs_8c.html" title="read FPS args from CLI" alt="" coords="208,184,387,225"/>
+<area shape="rect" id="node24" href="$fps__GetTypeString_8c.html" title=" " alt="" coords="411,184,589,225"/>
+<area shape="rect" id="node25" href="$fps__load_8c.html" title="Load FPS." alt="" coords="613,184,792,225"/>
+<area shape="rect" id="node26" href="$fps__loadstream_8c.html" title="Load image stream." alt="" coords="816,184,995,225"/>
+<area shape="rect" id="node27" href="$fps__outlog_8c.html" title="output log functions for FPS" alt="" coords="1019,184,1197,225"/>
 </map>

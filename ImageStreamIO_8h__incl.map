@@ -1,4 +1,12 @@
 <map id="src/ImageStreamIO/ImageStreamIO.h" name="src/ImageStreamIO/ImageStreamIO.h">
-<area shape="rect" id="node2" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="333,80,437,107"/>
-<area shape="rect" id="node10" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="681,155,835,181"/>
+<area shape="rect" id="node1" title="Function prototypes for ImageStreamIO." alt="" coords="263,5,506,32"/>
+<area shape="rect" id="node2" href="$ImageStruct_8h.html" title="Image structure definition." alt="" coords="333,80,437,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,155,103,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="127,155,192,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="217,155,278,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="302,155,366,181"/>
+<area shape="rect" id="node7" title=" " alt="" coords="390,155,481,181"/>
+<area shape="rect" id="node8" title=" " alt="" coords="505,155,573,181"/>
+<area shape="rect" id="node9" title=" " alt="" coords="598,155,657,181"/>
+<area shape="rect" id="node10" href="$ImageStreamIOError_8h_source.html" title=" " alt="" coords="681,155,833,181"/>
 </map>

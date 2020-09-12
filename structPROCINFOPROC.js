@@ -13,6 +13,7 @@ var structPROCINFOPROC =
     [ "CPUload", "structPROCINFOPROC.html#a0209cd5756e71c204c430791553dff3c", null ],
     [ "CPUpcnt", "structPROCINFOPROC.html#a7292ad1d9366db65bfc18731f041d0bc", null ],
     [ "CPUphys", "structPROCINFOPROC.html#a6deace003d2b3e0b3c9f1077cc7592f3", null ],
+    [ "DisplayDetailedMode", "structPROCINFOPROC.html#a3440cf40de261b91aa760e46714ec1f9", null ],
     [ "DisplayMode", "structPROCINFOPROC.html#af669a3a227250efdc7bf70771a205b88", null ],
     [ "dtscan", "structPROCINFOPROC.html#a001b562279a90de87a23d7c8bc9047ba", null ],
     [ "fdarray", "structPROCINFOPROC.html#ae512c30138dc28a043d12a72df107c21", null ],

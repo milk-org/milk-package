@@ -1,5 +1,6 @@
 var structPROCESSINFO =
 [
+    [ "CPUmask", "structPROCESSINFO.html#ac988ebef683484b64a44ff47d18fe6ff", null ],
     [ "createtime", "structPROCESSINFO.html#aef0d3dd2d1ce547b7e1d12923a08b1b9", null ],
     [ "CTRLval", "structPROCESSINFO.html#a52ad127084956058b18127b0c4a62ac7", null ],
     [ "description", "structPROCESSINFO.html#ad39ce6a9c304576b2415011936ad0568", null ],
@@ -29,5 +30,17 @@ var structPROCESSINFO =
     [ "texecstart", "structPROCESSINFO.html#a642648ccdbc9c372779c789053cbecd5", null ],
     [ "timerindex", "structPROCESSINFO.html#aedd118c31b64f169f520abb41c952157", null ],
     [ "timingbuffercnt", "structPROCESSINFO.html#a47c0baf8db864089d61150b0e7c22fdf", null ],
-    [ "tmuxname", "structPROCESSINFO.html#a9bdf26ac14218a74bf4abb83908de356", null ]
+    [ "tmuxname", "structPROCESSINFO.html#a9bdf26ac14218a74bf4abb83908de356", null ],
+    [ "triggerdelay", "structPROCESSINFO.html#afe17dbe3d7370a33a52485e02f7944af", null ],
+    [ "triggermissedframe", "structPROCESSINFO.html#a7ce7df2b5915bf65edf0072f9e1dad2b", null ],
+    [ "triggermissedframe_cumul", "structPROCESSINFO.html#a24b05d330ab5d2d582daad6c87c02929", null ],
+    [ "triggermode", "structPROCESSINFO.html#ad8941d98cc35d35b3d480b3a717f00f9", null ],
+    [ "triggersem", "structPROCESSINFO.html#a5258139c77c4fb1ed8daf1ecb16bc507", null ],
+    [ "triggerstatus", "structPROCESSINFO.html#ab1f6ed78f8595e04d9bac6ce882d8934", null ],
+    [ "triggerstreamcnt", "structPROCESSINFO.html#af013e67ba458258997cb1cf470abb4a2", null ],
+    [ "triggerstreamID", "structPROCESSINFO.html#a2a6689e2a2aee1e1226bf4f9b9672c0c", null ],
+    [ "triggerstreaminode", "structPROCESSINFO.html#a513abf25c667345ca6f57ffc543ca665", null ],
+    [ "triggerstreamname", "structPROCESSINFO.html#adbcbe7e0c1b09fc161f65f055fdff199", null ],
+    [ "triggertimeout", "structPROCESSINFO.html#a0631395b302de0a09590318e7d409a8f", null ],
+    [ "trigggertimeoutcnt", "structPROCESSINFO.html#aa60185b5ee054f498ee299b9446cee60", null ]
 ];

@@ -1,16 +1,48 @@
 <map id="src/info/info.c" name="src/info/info.c">
-<area shape="rect" id="node21" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="800,80,957,121"/>
-<area shape="rect" id="node33" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="2030,80,2231,121"/>
-<area shape="rect" id="node34" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="2255,80,2475,121"/>
-<area shape="rect" id="node35" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="2499,80,2698,121"/>
-<area shape="rect" id="node36" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="2722,80,2923,121"/>
-<area shape="rect" id="node37" href="$info_8h_source.html" title="info/info.h" alt="" coords="2947,87,3026,114"/>
-<area shape="rect" id="node38" href="$fft_8h_source.html" title="fft/fft.h" alt="" coords="3050,87,3112,114"/>
-<area shape="rect" id="node26" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="692,169,790,196"/>
-<area shape="rect" id="node27" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="446,169,668,196"/>
-<area shape="rect" id="node28" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="629,244,733,271"/>
-<area shape="rect" id="node30" href="$processtools_8h.html" title="Command line interface. " alt="" coords="785,244,892,271"/>
-<area shape="rect" id="node31" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="1420,244,1528,271"/>
-<area shape="rect" id="node32" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="967,169,1118,196"/>
-<area shape="rect" id="node29" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="548,319,702,345"/>
+<area shape="rect" id="node1" title="Information about images." alt="" coords="1110,5,1211,32"/>
+<area shape="rect" id="node2" href="$CLIcore_8h.html" title="Command line interface." alt="" coords="717,80,874,121"/>
+<area shape="rect" id="node42" href="$cubeMatchMatrix_8h.html" title=" " alt="" coords="898,87,1031,114"/>
+<area shape="rect" id="node43" href="$cubestats_8h.html" title=" " alt="" coords="1055,87,1146,114"/>
+<area shape="rect" id="node44" href="$info_2image__stats_8h.html" title=" " alt="" coords="1170,87,1274,114"/>
+<area shape="rect" id="node45" href="$imagemon_8h.html" title=" " alt="" coords="1298,87,1391,114"/>
+<area shape="rect" id="node46" href="$improfile_8h.html" title=" " alt="" coords="1415,87,1498,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="28,423,93,449"/>
+<area shape="rect" id="node4" title=" " alt="" coords="469,423,530,449"/>
+<area shape="rect" id="node5" title=" " alt="" coords="2323,177,2385,203"/>
+<area shape="rect" id="node6" title=" " alt="" coords="117,423,185,449"/>
+<area shape="rect" id="node7" title=" " alt="" coords="554,423,618,449"/>
+<area shape="rect" id="node8" title=" " alt="" coords="642,423,733,449"/>
+<area shape="rect" id="node9" title=" " alt="" coords="757,423,855,449"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2409,177,2472,203"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2497,177,2593,203"/>
+<area shape="rect" id="node12" title=" " alt="" coords="971,423,1038,449"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2617,177,2683,203"/>
+<area shape="rect" id="node14" href="$config_8h_source.html" title=" " alt="" coords="3251,177,3319,203"/>
+<area shape="rect" id="node16" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO." alt="" coords="305,177,526,203"/>
+<area shape="rect" id="node17" href="$ImageStruct_8h.html" title="Image structure definition." alt="" coords="363,341,467,367"/>
+<area shape="rect" id="node20" href="$processtools_8h.html" title="Command line interface." alt="" coords="601,333,758,375"/>
+<area shape="rect" id="node22" href="$streamCTRL_8h.html" title="Data streams control panel." alt="" coords="22,333,179,375"/>
+<area shape="rect" id="node23" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters." alt="" coords="2141,169,2298,211"/>
+<area shape="rect" id="node15" href="$milk__config_8h_source.html" title=" " alt="" coords="3705,259,3803,285"/>
+<area shape="rect" id="node18" title=" " alt="" coords="386,423,445,449"/>
+<area shape="rect" id="node19" href="$ImageStreamIOError_8h_source.html" title=" " alt="" coords="210,423,362,449"/>
+<area shape="rect" id="node21" title=" " alt="" coords="879,423,947,449"/>
+<area shape="rect" id="node24" href="$fps__add__entry_8h.html" title="add parameter entry to FPS" alt="" coords="1283,259,1396,285"/>
+<area shape="rect" id="node25" href="$fps__checkparameter_8h_source.html" title=" " alt="" coords="1420,259,1571,285"/>
+<area shape="rect" id="node26" href="$fps__connect_8h.html" title="connect to FPS" alt="" coords="1595,259,1699,285"/>
+<area shape="rect" id="node27" href="$fps__connectExternalFPS_8h.html" title="connect to external FPS" alt="" coords="1723,259,1902,285"/>
+<area shape="rect" id="node28" href="$fps__CTRLscreen_8h.html" title="FPS control TUI." alt="" coords="1927,259,2059,285"/>
+<area shape="rect" id="node29" href="$fps__disconnect_8h.html" title="Disconnect from FPS." alt="" coords="2083,259,2204,285"/>
+<area shape="rect" id="node30" href="$fps__execFPScmd_8h.html" title="Execute FPS command." alt="" coords="2228,259,2365,285"/>
+<area shape="rect" id="node31" href="$fps__FPCONFexit_8h.html" title="Exit FPS conf process." alt="" coords="2389,259,2524,285"/>
+<area shape="rect" id="node32" href="$fps__FPCONFloopstep_8h.html" title="FPS conf process loop step." alt="" coords="2549,259,2711,285"/>
+<area shape="rect" id="node33" href="$fps__FPCONFsetup_8h.html" title="FPS config setup." alt="" coords="2736,259,2881,285"/>
+<area shape="rect" id="node34" href="$fps__getFPSargs_8h.html" title="read FPS args from CLI" alt="" coords="2905,259,3032,285"/>
+<area shape="rect" id="node35" href="$fps__load_8h.html" title="Load FPS." alt="" coords="3057,259,3139,285"/>
+<area shape="rect" id="node36" href="$fps__outlog_8h.html" title="output log functions for FPS" alt="" coords="3163,259,3257,285"/>
+<area shape="rect" id="node37" href="$fps__paramvalue_8h.html" title="set and get parameter values" alt="" coords="3281,259,3406,285"/>
+<area shape="rect" id="node38" href="$fps__processinfo__entries_8h_source.html" title=" " alt="" coords="934,259,1105,285"/>
+<area shape="rect" id="node39" href="$fps__RUNexit_8h.html" title="Exit FPS run process." alt="" coords="3430,259,3539,285"/>
+<area shape="rect" id="node40" href="$fps__save2disk_8h.html" title="Save FPS content to disk." alt="" coords="3563,259,3681,285"/>
+<area shape="rect" id="node41" href="$fps__shmdirname_8h.html" title="create FPS shared memory directory name" alt="" coords="1129,259,1259,285"/>
 </map>

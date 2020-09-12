@@ -1,7 +1,7 @@
 var structIMAGE =
 [
     [ "__pad0__", "structIMAGE.html#a6573bb89fb5163c982942ac96b020bfd", null ],
-    [ "array", "structIMAGE.html#a372374cb0d2b9ee782d43337294bc622", null ],
+    [ "array", "structIMAGE.html#aa530cb661c9faad27c0e892f5e2e4887", null ],
     [ "atimearray", "structIMAGE.html#ae10ff9a5e0ce4c42663eecfafe497d30", null ],
     [ "CD", "structIMAGE.html#a87e4a923342b434dacfdead3d3949dae", null ],
     [ "CF", "structIMAGE.html#a511ca0aa5f2af1a79ee4d217abf08745", null ],
@@ -12,7 +12,7 @@ var structIMAGE =
     [ "kw", "structIMAGE.html#aeec1ba7287c93dc589e38c4b1479b967", null ],
     [ "md", "structIMAGE.html#a1c587a49713dfc64be950465ce7d5f29", null ],
     [ "memsize", "structIMAGE.html#ac8a9f8d982663546367fa6b332f28fbc", null ],
-    [ "name", "structIMAGE.html#ab141d7fe6a4c6c197f0200599f69b1f7", null ],
+    [ "name", "structIMAGE.html#a809a91905973746b27e42aa7124ec2c0", null ],
     [ "raw", "structIMAGE.html#ac6ed28d7d6fcd7e6985f1ceda85495df", null ],
     [ "semlog", "structIMAGE.html#a9862b2c9defbf6a47a982da827048ed1", null ],
     [ "semptr", "structIMAGE.html#a85b29e7531f0e07a5f68dbea97a14477", null ],
@@ -23,6 +23,7 @@ var structIMAGE =
     [ "SI32", "structIMAGE.html#a9aea8e876c7135a8d8dc170c2f58e5db", null ],
     [ "SI64", "structIMAGE.html#a1194bbd2a9ae0e1237e74f3ada485bcc", null ],
     [ "SI8", "structIMAGE.html#add68ff913d4fa1fb64a6fa214a278577", null ],
+    [ "streamproctrace", "structIMAGE.html#a2dbd39ecdecb01eb145a2daadc2106c5", null ],
     [ "UI16", "structIMAGE.html#a17ebc0b18068d1abcaba9cc77a9ea8e4", null ],
     [ "UI32", "structIMAGE.html#a92a4efbd12be9109ecef4af1d23d078a", null ],
     [ "UI64", "structIMAGE.html#a028bd26f77cfff9cb60a7378033440c1", null ],

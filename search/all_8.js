@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_5fcommand',['help_command',['../CLIcore_8c.html#a0608a0645f159671715fedd2b1795cae',1,'CLIcore.c']]]
+  ['help_5fcommand_330',['help_command',['../CLIcore__help_8h.html#a6a38f99d23d33feb25c8e515050fd5f3',1,'CLIcore_help.c']]]
 ];

@@ -21,5 +21,6 @@ var dir_68267d1309a1af8e8297ef4c3efbcdba =
     [ "psf", "dir_1d8bbc4c9e8585fb3b55cb602a75e682.html", "dir_1d8bbc4c9e8585fb3b55cb602a75e682" ],
     [ "statistic", "dir_545a73c80b83e1c7812a6808fc9654f7.html", "dir_545a73c80b83e1c7812a6808fc9654f7" ],
     [ "ZernikePolyn", "dir_79cde7c2c2a1e8c6935a72a82b7ac777.html", "dir_79cde7c2c2a1e8c6935a72a82b7ac777" ],
+    [ "config.h", "config_8h_source.html", null ],
     [ "milk_config.h", "milk__config_8h_source.html", null ]
 ];

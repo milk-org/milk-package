@@ -1,12 +1,19 @@
 <map id="DATA" name="DATA">
-<area shape="rect" id="node2" href="$structCMDARGTOKEN.html" title="CMDARGTOKEN" alt="" coords="5,95,133,121"/>
-<area shape="rect" id="node3" href="$structVARIABLE.html" title="VARIABLE" alt="" coords="157,95,245,121"/>
-<area shape="rect" id="node4" href="$structCMD.html" title="CMD" alt="" coords="269,95,323,121"/>
-<area shape="rect" id="node5" href="$structIMAGE.html" title="IMAGE structure The IMAGE structure includes : " alt="" coords="347,95,413,121"/>
-<area shape="rect" id="node6" href="$structcomplex__float.html" title="complex_float" alt="" coords="97,5,199,32"/>
-<area shape="rect" id="node7" href="$structIMAGE__METADATA.html" title="Image metadata. " alt="" coords="223,5,369,32"/>
-<area shape="rect" id="node8" href="$structIMAGE__KEYWORD.html" title="Keyword The IMAGE_KEYWORD structure includes : " alt="" coords="393,5,535,32"/>
-<area shape="rect" id="node9" href="$structcomplex__double.html" title="complex_double" alt="" coords="559,5,675,32"/>
-<area shape="rect" id="node10" href="$structPROCESSINFO.html" title="PROCESSINFO" alt="" coords="437,95,557,121"/>
-<area shape="rect" id="node11" href="$structMODULE.html" title="MODULE" alt="" coords="582,95,661,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="917,213,972,239"/>
+<area shape="rect" id="node2" href="$structCMDARGTOKEN.html" title=" " alt="" coords="635,45,763,71"/>
+<area shape="rect" id="node3" href="$structFUNCTION__PARAMETER__STRUCT.html" title=" " alt="" coords="608,96,789,137"/>
+<area shape="rect" id="node4" href="$structFUNCTION__PARAMETER.html" title=" " alt="" coords="280,45,461,71"/>
+<area shape="rect" id="node5" href="$structFUNCTION__PARAMETER__SUBINFO__FPS.html" title=" " alt="" coords="5,5,187,47"/>
+<area shape="rect" id="node6" href="$structFUNCTION__PARAMETER__SUBINFO__STREAM.html" title=" " alt="" coords="5,71,187,112"/>
+<area shape="rect" id="node7" href="$structFUNCTION__PARAMETER__STRUCT__MD.html" title=" " alt="" coords="280,96,461,137"/>
+<area shape="rect" id="node8" href="$structVARIABLE.html" title=" " alt="" coords="655,162,742,189"/>
+<area shape="rect" id="node9" href="$structCMD.html" title=" " alt="" coords="672,213,725,239"/>
+<area shape="rect" id="node10" href="$structIMAGE.html" title="IMAGE structure The IMAGE structure includes :" alt="" coords="666,263,731,290"/>
+<area shape="rect" id="node11" href="$structcomplex__float.html" title=" " alt="" coords="319,162,422,189"/>
+<area shape="rect" id="node12" href="$structIMAGE__METADATA.html" title="Image metadata." alt="" coords="300,213,441,239"/>
+<area shape="rect" id="node13" href="$structIMAGE__KEYWORD.html" title="Keyword The IMAGE_KEYWORD structure includes :" alt="" coords="299,263,442,290"/>
+<area shape="rect" id="node14" href="$structSTREAM__PROC__TRACE.html" title="STREAM_PROC_TRACE holds trigger and timing info." alt="" coords="282,314,459,341"/>
+<area shape="rect" id="node15" href="$structcomplex__double.html" title=" " alt="" coords="313,365,429,391"/>
+<area shape="rect" id="node16" href="$structPROCESSINFO.html" title=" " alt="" coords="639,314,759,341"/>
+<area shape="rect" id="node17" href="$structMODULE.html" title=" " alt="" coords="659,365,738,391"/>
 </map>

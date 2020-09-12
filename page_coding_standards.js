@@ -24,8 +24,8 @@ var page_coding_standards =
     [ "Function Parameter Structure (FPS)", "page_FunctionParameterStructure.html", [
       [ "1. Overview and background", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_Overview", null ],
       [ "2. FPS user interface", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_UserInterface", [
-        [ "2.1. Building command scripts from a `fpslist.txt` file", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_WritingFPSCMDscripts", null ],
-        [ "2.2. fpsCTRL tool", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_fpsCTRL", null ]
+        [ "2.1. Define which FPSs to enable with a <tt>fpslist.txt</tt> file", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_WritingFPSCMDscripts", null ],
+        [ "2.3. milk-fpsCTRL tool", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_fpsCTRL", null ]
       ] ],
       [ "3. Writing the CLI function (in <module>.c file)", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_WritingCLIfunc", null ],
       [ "4. Writing function prototypes (in <module>.h)", "page_FunctionParameterStructure.html#page_FunctionParameterStructure_WritingPrototypes", null ],

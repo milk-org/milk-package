@@ -1,15 +1,52 @@
 <map id="src/CommandLineInterface/CLIcore.c" name="src/CommandLineInterface/CLIcore.c">
-<area shape="rect" id="node4" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="841,95,998,136"/>
-<area shape="rect" id="node15" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="179,184,401,211"/>
-<area shape="rect" id="node41" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="3636,95,3856,136"/>
-<area shape="rect" id="node42" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="3880,95,4081,136"/>
-<area shape="rect" id="node43" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="4105,95,4304,136"/>
-<area shape="rect" id="node44" href="$calc_8h_source.html" title="CommandLineInterface\l/calc.h" alt="" coords="4329,95,4486,136"/>
-<area shape="rect" id="node45" href="$calc__bison_8h_source.html" title="CommandLineInterface\l/calc_bison.h" alt="" coords="4510,95,4667,136"/>
-<area shape="rect" id="node14" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="665,184,763,211"/>
-<area shape="rect" id="node16" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="650,259,754,285"/>
-<area shape="rect" id="node19" href="$processtools_8h.html" title="Command line interface. " alt="" coords="1065,259,1171,285"/>
-<area shape="rect" id="node20" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="180,259,288,285"/>
-<area shape="rect" id="node21" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="788,184,939,211"/>
-<area shape="rect" id="node18" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="691,333,844,360"/>
+<area shape="rect" id="node1" title="main C file" alt="" coords="2348,5,2527,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="577,363,642,389"/>
+<area shape="rect" id="node3" title=" " alt="" coords="70,191,135,218"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1686,102,1757,129"/>
+<area shape="rect" id="node5" title=" " alt="" coords="439,363,500,389"/>
+<area shape="rect" id="node6" title=" " alt="" coords="272,363,336,389"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1781,102,1857,129"/>
+<area shape="rect" id="node8" title=" " alt="" coords="846,363,914,389"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1881,102,1951,129"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1975,102,2083,129"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2107,102,2183,129"/>
+<area shape="rect" id="node12" title=" " alt="" coords="2208,102,2291,129"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2315,102,2378,129"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1275,191,1338,218"/>
+<area shape="rect" id="node15" title=" " alt="" coords="1119,363,1209,389"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2403,102,2472,129"/>
+<area shape="rect" id="node17" title=" " alt="" coords="2497,102,2575,129"/>
+<area shape="rect" id="node18" title=" " alt="" coords="2600,102,2680,129"/>
+<area shape="rect" id="node19" title=" " alt="" coords="2704,102,2763,129"/>
+<area shape="rect" id="node20" title=" " alt="" coords="2787,102,2861,129"/>
+<area shape="rect" id="node21" title=" " alt="" coords="2885,102,2968,129"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1353,363,1421,389"/>
+<area shape="rect" id="node23" title=" " alt="" coords="1564,363,1631,389"/>
+<area shape="rect" id="node24" title=" " alt="" coords="2993,102,3119,129"/>
+<area shape="rect" id="node25" title=" " alt="" coords="3143,102,3262,129"/>
+<area shape="rect" id="node26" title=" " alt="" coords="1363,191,1459,218"/>
+<area shape="rect" id="node27" title=" " alt="" coords="3287,102,3348,129"/>
+<area shape="rect" id="node28" href="$CLIcore_8h.html" title="Command line interface." alt="" coords="843,95,1000,136"/>
+<area shape="rect" id="node32" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO." alt="" coords="211,191,432,218"/>
+<area shape="rect" id="node37" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions." alt="" coords="3373,95,3593,136"/>
+<area shape="rect" id="node41" href="$COREMOD__iofits_8h_source.html" title=" " alt="" coords="3617,95,3818,136"/>
+<area shape="rect" id="node42" href="$COREMOD__arith_8h_source.html" title=" " alt="" coords="3842,95,4041,136"/>
+<area shape="rect" id="node43" href="$CLIcore__UI_8h.html" title="User input." alt="" coords="4065,95,4223,136"/>
+<area shape="rect" id="node44" href="$CLIcore__checkargs_8h.html" title="Check CLI command line arguments." alt="" coords="4247,95,4404,136"/>
+<area shape="rect" id="node45" href="$CLIcore__datainit_8h.html" title="data structure init" alt="" coords="4428,95,4585,136"/>
+<area shape="rect" id="node46" href="$CLIcore__help_8h.html" title="help functions" alt="" coords="4609,95,4767,136"/>
+<area shape="rect" id="node47" href="$CLIcore__memory_8h.html" title="memory functions" alt="" coords="4791,95,4948,136"/>
+<area shape="rect" id="node48" href="$CLIcore__modules_8h.html" title="Modules functions." alt="" coords="4972,95,5129,136"/>
+<area shape="rect" id="node49" href="$CLIcore__setSHMdir_8h.html" title="set shared memory directory" alt="" coords="5153,95,5311,136"/>
+<area shape="rect" id="node50" href="$CLIcore__signals_8h.html" title="signals and debugging" alt="" coords="5335,95,5492,136"/>
+<area shape="rect" id="node29" title=" " alt="" coords="947,363,1045,389"/>
+<area shape="rect" id="node30" title=" " alt="" coords="1086,191,1149,218"/>
+<area shape="rect" id="node31" href="$config_8h_source.html" title=" " alt="" coords="558,191,626,218"/>
+<area shape="rect" id="node33" href="$ImageStruct_8h.html" title="Image structure definition." alt="" coords="557,281,661,307"/>
+<area shape="rect" id="node34" href="$processtools_8h.html" title="Command line interface." alt="" coords="917,273,1075,315"/>
+<area shape="rect" id="node35" href="$streamCTRL_8h.html" title="Data streams control panel." alt="" coords="685,273,843,315"/>
+<area shape="rect" id="node36" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters." alt="" coords="651,184,808,225"/>
+<area shape="rect" id="node38" href="$logshmim__types_8h.html" title=" " alt="" coords="3150,184,3357,225"/>
+<area shape="rect" id="node39" href="$clearall_8h.html" title=" " alt="" coords="3381,191,3584,218"/>
+<area shape="rect" id="node40" href="$compute__image__memory_8h.html" title=" " alt="" coords="3608,184,3808,225"/>
 </map>

@@ -1,14 +1,14 @@
 var structBITMAPINFOHEADER =
 [
-    [ "biBitCount", "structBITMAPINFOHEADER.html#a9538a3f40f9f57cd5b82b698e1855015", null ],
-    [ "biClrImportant", "structBITMAPINFOHEADER.html#a5ef05c009e392db1cc9c3d41292928c8", null ],
-    [ "biClrUsed", "structBITMAPINFOHEADER.html#a4d48257999bea13ade311dda1448f2d0", null ],
-    [ "biCompression", "structBITMAPINFOHEADER.html#a43ec6e8e10f0c7fdf9bc9c892a22a028", null ],
-    [ "biHeight", "structBITMAPINFOHEADER.html#a9dddc8e5104f49e7feec78835bf7afbb", null ],
-    [ "biPlanes", "structBITMAPINFOHEADER.html#a77085881f424179a3c4ceaa728e1a81f", null ],
-    [ "biSize", "structBITMAPINFOHEADER.html#a7e3eb39ca20f49ccb7d7d5d1d3cfa6e7", null ],
-    [ "biSizeImage", "structBITMAPINFOHEADER.html#afcbafaf232b04775a6c4762d6c79ba00", null ],
-    [ "biWidth", "structBITMAPINFOHEADER.html#ac490e64690c13c3b425d21eb25043cca", null ],
-    [ "biXPelsPerMeter", "structBITMAPINFOHEADER.html#a2b93177924fd3803a050bf3daaf23ee4", null ],
-    [ "biYPelsPerMeter", "structBITMAPINFOHEADER.html#ad43bb286a1a2067b45d1c9b701c384a7", null ]
+    [ "biBitCount", "structBITMAPINFOHEADER.html#a47691b5f4c0134052b6d3a80d465f2cf", null ],
+    [ "biClrImportant", "structBITMAPINFOHEADER.html#ae7adc2ed23322a8871819f2a745c7208", null ],
+    [ "biClrUsed", "structBITMAPINFOHEADER.html#ae5fa6e54097b9f16ada07e7295f0b64a", null ],
+    [ "biCompression", "structBITMAPINFOHEADER.html#a306b18cffc38667d762180194ad350b1", null ],
+    [ "biHeight", "structBITMAPINFOHEADER.html#a6139ba5f96cde2500fc11765b3fac549", null ],
+    [ "biPlanes", "structBITMAPINFOHEADER.html#a4cef07f479171ad423347bd2f2b21d3a", null ],
+    [ "biSize", "structBITMAPINFOHEADER.html#a062630d1d627313aae6cc583d5528406", null ],
+    [ "biSizeImage", "structBITMAPINFOHEADER.html#a09873a2fd9d100b1717a42062b3c3268", null ],
+    [ "biWidth", "structBITMAPINFOHEADER.html#a053b8b04efa1ec50cedaa7e51d897286", null ],
+    [ "biXPelsPerMeter", "structBITMAPINFOHEADER.html#a72af8d43031875294501c8888345e3a2", null ],
+    [ "biYPelsPerMeter", "structBITMAPINFOHEADER.html#a745b3a2922b4609efe72f829c7c8621e", null ]
 ];

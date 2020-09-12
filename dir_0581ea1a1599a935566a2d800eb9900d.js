@@ -1,5 +1,26 @@
 var dir_0581ea1a1599a935566a2d800eb9900d =
 [
+    [ "CR2toFITS.c", "CR2toFITS_8c.html", "CR2toFITS_8c" ],
+    [ "CR2toFITS.h", "CR2toFITS_8h.html", "CR2toFITS_8h" ],
+    [ "CR2tomov.c", "CR2tomov_8c.html", "CR2tomov_8c" ],
+    [ "CR2tomov.h", "CR2tomov_8h.html", "CR2tomov_8h" ],
+    [ "extract_RGGBchan.c", "extract__RGGBchan_8c.html", "extract__RGGBchan_8c" ],
+    [ "extract_RGGBchan.h", "extract__RGGBchan_8h.html", "extract__RGGBchan_8h" ],
+    [ "FITS_to_floatbin_lock.c", "FITS__to__floatbin__lock_8c.html", "FITS__to__floatbin__lock_8c" ],
+    [ "FITS_to_floatbin_lock.h", "FITS__to__floatbin__lock_8h.html", "FITS__to__floatbin__lock_8h" ],
+    [ "FITS_to_ushortintbin_lock.c", "FITS__to__ushortintbin__lock_8c.html", "FITS__to__ushortintbin__lock_8c" ],
+    [ "FITS_to_ushortintbin_lock.h", "FITS__to__ushortintbin__lock_8h.html", "FITS__to__ushortintbin__lock_8h" ],
+    [ "FITStorgbFITSsimple.h", "FITStorgbFITSsimple_8h.html", "FITStorgbFITSsimple_8h" ],
     [ "image_format.c", "image__format_8c.html", "image__format_8c" ],
-    [ "image_format.h", "image__format_8h_source.html", null ]
+    [ "image_format.h", "image__format_8h_source.html", null ],
+    [ "imtoASCII.c", "imtoASCII_8c.html", "imtoASCII_8c" ],
+    [ "imtoASCII.h", "imtoASCII_8h.html", "imtoASCII_8h" ],
+    [ "loadCR2toFITSRGB.c", "loadCR2toFITSRGB_8c.html", "loadCR2toFITSRGB_8c" ],
+    [ "loadCR2toFITSRGB.h", "loadCR2toFITSRGB_8h.html", "loadCR2toFITSRGB_8h" ],
+    [ "read_binary32f.c", "read__binary32f_8c.html", "read__binary32f_8c" ],
+    [ "read_binary32f.h", "read__binary32f_8h.html", "read__binary32f_8h" ],
+    [ "readPGM.c", "readPGM_8c.html", "readPGM_8c" ],
+    [ "readPGM.h", "readPGM_8h.html", "readPGM_8h" ],
+    [ "writeBMP.c", "writeBMP_8c.html", "writeBMP_8c" ],
+    [ "writeBMP.h", "writeBMP_8h.html", "writeBMP_8h" ]
 ];

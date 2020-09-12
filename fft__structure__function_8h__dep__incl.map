@@ -1,3 +1,7 @@
 <map id="src/fft/fft_structure_function.h" name="src/fft/fft_structure_function.h">
-<area shape="rect" id="node2" href="$fft_8c.html" title="Fourier Transform. " alt="" coords="29,95,112,121"/>
+<area shape="rect" id="node1" title=" " alt="" coords="230,5,361,47"/>
+<area shape="rect" id="node2" href="$fft_8h_source.html" title=" " alt="" coords="254,95,337,121"/>
+<area shape="rect" id="node3" href="$fft__autocorrelation_8c.html" title="Compute autocorrelation using FFT." alt="" coords="5,177,180,203"/>
+<area shape="rect" id="node4" href="$fconvolve_8c.html" title=" " alt="" coords="204,177,387,203"/>
+<area shape="rect" id="node5" href="$img__reduce_8c.html" title="Image analysis functions." alt="" coords="411,169,547,211"/>
 </map>

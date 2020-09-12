@@ -1,18 +1,52 @@
 <map id="src/linARfilterPred/linARfilterPred.c" name="src/linARfilterPred/linARfilterPred.c">
-<area shape="rect" id="node23" href="$CLIcore_8h.html" title="Command line interface. " alt="" coords="1957,95,2114,136"/>
-<area shape="rect" id="node37" href="$COREMOD__tools_8h_source.html" title="COREMOD_tools/COREMOD\l_tools.h" alt="" coords="2190,95,2391,136"/>
-<area shape="rect" id="node38" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions. " alt="" coords="2415,95,2635,136"/>
-<area shape="rect" id="node39" href="$COREMOD__arith_8h_source.html" title="COREMOD_arith/COREMOD\l_arith.h" alt="" coords="2659,95,2858,136"/>
-<area shape="rect" id="node40" href="$COREMOD__iofits_8h_source.html" title="COREMOD_iofits/COREMOD\l_iofits.h" alt="" coords="2882,95,3083,136"/>
-<area shape="rect" id="node41" href="$statistic_8h.html" title="Function prototypes for statistic module. " alt="" coords="3107,102,3236,129"/>
-<area shape="rect" id="node42" href="$info_8h_source.html" title="info/info.h" alt="" coords="3260,102,3339,129"/>
-<area shape="rect" id="node43" href="$linopt__imtools_8h.html" title="Function prototypes for linear algebra tools. " alt="" coords="3363,95,3500,136"/>
-<area shape="rect" id="node44" href="$linARfilterPred_8h.html" title="Function prototypes for linear autoregressive prediction. " alt="" coords="3524,95,3691,136"/>
-<area shape="rect" id="node30" href="$milk__config_8h_source.html" title="milk_config.h" alt="" coords="1052,184,1150,211"/>
-<area shape="rect" id="node31" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO. " alt="" coords="1401,184,1622,211"/>
-<area shape="rect" id="node32" href="$ImageStruct_8h.html" title="Image structure definition. " alt="" coords="1533,259,1637,285"/>
-<area shape="rect" id="node34" href="$processtools_8h.html" title="Command line interface. " alt="" coords="1756,259,1862,285"/>
-<area shape="rect" id="node35" href="$streamCTRL_8h.html" title="Data streams control panel. " alt="" coords="1988,259,2096,285"/>
-<area shape="rect" id="node36" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters. " alt="" coords="1226,184,1376,211"/>
-<area shape="rect" id="node33" href="$ImageStreamIOError_8h_source.html" title="ImageStreamIOError.h" alt="" coords="1464,333,1618,360"/>
+<area shape="rect" id="node1" title="linear auto&#45;regressive predictive filter" alt="" coords="2481,5,2609,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="519,363,585,389"/>
+<area shape="rect" id="node3" title=" " alt="" coords="138,191,203,218"/>
+<area shape="rect" id="node4" title=" " alt="" coords="676,363,737,389"/>
+<area shape="rect" id="node5" title=" " alt="" coords="1753,102,1818,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1842,102,1913,129"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1937,102,1999,129"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1345,363,1409,389"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1089,363,1186,389"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1513,363,1581,389"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2024,102,2093,129"/>
+<area shape="rect" id="node12" title=" " alt="" coords="2117,102,2197,129"/>
+<area shape="rect" id="node13" title=" " alt="" coords="2222,102,2349,129"/>
+<area shape="rect" id="node14" title=" " alt="" coords="2373,102,2491,129"/>
+<area shape="rect" id="node15" title=" " alt="" coords="2515,102,2576,129"/>
+<area shape="rect" id="node16" title=" " alt="" coords="2601,102,2714,129"/>
+<area shape="rect" id="node17" title=" " alt="" coords="2739,102,2853,129"/>
+<area shape="rect" id="node18" title=" " alt="" coords="2877,102,2984,129"/>
+<area shape="rect" id="node19" title=" " alt="" coords="3008,102,3117,129"/>
+<area shape="rect" id="node20" title=" " alt="" coords="3141,102,3251,129"/>
+<area shape="rect" id="node21" title=" " alt="" coords="3275,102,3378,129"/>
+<area shape="rect" id="node22" title=" " alt="" coords="1645,363,1704,389"/>
+<area shape="rect" id="node23" href="$CLIcore_8h.html" title="Command line interface." alt="" coords="716,95,873,136"/>
+<area shape="rect" id="node36" href="$timeutils_8h.html" title=" " alt="" coords="3403,95,3560,136"/>
+<area shape="rect" id="node37" href="$COREMOD__tools_8h_source.html" title=" " alt="" coords="3585,95,3786,136"/>
+<area shape="rect" id="node44" href="$COREMOD__memory_8h.html" title="Function prototypes for milk memory functions." alt="" coords="3810,95,4030,136"/>
+<area shape="rect" id="node45" href="$COREMOD__arith_8h_source.html" title=" " alt="" coords="4054,95,4253,136"/>
+<area shape="rect" id="node46" href="$COREMOD__iofits_8h_source.html" title=" " alt="" coords="4277,95,4478,136"/>
+<area shape="rect" id="node47" href="$statistic_8h.html" title="Function prototypes for statistic module." alt="" coords="4502,102,4631,129"/>
+<area shape="rect" id="node48" href="$info_8h_source.html" title=" " alt="" coords="4655,102,4734,129"/>
+<area shape="rect" id="node49" href="$linopt__imtools_8h.html" title="Function prototypes for linear algebra tools." alt="" coords="4758,95,4895,136"/>
+<area shape="rect" id="node50" href="$linARfilterPred_8h.html" title="Function prototypes for linear autoregressive prediction." alt="" coords="4919,95,5086,136"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1205,191,1267,218"/>
+<area shape="rect" id="node25" title=" " alt="" coords="782,363,850,389"/>
+<area shape="rect" id="node26" title=" " alt="" coords="944,363,1035,389"/>
+<area shape="rect" id="node27" title=" " alt="" coords="1291,191,1354,218"/>
+<area shape="rect" id="node28" title=" " alt="" coords="1379,191,1475,218"/>
+<area shape="rect" id="node29" title=" " alt="" coords="319,363,385,389"/>
+<area shape="rect" id="node30" href="$config_8h_source.html" title=" " alt="" coords="279,191,347,218"/>
+<area shape="rect" id="node31" href="$ImageStreamIO_8h.html" title="Function prototypes for ImageStreamIO." alt="" coords="857,191,1079,218"/>
+<area shape="rect" id="node32" href="$ImageStruct_8h.html" title="Image structure definition." alt="" coords="937,281,1041,307"/>
+<area shape="rect" id="node33" href="$processtools_8h.html" title="Command line interface." alt="" coords="756,273,913,315"/>
+<area shape="rect" id="node34" href="$streamCTRL_8h.html" title="Data streams control panel." alt="" coords="473,273,631,315"/>
+<area shape="rect" id="node35" href="$function__parameters_8h.html" title="Tools to help expose and control function parameters." alt="" coords="372,184,529,225"/>
+<area shape="rect" id="node38" href="$fileutils_8h.html" title=" " alt="" coords="4165,191,4347,218"/>
+<area shape="rect" id="node39" href="$imdisplay3d_8h.html" title=" " alt="" coords="3023,191,3233,218"/>
+<area shape="rect" id="node40" href="$logfunc_8h.html" title=" " alt="" coords="3257,191,3441,218"/>
+<area shape="rect" id="node41" href="$linregress_8h.html" title=" " alt="" coords="3466,191,3665,218"/>
+<area shape="rect" id="node42" href="$mvprocCPUset_8h.html" title=" " alt="" coords="3689,191,3921,218"/>
+<area shape="rect" id="node43" href="$quicksort_8h.html" title=" " alt="" coords="3945,191,4140,218"/>
 </map>

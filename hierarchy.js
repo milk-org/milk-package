@@ -7,8 +7,10 @@ var hierarchy =
     [ "CMDARGTOKEN", "structCMDARGTOKEN.html", null ],
     [ "complex_double", "structcomplex__double.html", null ],
     [ "complex_float", "structcomplex__float.html", null ],
+    [ "COREMOD_IOFITS_DATA", "structCOREMOD__IOFITS__DATA.html", null ],
+    [ "CUDACOMP_THDATA", "structCUDACOMP__THDATA.html", null ],
     [ "DATA", "structDATA.html", null ],
-    [ "FPSCTRL_GUIVARS", "structFPSCTRL__GUIVARS.html", null ],
+    [ "FPSCTRL_PROCESS_VARS", "structFPSCTRL__PROCESS__VARS.html", null ],
     [ "FPSCTRL_TASK_ENTRY", "structFPSCTRL__TASK__ENTRY.html", null ],
     [ "FPSCTRL_TASK_QUEUE", "structFPSCTRL__TASK__QUEUE.html", null ],
     [ "FUNCTION_PARAMETER", "structFUNCTION__PARAMETER.html", null ],
@@ -34,7 +36,7 @@ var hierarchy =
     [ "PROCINFOPROC", "structPROCINFOPROC.html", null ],
     [ "pyPROCESSINFO", "classpyPROCESSINFO.html", null ],
     [ "res_node", "structres__node.html", null ],
-    [ "sImage", "structsImage.html", null ],
+    [ "STREAM_PROC_TRACE", "structSTREAM__PROC__TRACE.html", null ],
     [ "streamCTRLarg_struct", "structstreamCTRLarg__struct.html", null ],
     [ "STREAMINFO", "structSTREAMINFO.html", null ],
     [ "STREAMINFOPROC", "structSTREAMINFOPROC.html", null ],
@@ -50,11 +52,9 @@ var hierarchy =
     [ "YYSTYPE", "unionYYSTYPE.html", null ],
     [ "ZERNIKE", "structZERNIKE.html", null ],
     [ "build_ext", null, [
-      [ "setup.CMakeBuildExt", "classsetup_1_1CMakeBuildExt.html", null ],
       [ "setup.CMakeBuildExt", "classsetup_1_1CMakeBuildExt.html", null ]
     ] ],
     [ "Extension", null, [
-      [ "setup.CMakeExtension", "classsetup_1_1CMakeExtension.html", null ],
       [ "setup.CMakeExtension", "classsetup_1_1CMakeExtension.html", null ]
     ] ]
 ];

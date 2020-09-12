@@ -1,5 +1,4 @@
 <map id="src/cudacomp/cudacomp.h" name="src/cudacomp/cudacomp.h">
-<area shape="rect" id="node2" href="$cudacomp_8c.html" title="CUDA functions wrapper. " alt="" coords="5,87,184,114"/>
-<area shape="rect" id="node3" href="$cudacomp__MVMextractModesLoop_8c.html" title="CUDA functions wrapper. " alt="" coords="208,80,387,121"/>
-<area shape="rect" id="node4" href="$linopt__imtools_8c.html" title="linear optimization tools " alt="" coords="411,80,535,121"/>
+<area shape="rect" id="node1" title="Function prototypes for CUDA/MAGMA wrapper." alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$linopt__imtools_8c.html" title="linear optimization tools" alt="" coords="33,80,157,121"/>
 </map>

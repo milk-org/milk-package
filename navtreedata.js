@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var NAVTREE =
 [
   [ "milk", "index.html", [
@@ -26,10 +48,10 @@ var NAVTREE =
         [ "1.3. A simple example", "page_LoadingModules.html#page_LoadingModules_overview_example", null ]
       ] ],
       [ "2. Linking Modules to CLI", "page_LoadingModules.html#page_LoadingModules_linking", [
-        [ "2.1. Automatic linking from `./lib/` directory", "page_LoadingModules.html#page_LoadingModules_linking_libdir", null ],
+        [ "2.1. Automatic linking from <tt>./lib/</tt> directory", "page_LoadingModules.html#page_LoadingModules_linking_libdir", null ],
         [ "2.2. Linking module from within CLI with soload", "page_LoadingModules.html#page_LoadingModules_linking_soload", null ],
         [ "2.3. Linking module from within CLI with mload", "page_LoadingModules.html#page_LoadingModules_linking_mload", null ],
-        [ "2.4. Using environment variable `CLI_ADD_LIBS` to link shared objects", "page_LoadingModules.html#page_LoadingModules_linking_envvar", null ]
+        [ "2.4. Using environment variable <tt>CLI_ADD_LIBS</tt> to link shared objects", "page_LoadingModules.html#page_LoadingModules_linking_envvar", null ]
       ] ],
       [ "3. Writing and Compiling Modules", "page_LoadingModules.html#page_LoadingModules_compiling", [
         [ "3.1. Principles", "page_LoadingModules.html#page_LoadingModules_compiling_principles", null ],
@@ -62,8 +84,8 @@ var NAVTREE =
         [ "Variables", "functions_vars.html", null ]
       ] ]
     ] ],
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", "globals_func" ],
@@ -77,16 +99,21 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"COREMOD__arith_8c.html#a6c3acb9ac0e5a0a1cd31925cffc9776e",
-"COREMOD__memory_8c.html#a78dc9e7339180cc4abdb28b899b314b3",
-"COREMOD__tools_8h_source.html",
-"fft_8c.html#ab3fe145c0484fc3b208e8959ac572e40",
-"function__parameters_8h.html#a765f1bd2ed775058283fdc962f5bb227",
-"image__basic_8c.html#ae9e7602a9890b09aad6dca8855cd3210",
-"linopt__imtools_8c.html#a05e6847679b5d1fedf8b5f13bd37417c",
-"statistic_8h.html#ab7ac1e1d30224f2ad6b02a2bbc575153",
-"structIMAGE.html#a17ebc0b18068d1abcaba9cc77a9ea8e4",
-"structSTREAMINFOPROC.html#a2dfe5523fe51cb07a3985eddcd35f74a"
+"DFT_8c.html#a3d198dfb1182aa3fefe58406bf07f344",
+"TUItools_8h.html#a8a6134b85d5c3841a5d3b156d296532f",
+"dofft_8c.html#a775d5d931603cc3830bfb7b6fc6afa94",
+"fps__create_8c.html#a62492b6930b45caeb9c878eca93367f5",
+"function__parameters_8h.html#aadcefa23d09955abdfc1f13a3c8b2e29",
+"image__arith____im____im_8c.html#abf77e996dbbb93038cb2446133132ed2",
+"image__copy_8c.html#a90d2af44593fd41a8568ee71722a9591",
+"improfile_8h.html#a59d4b1b57b1bba5cc630fe3531f8a400",
+"loadfits_8c.html#af227bf0c215a4bc98e55abf236c806ef",
+"permut_8c.html#a1055aac2cc54446250d0a8a9b6f8090e",
+"savefits_8c.html#a93cf61e1a3d4fe131beaa48568e542e8",
+"stream__updateloop_8c.html#a1ed1efb80b24e62751dce49267d3e607",
+"structFUNCTION__PARAMETER__STRUCT__MD.html",
+"structPROCESSINFOLIST.html#ae92db7280bd061f05b6eb047513568be",
+"writeBMP_8c.html#a03654fe4f034ee9d5539ecdb26dab5e2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

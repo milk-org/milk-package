@@ -1,9 +1,11 @@
 <map id="streamCTRLarg_struct" name="streamCTRLarg_struct">
-<area shape="rect" id="node2" href="$structIMAGE.html" title="IMAGE structure The IMAGE structure includes : " alt="" coords="340,95,405,121"/>
-<area shape="rect" id="node3" href="$structcomplex__float.html" title="complex_float" alt="" coords="5,5,108,32"/>
-<area shape="rect" id="node4" href="$structIMAGE__METADATA.html" title="Image metadata. " alt="" coords="132,5,277,32"/>
-<area shape="rect" id="node5" href="$structIMAGE__KEYWORD.html" title="Keyword The IMAGE_KEYWORD structure includes : " alt="" coords="301,5,444,32"/>
-<area shape="rect" id="node6" href="$structcomplex__double.html" title="complex_double" alt="" coords="468,5,584,32"/>
-<area shape="rect" id="node7" href="$structSTREAMINFOPROC.html" title="STREAMINFOPROC" alt="" coords="509,95,658,121"/>
-<area shape="rect" id="node8" href="$structSTREAMINFO.html" title="STREAMINFO" alt="" coords="608,5,719,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="617,183,772,209"/>
+<area shape="rect" id="node2" href="$structIMAGE.html" title="IMAGE structure The IMAGE structure includes :" alt="" coords="371,132,437,159"/>
+<area shape="rect" id="node3" href="$structcomplex__float.html" title=" " alt="" coords="43,5,145,32"/>
+<area shape="rect" id="node4" href="$structIMAGE__METADATA.html" title="Image metadata." alt="" coords="23,56,165,83"/>
+<area shape="rect" id="node5" href="$structIMAGE__KEYWORD.html" title="Keyword The IMAGE_KEYWORD structure includes :" alt="" coords="23,107,165,133"/>
+<area shape="rect" id="node6" href="$structSTREAM__PROC__TRACE.html" title="STREAM_PROC_TRACE holds trigger and timing info." alt="" coords="5,157,183,184"/>
+<area shape="rect" id="node7" href="$structcomplex__double.html" title=" " alt="" coords="36,208,152,235"/>
+<area shape="rect" id="node8" href="$structSTREAMINFOPROC.html" title=" " alt="" coords="329,208,479,235"/>
+<area shape="rect" id="node9" href="$structSTREAMINFO.html" title=" " alt="" coords="39,259,149,285"/>
 </map>

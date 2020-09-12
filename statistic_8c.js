@@ -1,7 +1,6 @@
 var statistic_8c =
 [
     [ "BIRCHCF", "structBIRCHCF.html", "structBIRCHCF" ],
-    [ "MODULE_APPLICATION", "statistic_8c.html#a205b3ef5e31a32b6795f01c3d87ba844", null ],
     [ "MODULE_DESCRIPTION", "statistic_8c.html#a5b62e7184a709de637eae6370501dac3", null ],
     [ "MODULE_SHORTNAME_DEFAULT", "statistic_8c.html#a5b10534f5a2bc061d385478136c531be", null ],
     [ "better_poisson", "statistic_8c.html#a617f9bb1c07595bb869077d862cf4c73", null ],

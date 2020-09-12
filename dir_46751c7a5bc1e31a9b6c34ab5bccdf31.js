@@ -1,5 +1,25 @@
 var dir_46751c7a5bc1e31a9b6c34ab5bccdf31 =
 [
+    [ "breakcube.c", "breakcube_8c.html", "breakcube_8c" ],
+    [ "breakcube.h", "breakcube_8h.html", "breakcube_8h" ],
+    [ "check_fitsio_status.h", "check__fitsio__status_8h_source.html", null ],
     [ "COREMOD_iofits.c", "COREMOD__iofits_8c.html", "COREMOD__iofits_8c" ],
-    [ "COREMOD_iofits.h", "COREMOD__iofits_8h_source.html", null ]
+    [ "COREMOD_iofits.h", "COREMOD__iofits_8h_source.html", null ],
+    [ "COREMOD_iofits_common.h", "COREMOD__iofits__common_8h_source.html", null ],
+    [ "data_type_code.c", "data__type__code_8c.html", "data__type__code_8c" ],
+    [ "data_type_code.h", "data__type__code_8h.html", "data__type__code_8h" ],
+    [ "file_exists.c", "file__exists_8c.html", "file__exists_8c" ],
+    [ "file_exists.h", "file__exists_8h.html", "file__exists_8h" ],
+    [ "images2cube.c", "images2cube_8c.html", "images2cube_8c" ],
+    [ "images2cube.h", "images2cube_8h.html", "images2cube_8h" ],
+    [ "is_fits_file.c", "is__fits__file_8c.html", "is__fits__file_8c" ],
+    [ "is_fits_file.h", "is__fits__file_8h.html", "is__fits__file_8h" ],
+    [ "loadfits.c", "loadfits_8c.html", "loadfits_8c" ],
+    [ "loadfits.h", "loadfits_8h.html", "loadfits_8h" ],
+    [ "loadmemstream.c", "loadmemstream_8c.html", "loadmemstream_8c" ],
+    [ "loadmemstream.h", "loadmemstream_8h.html", "loadmemstream_8h" ],
+    [ "read_keyword.c", "read__keyword_8c.html", "read__keyword_8c" ],
+    [ "read_keyword.h", "read__keyword_8h.html", "read__keyword_8h" ],
+    [ "savefits.c", "savefits_8c.html", "savefits_8c" ],
+    [ "savefits.h", "savefits_8h.html", "savefits_8h" ]
 ];

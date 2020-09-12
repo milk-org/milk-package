@@ -1,8 +1,8 @@
 var structBITMAPFILEHEADER =
 [
-    [ "bfOffBits", "structBITMAPFILEHEADER.html#a7426a16a6cb6a65bd22b3696376d18dc", null ],
-    [ "bfReserved1", "structBITMAPFILEHEADER.html#ac01d6a25f6fde8d2427bbee61e03b9ab", null ],
-    [ "bfReserved2", "structBITMAPFILEHEADER.html#a5e2a8f1c1a537c5570dfdb8d875edc90", null ],
-    [ "bfSize", "structBITMAPFILEHEADER.html#a5b7969496b8a8a477ce2f9f6a602c556", null ],
-    [ "bfType", "structBITMAPFILEHEADER.html#a37ad25a2c6577794f1e5376b45d5a7de", null ]
+    [ "bfOffBits", "structBITMAPFILEHEADER.html#abf9428ac96d16e5e65b9ab5d3465a0af", null ],
+    [ "bfReserved1", "structBITMAPFILEHEADER.html#aa68cd7c68a8c499985dcc740014c3e53", null ],
+    [ "bfReserved2", "structBITMAPFILEHEADER.html#a177ef160618144a048c513d1bb41448b", null ],
+    [ "bfSize", "structBITMAPFILEHEADER.html#a56dd5f349387ec5b5e5f83c7a446d7ac", null ],
+    [ "bfType", "structBITMAPFILEHEADER.html#ad7009278ed4654fa9a67899210174232", null ]
 ];
