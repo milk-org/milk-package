@@ -133,7 +133,7 @@ endforeach()
 
 FOREACH(mname ${EXTRAMODULES})
 string(REPLACE "_" "" mname1 "${mname}")
-if(IS_DIRECTORY "src/${mname}")
+if(IS_DIRECTORY "../src/${mname}")
 list(APPEND libsrcdir src/${mname})
 list(APPEND libname ${PROJECT_NAME}${mname1})
 message("======= adding EXTRA module  ${mname}")
