@@ -126,6 +126,25 @@ endforeach()
 
 
 
+#
+# Add extra optional modules (list provided by user)
+# separator character ";"
+#
+
+FOREACH(mname ${EXTRAMODULES})
+string(REPLACE "_" "" mname1 "${mname}")
+if(IS_DIRECTORY "src/${mname}")
+list(APPEND libsrcdir src/${mname})
+list(APPEND libname ${PROJECT_NAME}${mname1})
+message("======= adding EXTRA module  ${mname}")
+else()
+message("Directory  src/${mname}  not found")
+endif()
+ENDFOREACH()
+
+
+
+
 
 # =======================================
 # BUILD TYPE
@@ -257,15 +276,6 @@ add_subdirectory ( "${lsrcdir}" )
 endforeach()
 
 
-#
-# Add extra optional modules (list provided by user)
-# separator character ";"
-#
-
-FOREACH(extramodule ${EXTRAMODULES})
-add_subdirectory ( "src/${extramodule}" )
-ENDFOREACH()
-
 
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
@@ -307,7 +317,6 @@ endforeach()
 
 
 target_link_libraries (milk PUBLIC
-${EXTRAMODULES}
 m
 readline
 ncurses
