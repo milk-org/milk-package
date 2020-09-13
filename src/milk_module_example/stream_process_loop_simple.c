@@ -18,6 +18,85 @@
 #include "CommandLineInterface/timeutils.h"
 
 
+
+
+// ==========================================
+// Forward declaration(s)
+// ==========================================
+
+
+errno_t milk_module_example__stream_process_loop_simple(
+    char *streamA_name,
+    char *streamB_name,
+    long loopNBiter,
+    int semtrig
+);
+
+
+
+
+// ==========================================
+// Command line interface wrapper function(s)
+// ==========================================
+
+
+
+static errno_t milk_module_example__stream_process_loop_simple__cli()
+{
+    if(0
+            + CLI_checkarg(1, CLIARG_IMG)
+            + CLI_checkarg(2, CLIARG_IMG)
+            + CLI_checkarg(3, CLIARG_LONG)
+            + CLI_checkarg(4, CLIARG_LONG)
+            == 0)
+    {
+        milk_module_example__stream_process_loop_simple(
+            data.cmdargtoken[1].val.string,
+            data.cmdargtoken[2].val.string,
+            data.cmdargtoken[3].val.numl,
+            data.cmdargtoken[4].val.numl);
+
+        return CLICMD_SUCCESS;
+    }
+    else
+    {
+        return CLICMD_INVALID_ARG;
+    }
+}
+
+
+
+
+
+
+// ==========================================
+// Register CLI command(s)
+// ==========================================
+
+
+errno_t stream_process_loop_simple_addCLIcmd()
+{
+
+    RegisterCLIcommand(
+        "streamloop",                                                                    
+        __FILE__,                                                                     
+        milk_module_example__stream_process_loop_simple__cli,
+        "simple stream loop",
+        "<streamA> <stramB> <NBiter>",                  
+        "streamloop imA imB 10000 2",
+        "milk_module_example__stream_process_loop_simple(char *streamA_name, char *streamB_name, long loopNBiter, int semtrig)");
+
+    return RETURN_SUCCESS;
+}
+
+
+
+
+
+
+
+
+
 /**
  * @brief simple stream processing
  *

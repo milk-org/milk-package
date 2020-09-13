@@ -11,5 +11,7 @@
 #ifndef _MILK_MODULE_EXAMPLE_H
 #define _MILK_MODULE_EXAMPLE_H
 
+#include "create_example_image.h"
+#include "stream_process_loop_simple.h"
 
 #endif
