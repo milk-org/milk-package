@@ -1,36 +1,40 @@
 # Example, run from _build directory :
 #
-#
-# 
-# cmake ..
-# cmake .. -DCMAKE_INSTALL_PREFIX=../_install
+# > cmake ..
+# > cmake .. -DCMAKE_INSTALL_PREFIX=../_install
 #
 #
 # Don't make this the default version on the system
-# ================================
-# cmake .. -DINSTALLMAKEDEFAULT=OFF
+# ======================================================================
+# > cmake .. -DINSTALLMAKEDEFAULT=OFF
+#
+#
+# ADDING MODULES
+# ======================================================================
+# > cmake .. -DEXTRAMODULES="milk_module_example;mycustommodule"
+#
 #
 # USING GPU libraries
-# ===============================
-# cmake .. -DUSE_MAGMA=ON
+# ======================================================================
+# > cmake .. -DUSE_MAGMA=ON
 #
 #
 # BUILD TYPE
-# ===============================
+# ======================================================================
 # Debug build type turns off optimization
-# cmake -DCMAKE_BUILD_TYPE=Debug ..
-# cmake -DCMAKE_BUILD_TYPE=Debug .. -DUSE_MAGMA=ON
+# > cmake -DCMAKE_BUILD_TYPE=Debug ..
+# > cmake -DCMAKE_BUILD_TYPE=Debug .. -DUSE_MAGMA=ON
 #
 # Release build type turns on optimization flags
-# cmake -DCMAKE_BUILD_TYPE=Release ..
+# > cmake -DCMAKE_BUILD_TYPE=Release ..
 #
 #
 #
 # COMPILING
-# ================================
-# make clean
-# make
-# sudo make install
+# ======================================================================
+# > make clean
+# > make
+# > sudo make install
 #
 #
 #

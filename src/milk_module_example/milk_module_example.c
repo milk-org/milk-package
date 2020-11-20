@@ -4,7 +4,16 @@
  *
  * milk module source code template\n
  * Demonstates how to add modules to milk and connect functions.\n
+ * 
+ * 
+ * To compile with module :
+ * > cd _build
+ * > cmake .. -DEXTRAMODULES="milk_module_example" -DINSTALLMAKEDEFAULT=ON
+ * 
+ * 
+ * To load, type "mload milkmilkmoduleexample" in CLI\n
  *
+ * 
  *  File list :
  * - milk_module_example.c  : module main C file, includes binding code to milk
  * - milk_module_example.h  : function prototypes to be included by other modules

@@ -1,7 +1,8 @@
 # list source files (.c) other than modulename.c
 set(SOURCEFILES
 	create_example_image.c
-	stream_process_loop_simple.c)
+	stream_process_loop_simple.c
+)
 
 # list include files (.h) that should be installed on system
 set(INCLUDEFILES
