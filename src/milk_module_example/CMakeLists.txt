@@ -2,6 +2,7 @@
 set(SOURCEFILES
 	create_example_image.c
 	stream_process_loop_simple.c
+	updatestreamloop.c
 )
 
 # list include files (.h) that should be installed on system

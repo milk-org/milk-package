@@ -14,12 +14,16 @@
  * To load, type "mload milkmilkmoduleexample" in CLI\n
  *
  * 
- *  File list :
+ *  Files
+ * 
+ * - CMakeLists.txt         : cmake input file for module
+ * 
  * - milk_module_example.c  : module main C file, includes binding code to milk
  * - milk_module_example.h  : function prototypes to be included by other modules
+ *
  * - create_example_image.c : source code, .c file
  * - create_example_image.h : source code, .h file
- * - CMakeLists.txt         : cmake input file for module
+ * 
  */
 
 
@@ -61,7 +65,7 @@
 //
 #include "create_example_image.h"
 #include "stream_process_loop_simple.h"
-
+#include "updatestreamloop.h"
 
 
 
@@ -93,7 +97,9 @@ static errno_t init_module_CLI()
     //CLI_CMD_CONNECT("func1", "create_image_with_value");
 
 	create_example_image_addCLIcmd();
-	stream_process_loop_simple_addCLIcmd;
+	stream_process_loop_simple_addCLIcmd();
+
+	milk_module_example__updatestreamloop_addCLIcmd();
 
     // optional: add atexit functions here
 
