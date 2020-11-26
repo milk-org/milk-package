@@ -99,7 +99,8 @@ static errno_t init_module_CLI()
 	create_example_image_addCLIcmd();
 	stream_process_loop_simple_addCLIcmd();
 
-	milk_module_example__updatestreamloop_addCLIcmd();
+//	milk_module_example__updatestreamloop_addCLIcmd();
+	FPSCLIADDCMD_milk_module_example__updatestreamloop();
 
     // optional: add atexit functions here
 
