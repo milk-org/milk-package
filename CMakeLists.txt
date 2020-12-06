@@ -177,19 +177,23 @@ message("CMAKE_BUILD_TYPE : ${CMAKE_BUILD_TYPE}")
 # COMPILE OPTIONS
 # =======================================
 
-add_compile_options(-std=gnu11)
-add_compile_options(-march=native)
+# add gnu11 option only for C, don't add for nvcc
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-std=gnu11>) 
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-march=native>)
+
 
 # OpenMP
 find_package(OpenMP)
 if (OPENMP_FOUND)
 message("Found OpenMP")
-add_compile_options(-fopenmp)
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-fopenmp>)
+#add_compile_options(-fopenmp)
 endif()
 
 # link-time optimizer
-add_compile_options(-flto)
-add_compile_options(-fwhole-program)
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-flto>)
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-fwhole-program>)
+#add_compile_options(-fwhole-program)
 # NOTE: -fstack-usage is incompatible with link-time optimizer
 #add_compile_options(-fstack-usage)
 
@@ -199,7 +203,7 @@ add_compile_options(-fwhole-program)
 # to use pipes instead of temporary files during the different stages 
 # of compilation, which uses more memory. On systems with low memory, 
 # GCC might get killed. In those cases do not use this flag. 
-add_compile_options(-pipe)
+add_compile_options($<$<COMPILE_LANGUAGE:C>:-pipe>)
 
 message("COMPILE_OPTIONS:  ${COMPILE_OPTIONS}")
 
