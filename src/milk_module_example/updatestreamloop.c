@@ -15,11 +15,26 @@
  * 
  * To enable FPS support with command line interface (CLI) wrapper, four 
  * functions are required in a C program:
- * - FPSCONF function to configure function parameters and setup the FPS
- * - FPSRUN function that executes the code
- * - a self-contained execution function
+ * - FPSCONFfunction() configures parameters and setup the FPS
+ * - FPSRUNfunction() executes the code
+ * - FPSEXECfuncion() a self-contained execution function
  * - a CLI wrapper function
  * 
+ * There are two ways to run the code inside FPSRUNfunction():
+ * - CLI-called  : function called inside CLI by typing command
+ * - FPS-managed : function called by FPS configuration
+ * 
+ * When CLI-called, command CLICMD_SHORTNAME is typed/entered in the CLI
+ * (possibly preceeded by command namespace), which is processed by 
+ * FPSCLIfunction() with data.FPS_CMDCODE set to 0. Following argument
+ * checks, FPSEXECfunction() is called to create the FPS and run the code.
+ * The FPS is created to hold arguments, uniquely named <CLICMD_SHORTNAME>-<PID>
+ * 
+ * When FPS-managed, FPSCONFfunction() manages parameters and execution.
+ * The FPS name is then <CLICMD_SHORTNAME>-<ARG0>-<ARG1>...
+ * 
+ * To use the FPS-managed interface, see script milk-fpsinit:
+ * > milk-fpsinit -h
  * 
  */
 
@@ -29,274 +44,55 @@
 // required for create_2Dimage_ID()
 #include "COREMOD_memory/COREMOD_memory.h"
 
-// required for timespec_diff()
+
 #include "COREMOD_tools/COREMOD_tools.h"
 
-// required for timespec_diff
+// required for timespec_diff()
 #include "CommandLineInterface/timeutils.h"
 
 
 
-#define FPSFUNCNAME        milk_module_example__updatestreamloop
-#define CLICMD_SHORTNAME   "streamupdate"
-#define FUNCDESCRIPTION    "update stream"
 
 
 
-typedef struct
+// Command line interface (CLI) arguments 
+// A function variable is named by a tag, which is a hierarchical
+// series of words separated by dot "." 
+// For example: .input.xsize (note that first dot is optional)
+
+// Function arguments rules:
+// considering function "funcname", variable "var1" 
+//
+// [1] Argument specified in CLI call
+// > funcname 1.0
+// Will create variable "funcname.var1" with value var1value=1.0
+// 
+// [2] Argument specified prior to CLI call
+// > funcname.var1=1.0
+// > funcname .
+//
+// If a variable of name funcname.var1 exists, then its value will be
+// used for the corresponding parameter. Otherwise, the 
+// Function parameter structure (FPS) uses tag field
+
+static CLICMDARGDEF funcfpscliarg[] =
 {
-	int type;
-	char fpstag[100];
-	char descr[100];
-	char example[100];
-} FPSCLIARG;
+    { CLIARG_IMG,  ".in_name",   "input stream", "ims1" , 0 },
+    { CLIARG_LONG, ".delayus",   "delay [us]",   "2000" , 0 },
+    { CLIARG_FLOAT, ".fpsonly", "test val", "1.2334", CLICMDARG_FLAG_NOCLI }
+};
 
-// Command line interface (CLI) arguments and corresponding function parameter structure (FPS) tag
-static FPSCLIARG fpscliarg[2] =
-{
-//    type,         fpstag,        description,    example
-    { CLIARG_IMG,  ".in_name",   "input stream", "ims1" },
-    { CLIARG_LONG, ".delayus",     "delay [us]",  "2000" }
+
+static CLICMDDATA CLIcmddata = {
+    "streamupdate",
+    "update stream",
+    __FILE__,
+    sizeof(funcfpscliarg)/sizeof(CLICMDARGDEF),
+    funcfpscliarg
 };
 
 
 
-
-
-
-
-
-
-
-static errno_t CLIcheckargs()
-{
-	int nbarg = (int) sizeof(fpscliarg)/sizeof(FPSCLIARG);
-	
-	printf("Number of CLI args : %d\n", nbarg);
-	
-	int nberr = 0;
-	for(int arg = 0; arg < nbarg; arg++)
-	{
-		if( CLI_checkarg(arg+1, fpscliarg[arg].type) != 0 )
-		{
-			nberr ++;
-		}
-	}
-	
-	printf("Number of arg error(s): %d\n", nberr);
-	
-	if(nberr==0)
-	{
-		return RETURN_SUCCESS;
-	}
-	else
-	{
-		return RETURN_FAILURE;
-	}
-}
-
-
-static int makeCLIargstring(char *argstring)
-{
-    char tmpstr[1000];
-
-
-    int nbarg = (int) sizeof(fpscliarg) / sizeof(FPSCLIARG);
-    for(int arg = 0; arg < nbarg; arg++)
-    {
-        char typestring[100] = "?";
-
-        switch(fpscliarg[arg].type)
-        {
-
-            case CLIARG_IMG:
-                strcpy(typestring, "string");
-                break;
-
-            case CLIARG_LONG:
-                strcpy(typestring, "long");
-                break;
-        }
-
-        if(arg == 0)
-        {
-            sprintf(tmpstr, "<%s [%s] ->(%s)>", fpscliarg[arg].descr, typestring,
-                    fpscliarg[arg].fpstag);
-        }
-        else
-        {
-            char tmpstr1[1000];
-            sprintf(tmpstr1, " <%s [%s] ->(%s)>", fpscliarg[arg].descr, typestring,
-                    fpscliarg[arg].fpstag);
-            strcat(tmpstr, tmpstr1);
-        }
-    }
-    strcpy(argstring, tmpstr);
-
-    return strlen(argstring);
-}
-
-
-
-static int makeCLIcmdexamplestring(char *cmdexstring)
-{
-    char tmpstr[1000];
-
-    sprintf(tmpstr, "%s", CLICMD_SHORTNAME);
-
-    int nbarg = (int) sizeof(fpscliarg) / sizeof(FPSCLIARG);
-    for(int arg = 0; arg < nbarg; arg++)
-    {
-        char tmpstr1[1000];
-        sprintf(tmpstr1, " %s", fpscliarg[arg].example);
-        strcat(tmpstr, tmpstr1);
-    }
-    strcpy(cmdexstring, tmpstr);
-
-    return strlen(cmdexstring);
-}
-
-
-
-static int CLIargs_to_FPSparams_setval(FUNCTION_PARAMETER_STRUCT *fps)
-{
-    int NBarg_processed = 0;
-
-    int nbarg = (int) sizeof(fpscliarg) / sizeof(FPSCLIARG);
-    for(int arg = 0; arg < nbarg; arg++)
-    {
-        switch(fpscliarg[arg].type)
-        {
-            case CLIARG_IMG:
-                functionparameter_SetParamValue_STRING(fps, fpscliarg[arg].fpstag,
-                                                       data.cmdargtoken[arg + 1].val.string);
-                NBarg_processed++;
-                break;
-
-            case CLIARG_LONG:
-                functionparameter_SetParamValue_INT64(fps, fpscliarg[arg].fpstag,
-                                                      data.cmdargtoken[arg + 1].val.numl);
-                NBarg_processed++;
-                break;
-
-        }
-
-    }
-
-    return NBarg_processed;
-}
-
-
-static int CLIargs_to_FPSparams_create(FUNCTION_PARAMETER_STRUCT *fps)
-{
-    int NBarg_processed = 0;
-
-    int nbarg = (int) sizeof(fpscliarg) / sizeof(FPSCLIARG);
-    for(int arg = 0; arg < nbarg; arg++)
-    {
-        switch(fpscliarg[arg].type)
-        {
-            case CLIARG_IMG:
-                function_parameter_add_entry(fps, fpscliarg[arg].fpstag, fpscliarg[arg].descr,
-                                             FPTYPE_STREAMNAME, FPFLAG_DEFAULT_INPUT_STREAM, "nullim");
-                NBarg_processed++;
-                break;
-
-            case CLIARG_LONG:
-                function_parameter_add_entry(fps, fpscliarg[arg].fpstag, fpscliarg[arg].descr,
-                                             FPTYPE_INT64, FPFLAG_DEFAULT_INPUT, NULL);
-                NBarg_processed++;
-                break;
-
-        }
-
-    }
-
-    return NBarg_processed;
-}
-
-
-
-
-// =====================================================================
-// Forward declaration(s)
-// =====================================================================
-
-static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)(void);
-static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)(void);
-static errno_t FPSFUNCNAME(void);
-
-
-
-// =====================================================================
-// Command line interface wrapper function(s)
-// =====================================================================
-
-
-static errno_t FPSCLI_FUNCTION_NAME(FPSFUNCNAME)(void)
-{
-    // Try FPS implementation
-
-    // Set data.fpsname, providing default value as first arg, and set data.FPS_CMDCODE value.
-    // Default FPS name will be used if CLI process has NOT been named.
-    // See code in function_parameter.c for detailed rules.
-
-    function_parameter_getFPSargs_from_CLIfunc(CLICMD_SHORTNAME);
-
-    if(data.FPS_CMDCODE != 0)   // use FPS implementation
-    {
-        // set pointers to CONF and RUN functions
-        data.FPS_CONFfunc = FPSCONF_FUNCTION_NAME(FPSFUNCNAME);
-        data.FPS_RUNfunc  = FPSRUN_FUNCTION_NAME(FPSFUNCNAME);
-        function_parameter_execFPScmd();
-        return RETURN_SUCCESS;
-    }
-
-    // call self-contained execution function - all parameters specified at function launch
-    if(CLIcheckargs() == RETURN_SUCCESS)
-    {
-        FPSFUNCNAME();
-        return RETURN_SUCCESS;
-    }
-    else
-    {
-        return CLICMD_INVALID_ARG;
-    }
-}
-
-
-
-
-
-
-
-// =====================================================================
-// Register CLI command(s)
-// =====================================================================
-
-//errno_t milk_module_example__updatestreamloop_addCLIcmd()
-
-errno_t FPSCLIADDCMD_FUNCTION_NAME(FPSFUNCNAME)()
-{
-	char argstring[1000];
-	makeCLIargstring(argstring);
-	
-	char cmdexamplestring[1000];
-	makeCLIcmdexamplestring(cmdexamplestring);
-    
-    RegisterCLIcommand(
-        CLICMD_SHORTNAME,
-        __FILE__,
-        FPSCLI_FUNCTION_NAME(FPSFUNCNAME),
-        FUNCDESCRIPTION,
-        argstring,
-        cmdexamplestring,
-        __FUNCTION__);
-        
-        //"errno_t milk_module_example__updatestreamloop(const char *restrict instreamname, long delayus)");
-
-    return RETURN_SUCCESS;
-}
 
 
 
@@ -311,7 +107,7 @@ errno_t FPSCLIADDCMD_FUNCTION_NAME(FPSFUNCNAME)()
  * ## Details
  *
  */
-static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
+static errno_t FPSCONFfunction()
 {
     /** ### INITIALIZE FPS
      */
@@ -322,6 +118,7 @@ static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
     fps_add_processinfo_entries(&fps);
 
     /** ### ADD PARAMETERS
+     *
      *
      *
      * The function function_parameter_add_entry() is called to add
@@ -342,11 +139,9 @@ static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
      *     long fp_delayus = function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
      *     (void) fp_delayus;
      */
-    CLIargs_to_FPSparams_create(&fps);
-    // CUSTOM SECTION START (READ PARAMETERS)
-    //
-    long delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
-    // CUSTOM SECTION END
+    CLIargs_to_FPSparams_create(funcfpscliarg, CLIcmddata.nbarg, &fps);
+
+    long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
 
     /** ### START CONFLOOP
      *
@@ -357,13 +152,8 @@ static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
      * statement
      */
     FPS_CONFLOOP_START
-    
-    // CUSTOM SECTION START (CHECK PARAMETERS) - OPTIONAL
-    //
-    printf("delayus value before conf loop: %ld\n", delayus);
 
-    //
-    // CUSTOM SECTION END
+    printf("delayus value inside conf loop: %ld\n", fps_delayus);
 
     /** ### STOP CONFLOOP
      *
@@ -379,6 +169,7 @@ static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
 
 
 
+
 /** @brief Loop process code example
  *
  * ## Purpose
@@ -389,17 +180,19 @@ static errno_t FPSCONF_FUNCTION_NAME(FPSFUNCNAME)()
  * ## Details
  *
  */
-static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
+static errno_t FPSRUNfunction()
 {
     /** ### CONNECT TO FPS
      *
-     * The FPS name is taken from data.FPS_name, which is has to
+     * The FPS name is taken from data.FPS_name, which has to
      * have been set up by either the stand-alone function, or the
      * CLI.
      *
      * Running FPS_CONNECT macro in FPSCONNECT_RUN mode.
      */
     FPS_CONNECT(data.FPS_name, FPSCONNECT_RUN);
+
+
 
     /** ### GET FUNCTION PARAMETER VALUES
      *
@@ -419,12 +212,8 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
      *     strncpy(_IDin_name,  functionparameter_GetParamPtr_STRING(&fps, ".in_name"), FUNCTION_PARAMETER_STRMAXLEN);
      *     long _delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
      */
-	// CUSTOM SECTION START (GET PARAMETERS VALUES)
-	//
-    char *IDin_name = functionparameter_GetParamPtr_STRING(&fps, ".in_name");
-    long delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
-	//
-	// CUSTOM SECTION END
+    char *fps_IDin_name = functionparameter_GetParamPtr_STRING(&fps, ".in_name");
+    long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
 
     /** ### SET UP PROCESSINFO
      * 
@@ -452,22 +241,14 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
 	* 
 	*     int processloopOK = 1;
     */
-    FPSPROCINFOLOOP_RUNINIT("streamupdate %.10s", IDin_name);
+    FPSPROCINFOLOOP_RUNINIT("streamupdate %.10s", fps_IDin_name);
 
     /** ### OPTIONAL: TESTING CONDITION FOR LOOP ENTRY
      * 
      * Pre-loop testing, anything that would prevent loop from starting should issue message\n
      * Set processloopOK to 0 if tests fail.
      */
-	// INSERT CUSTOM OUT-OF-LOOP SOURCE CODE HERE
-	// local variables, setup, tests etc..
-	//
-	// CUSTOM SECTION START
-	//
-	imageID IDin = image_ID(IDin_name);
-	//
-	// CUSTOM SECTION END
-
+	imageID IDin = image_ID(fps_IDin_name);
 
     /** ### Specify input trigger
      * 
@@ -485,11 +266,9 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
      *         processinfo->triggerdelay.tv_sec += 1;
      *     }
      */
-    // CUSTOM SECTION START (TRIGGER MODE)
-    //
-	PROCINFO_TRIGGER_DELAYUS(delayus);
-	//
-	// CUSTOM SECTION END
+	PROCINFO_TRIGGER_DELAYUS(fps_delayus);
+
+
 
     /** ### START LOOP
      *
@@ -506,13 +285,11 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
      *         if(processinfo_compute_status(processinfo) == 1) {
      */
     PROCINFOLOOP_START
-        
-    // CUSTOM SECTION START (COMPUTATION CODE)
-    //
-    processinfo_update_output_stream(processinfo, IDin);    
-    //
-    // CUSTOM SECTION END  
     
+	DEBUG_TRACEPOINT("Starting loop iteration");
+    
+    DEBUG_TRACEPOINT("Update stream \"%s\" %ld", fps_IDin_name, IDin);
+    processinfo_update_output_stream(processinfo, IDin);        
     /** ### END LOOP
      * 
      * Equivalent non-macro code:
@@ -522,12 +299,18 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
      *     }
      *     processinfo_cleanExit(processinfo);
      */
+    DEBUG_TRACEPOINT("Ending loop iteration");
     PROCINFOLOOP_END
+    
+    DEBUG_TRACEPOINT("Ending loop computation");
     
     function_parameter_RUNexit(&fps);
 
     return RETURN_SUCCESS;
 }
+
+
+
 
 
 
@@ -547,24 +330,85 @@ static errno_t FPSRUN_FUNCTION_NAME(FPSFUNCNAME)()
  * ## Details
  *
  */
-static errno_t FPSFUNCNAME()
+static errno_t FPSEXECfunction()
 {
 	FUNCTION_PARAMETER_STRUCT fps;
-	sprintf(data.FPS_name, "%s-%06ld", CLICMD_SHORTNAME, (long) getpid());
+	sprintf(data.FPS_name, "%s-%06ld", CLIcmddata.key, (long) getpid());
+	
+	// initialize and create FPS
 	data.FPS_CMDCODE = FPSCMDCODE_FPSINIT;
-	FPSCONF_FUNCTION_NAME(FPSFUNCNAME)();
+	FPSCONFfunction();
+	
+	// connect to newly created FPS
 	function_parameter_struct_connect(data.FPS_name, &fps, FPSCONNECT_SIMPLE);
 		
 	/** ### WRITE FUNCTION PARAMETERS TO FPS 
 	 */
-	CLIargs_to_FPSparams_setval(&fps);
+	CLIargs_to_FPSparams_setval(funcfpscliarg, CLIcmddata.nbarg, &fps);
     function_parameter_struct_disconnect(&fps);
+
 
     /** EXECUTE RUN FUNCTION
      */
-    FPSRUN_FUNCTION_NAME(FPSFUNCNAME)();
-
+    FPSRUNfunction();
 
     return RETURN_SUCCESS;
-
 }
+
+
+
+
+// =====================================================================
+// Command line interface wrapper function(s)
+// =====================================================================
+
+static errno_t FPSCLIfunction(void)
+{
+    // Try FPS implementation
+
+    // Set data.fpsname, providing default value as first arg, and set data.FPS_CMDCODE value.
+    //    Default FPS name will be used if CLI process has NOT been named.
+    //    See code in function_parameter.h for detailed rules.
+    function_parameter_getFPSargs_from_CLIfunc(CLIcmddata.key);
+
+    if(data.FPS_CMDCODE != 0)   // use FPS implementation
+    {
+        // set pointers to CONF and RUN functions
+        data.FPS_CONFfunc = FPSCONFfunction;
+        data.FPS_RUNfunc  = FPSRUNfunction;
+        function_parameter_execFPScmd();
+        return RETURN_SUCCESS;
+    }
+
+    // call self-contained execution function - all parameters specified at function launch
+    if(CLI_checkarg_array(funcfpscliarg, CLIcmddata.nbarg) == RETURN_SUCCESS)
+    {
+        FPSEXECfunction();
+        return RETURN_SUCCESS;
+    }
+    else
+    {
+        return CLICMD_INVALID_ARG;
+    }
+}
+
+
+
+
+
+
+// =====================================================================
+// Register CLI command(s)
+// =====================================================================
+
+errno_t FPSCLIADDCMD_milk_module_example__updatestreamloop()
+{
+    RegisterCLIcmd(CLIcmddata, FPSCLIfunction);
+
+    return RETURN_SUCCESS;
+}
+
+
+
+
+
