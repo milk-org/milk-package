@@ -110,14 +110,11 @@ static errno_t FPSCONFfunction()
     /** ### INITIALIZE FPS
      */
     FPS_SETUP_INIT(data.FPS_name, data.FPS_CMDCODE);
-
     /** ### ADD PROCESSINFO STANDARD ENTRIES (optional)
      */
     fps_add_processinfo_entries(&fps);
 
     /** ### ADD PARAMETERS
-     *
-     *
      *
      * The function function_parameter_add_entry() is called to add
      * each parameter.
