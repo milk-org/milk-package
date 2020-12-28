@@ -1,6 +1,7 @@
 # list source files (.c) other than modulename.c
 set(SOURCEFILES
 	create_example_image.c
+	simplefunc.c
 	stream_process_loop_simple.c
 	updatestreamloop.c
 )

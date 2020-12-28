@@ -75,7 +75,7 @@
 // used for the corresponding parameter. Otherwise, the 
 // Function parameter structure (FPS) uses tag field
 
-static CLICMDARGDEF funcfpscliarg[] =
+static CLICMDARGDEF farg[] =
 {
     { CLIARG_IMG,  ".in_name",   "input stream", "ims1" , 0 },
     { CLIARG_LONG, ".delayus",   "delay [us]",   "2000" , 0 },
@@ -87,8 +87,8 @@ static CLICMDDATA CLIcmddata = {
     "streamupdate",
     "update stream",
     __FILE__,
-    sizeof(funcfpscliarg)/sizeof(CLICMDARGDEF),
-    funcfpscliarg
+    sizeof(farg)/sizeof(CLICMDARGDEF),
+    farg
 };
 
 
@@ -139,7 +139,7 @@ static errno_t FPSCONFfunction()
      *     long fp_delayus = function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
      *     (void) fp_delayus;
      */
-    CLIargs_to_FPSparams_create(funcfpscliarg, CLIcmddata.nbarg, &fps);
+    CLIargs_to_FPSparams_create(farg, CLIcmddata.nbarg, &fps);
 
     long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
 
@@ -344,7 +344,7 @@ static errno_t FPSEXECfunction()
 		
 	/** ### WRITE FUNCTION PARAMETERS TO FPS 
 	 */
-	CLIargs_to_FPSparams_setval(funcfpscliarg, CLIcmddata.nbarg, &fps);
+	CLIargs_to_FPSparams_setval(farg, CLIcmddata.nbarg, &fps);
     function_parameter_struct_disconnect(&fps);
 
 
@@ -381,7 +381,7 @@ static errno_t FPSCLIfunction(void)
     }
 
     // call self-contained execution function - all parameters specified at function launch
-    if(CLI_checkarg_array(funcfpscliarg, CLIcmddata.nbarg) == RETURN_SUCCESS)
+    if(CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
     {
         FPSEXECfunction();
         return RETURN_SUCCESS;
