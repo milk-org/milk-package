@@ -27,7 +27,6 @@ static CLICMDDATA CLIcmddata = {
 
 
 
-
 /** @brief Compute function
  */
 static errno_t compute_2Dimage_total(

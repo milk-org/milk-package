@@ -77,8 +77,8 @@
 
 static CLICMDARGDEF farg[] =
 {
-    { CLIARG_IMG,  ".in_name",   "input stream", "ims1" , 0 },
-    { CLIARG_LONG, ".delayus",   "delay [us]",   "2000" , 0 },
+    { CLIARG_IMG,  ".in_name",   "input stream", "ims1" , CLICMDARG_FLAG_DEFAULT },
+    { CLIARG_LONG, ".delayus",   "delay [us]",   "2000" , CLICMDARG_FLAG_DEFAULT },
     { CLIARG_FLOAT, ".fpsonly", "test val", "1.2334", CLICMDARG_FLAG_NOCLI }
 };
 
@@ -86,9 +86,7 @@ static CLICMDARGDEF farg[] =
 static CLICMDDATA CLIcmddata = {
     "streamupdate",
     "update stream",
-    __FILE__,
-    sizeof(farg)/sizeof(CLICMDARGDEF),
-    farg
+    __FILE__, sizeof(farg)/sizeof(CLICMDARGDEF), farg
 };
 
 
