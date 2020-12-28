@@ -60,20 +60,6 @@
 // series of words separated by dot "." 
 // For example: .input.xsize (note that first dot is optional)
 
-// Function arguments rules:
-// considering function "funcname", variable "var1" 
-//
-// [1] Argument specified in CLI call
-// > funcname 1.0
-// Will create variable "funcname.var1" with value var1value=1.0
-// 
-// [2] Argument specified prior to CLI call
-// > funcname.var1=1.0
-// > funcname .
-//
-// If a variable of name funcname.var1 exists, then its value will be
-// used for the corresponding parameter. Otherwise, the 
-// Function parameter structure (FPS) uses tag field
 
 static CLICMDARGDEF farg[] =
 {

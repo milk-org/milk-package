@@ -4,6 +4,7 @@ set(SOURCEFILES
 	simplefunc.c
 	stream_process_loop_simple.c
 	updatestreamloop.c
+	updatestreamloop_brief.c
 )
 
 # list include files (.h) that should be installed on system

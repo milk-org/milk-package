@@ -66,6 +66,7 @@
 #include "create_example_image.h"
 #include "stream_process_loop_simple.h"
 #include "updatestreamloop.h"
+#include "updatestreamloop_brief.h"
 #include "simplefunc.h"
 
 
@@ -104,7 +105,8 @@ static errno_t init_module_CLI()
 	FPSCLIADDCMD_milk_module_example__simplefunc();
 
 	FPSCLIADDCMD_milk_module_example__updatestreamloop();
-
+	FPSCLIADDCMD_milk_module_example__updatestreamloop_brief();
+	
     // optional: add atexit functions here
 
     return RETURN_SUCCESS;
