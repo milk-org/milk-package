@@ -131,8 +131,7 @@ static errno_t FPSCONFfunction()
      *
      * Equivalent code without using macro :
      *
-     *     long fp_delayus = function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
-     *     (void) fp_delayus;
+     *     function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
      */
     CLIargs_to_FPSparams_create(farg, CLIcmddata.nbarg, &fps);
 
