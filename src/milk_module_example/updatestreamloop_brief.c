@@ -9,10 +9,6 @@
 
 #include "COREMOD_memory/COREMOD_memory.h"
 
-#include "COREMOD_tools/COREMOD_tools.h"
-
-#include "CommandLineInterface/timeutils.h"
-
 
 
 static CLICMDARGDEF farg[] =
@@ -63,13 +59,13 @@ static errno_t FPSRUNfunction()
 
 	imageID IDin = image_ID(fps_IDin_name);
 
-	PROCINFO_TRIGGER_DELAYUS(fps_delayus);
+	PROCINFO_TRIGGER_DELAYUS(fps_delayus); 
 
 
 
     PROCINFOLOOP_START
     
-    processinfo_update_output_stream(processinfo, IDin);        
+    processinfo_update_output_stream(processinfo, IDin);
    
     PROCINFOLOOP_END    
     function_parameter_RUNexit(&fps);
@@ -78,10 +74,8 @@ static errno_t FPSRUNfunction()
 }
 
 
-
-FPS_EXECFUNCTION_STD
-
-FPS_CLIFUNCTION_STD
+FPS_EXECFUNCTION_STD // macro defined in function_parameters.h
+FPS_CLIFUNCTION_STD  // macro defined in function_parameters.h
 
 errno_t FPSCLIADDCMD_milk_module_example__updatestreamloop_brief()
 {
