@@ -177,7 +177,7 @@ message("CMAKE_BUILD_TYPE : ${CMAKE_BUILD_TYPE}")
 # COMPILE OPTIONS
 # =======================================
 
-# add gnu11 option only for C, don't add for nvcc
+# add gnu17 option only for C, don't add for nvcc
 add_compile_options($<$<COMPILE_LANGUAGE:C>:-std=gnu17>) 
 add_compile_options($<$<COMPILE_LANGUAGE:C>:-march=native>)
 

@@ -4,7 +4,7 @@
  * 
  * Demonstrates how functions are registered and their arguments processed.
  * 
- * display function info :
+ * Display function info :
  * > cmd? modex.simplefunc
  * 
  * run function :
@@ -20,6 +20,7 @@
  */
 
 #include "CommandLineInterface/CLIcore.h"
+
 
 
 
