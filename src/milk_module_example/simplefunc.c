@@ -95,7 +95,7 @@ static errno_t CLIfunction(void)
 
         return RETURN_SUCCESS;
     }
-    else
+       else
     {
         return CLICMD_INVALID_ARG;
     }
