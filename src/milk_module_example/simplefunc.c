@@ -21,45 +21,37 @@
 
 #include "CommandLineInterface/CLIcore.h"
 
-
-
-
 // List of arguments to function
 // { type, tag, description, pre-set default value, flag }
 //
 static CLICMDARGDEF farg[] =
-{
-    { CLIARG_IMG,  ".in_name",   "input image", "im1" , CLICMDARG_FLAG_DEFAULT },
-    { CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0", CLICMDARG_FLAG_NOCLI } // argument is not part of CLI call
+    {
+        {CLIARG_IMG, ".in_name", "input image", "im1", CLICMDARG_FLAG_DEFAULT},
+        {CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0", CLICMDARG_FLAG_NOCLI} // argument is not part of CLI call
 };
 
 static CLICMDDATA CLIcmddata = {
     "simplefunc",             // keyword to call function in CLI
     "compute total of image", // description of what the function does
-    __FILE__, sizeof(farg)/sizeof(CLICMDARGDEF), farg
-};
-
-
-
+    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg};
 
 /** @brief Compute function
  */
 static errno_t compute_2Dimage_total(
     IMGID img,
-    double scalingcoeff
-)
+    double scalingcoeff)
 {
-	if(resolveIMGID(&img) < 0)
-	{
-		printf("Missing input to function %s\n", __FUNCTION__);
-		return RETURN_FAILURE;
-	}
+    if (resolveIMGID(&img) < 0)
+    {
+        printf("Missing input to function %s\n", __FUNCTION__);
+        return RETURN_FAILURE;
+    }
     uint_fast32_t xsize = img.md->size[0];
     uint_fast32_t ysize = img.md->size[1];
-	uint_fast64_t xysize = xsize * ysize;
+    uint_fast64_t xysize = xsize * ysize;
 
-    double total = 0.0;   
-    for(uint_fast64_t ii = 0; ii < xysize; ii++)
+    double total = 0.0;
+    for (uint_fast64_t ii = 0; ii < xysize; ii++)
     {
         total += img.im->array.F[ii];
     }
@@ -70,8 +62,6 @@ static errno_t compute_2Dimage_total(
     return RETURN_SUCCESS;
 }
 
-
-
 /** @brief Function call wrapper
  *
  * CLI argument(s) is(are) parsed and checked with CLI_checkarray(), then
@@ -81,28 +71,24 @@ static errno_t compute_2Dimage_total(
  */
 static errno_t CLIfunction(void)
 {
-    if(CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
+    if (CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
     { // if CLI call arguments check out, go ahead with computation
-        
-        // arguments not contained in CLI call line are extracted from the 
+
+        // arguments not contained in CLI call line are extracted from the
         // command argument list
         double scalingcoeff = data.cmd[data.cmdindex].argdata[1].val.f;
-        
+
         compute_2Dimage_total(
             makeIMGID(data.cmdargtoken[1].val.string),
-            scalingcoeff
-        );
+            scalingcoeff);
 
         return RETURN_SUCCESS;
     }
-       else
+    else
     {
         return CLICMD_INVALID_ARG;
     }
 }
-
-
-
 
 /** @brief Register CLI command
  * 
