@@ -97,13 +97,14 @@ static errno_t CLIfunction(void)
     }
 }
 
+
 /** @brief Register CLI command
  *
  * Adds function to list of CLI commands.
  * Called by main module initialization function init_module_CLI().
  */
 errno_t FPSCLIADDCMD_milk_module_example__simplefunc()
-{
+{   
     RegisterCLIcmd(CLIcmddata, CLIfunction);
 
     return RETURN_SUCCESS;

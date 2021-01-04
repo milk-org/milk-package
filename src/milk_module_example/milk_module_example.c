@@ -4,26 +4,44 @@
  *
  * milk module source code template\n
  * Demonstates how to add modules to milk and connect functions.\n
- * 
- * 
+ *
+ *
  * To compile with module :
  * > cd _build
  * > cmake .. -DEXTRAMODULES="milk_module_example" -DINSTALLMAKEDEFAULT=ON
- * 
- * 
+ *
+ *
  * To load, type "mload milkmilkmoduleexample" in CLI\n
  *
- * 
+ *
  *  Files
- * 
+ *
  * - CMakeLists.txt         : cmake input file for module
- * 
+ *
  * - milk_module_example.c  : module main C file, includes binding code to milk
  * - milk_module_example.h  : function prototypes to be included by other modules
  *
+ *
+ * Several examples are provided to demonstrate code features.
+ * Each example builds on the previous one(s), demonstrating additional capabilities.
+ *
+ * ## Simple function example
+ *
+ * Simple function example. No FPS, no processinfo.
+ *
+ * Files:
+ * - simplefunc.c
+ * - simplefunc.h
+ *
+ *
+ * ## Function parameter structure (FPS) example
+ *
+ *
+ *
+ *
  * - create_example_image.c : source code, .c file
  * - create_example_image.h : source code, .h file
- * 
+ *
  */
 
 
@@ -68,7 +86,7 @@
 #include "updatestreamloop.h"
 #include "updatestreamloop_brief.h"
 #include "simplefunc.h"
-
+#include "simplefunc_FPS.h"
 
 
 
@@ -97,16 +115,17 @@ static errno_t init_module_CLI()
 
     //CLI_CMD_CONNECT("func1", "create_image_with_value");
 
-	create_example_image_addCLIcmd();
-	stream_process_loop_simple_addCLIcmd();
+    create_example_image_addCLIcmd();
+    stream_process_loop_simple_addCLIcmd();
 
-//	milk_module_example__updatestreamloop_addCLIcmd();
+    //	milk_module_example__updatestreamloop_addCLIcmd();
 
-	FPSCLIADDCMD_milk_module_example__simplefunc();
+    FPSCLIADDCMD_milk_module_example__simplefunc();
+	FPSCLIADDCMD_milk_module_example__simplefunc_FPS();
 
-	FPSCLIADDCMD_milk_module_example__updatestreamloop();
-	FPSCLIADDCMD_milk_module_example__updatestreamloop_brief();
-	
+    FPSCLIADDCMD_milk_module_example__updatestreamloop();
+    FPSCLIADDCMD_milk_module_example__updatestreamloop_brief();
+
     // optional: add atexit functions here
 
     return RETURN_SUCCESS;
