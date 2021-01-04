@@ -30,19 +30,22 @@ mload milkmilkmoduleexample
 m? milk_module_example
 
 # print function help
-cmd? modex.simplefunc
+cmd? modex.simplefuncFPS
 
 # list images in memory
 listim
 
-# run function
-modex.simplefunc imd1
+# run function wifh FPS
+modex.simplefuncFPS _FPSINIT_
+listfps
+
+#modex.simplefuncFPS imd1
 
 # change scaling parameter for function
-modex.simplefunc .scaling 0.3
+#modex.simplefuncFPS .scaling 0.3
 
 # run again
-modex.simplefunc .
+#modex.simplefuncFPS .
 
 exitCLI
 EOF

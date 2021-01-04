@@ -2,6 +2,7 @@
 set(SOURCEFILES
 	create_example_image.c
 	simplefunc.c
+	simplefunc_FPS.c
 	stream_process_loop_simple.c
 	updatestreamloop.c
 	updatestreamloop_brief.c
