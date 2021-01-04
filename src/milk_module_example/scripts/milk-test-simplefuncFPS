@@ -29,17 +29,41 @@ imgen.mkdisk imd2 256 256 128 128 10
 mload milkmilkmoduleexample
 m? milk_module_example
 
+# change scaling
+modex.simplefuncFPS .scaling 0.31
+modex.simplefuncFPS .in_name imd1
+
 # print function help
 cmd? modex.simplefuncFPS
 
 # list images in memory
 listim
 
-# run function wifh FPS
-modex.simplefuncFPS _FPSINIT_
-listfps
+# Create/initialize FPS if it does not exist
+# Default FPS name is function key without namespace.
+# Arguments following _FPSINIT_ are pasted to construct
+# the FPS name.
+# If FPS already exists, do nothing (param values
+# may then be out of sync)
+modex.simplefuncFPS _FPSINIT_ "03"
 
-#modex.simplefuncFPS imd1
+modex.simplefuncFPS .scaling 0.5
+modex.simplefuncFPS _FPSINIT_ "05"
+
+# FPS call, uses last active FPS name
+modex.simplefuncFPS _RUNSTART_
+
+# add arg to specify which FPS to use
+modex.simplefuncFPS _RUNSTART_ "03"
+modex.simplefuncFPS _RUNSTART_ "05"
+
+# non-FPS call
+# changing argument value does not change FPS
+modex.simplefuncFPS .scaling 1.0
+modex.simplefuncFPS imd1
+
+
+
 
 # change scaling parameter for function
 #modex.simplefuncFPS .scaling 0.3

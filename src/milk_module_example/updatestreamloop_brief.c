@@ -31,7 +31,7 @@ static errno_t FPSCONFfunction()
 {
     FPS_SETUP_INIT(data.FPS_name, data.FPS_CMDCODE);
     fps_add_processinfo_entries(&fps);
-    CLIargs_to_FPSparams_create(farg, CLIcmddata.nbarg, &fps);
+    CMDargs_to_FPSparams_create(&fps);
 
     long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
     

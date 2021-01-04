@@ -104,7 +104,7 @@ static errno_t FPSCONFfunction()
      *
      *     function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
      */
-    CLIargs_to_FPSparams_create(farg, CLIcmddata.nbarg, &fps);
+    CMDargs_to_FPSparams_create(&fps);
 
     long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
 

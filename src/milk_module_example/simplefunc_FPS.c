@@ -3,20 +3,7 @@
  * @brief   simple function example with FPS support
  *
  * Demonstrates using FPS to hold function arguments and parameters.
- *
- * Display function info :
- * > cmd? modex.simplefuncFPS
- *
- * run function :
- * > modex.simplefuncFPS im1
- *
- * Change parameters :
- * > modex.simplefuncFPS .in_name im2
- * > modex.simplefuncFPS .scaling 0.3
- *
- * Run function with pre-set parameters :
- * > modex.simplefuncFPS .
- *
+ * See script milk-test-simplefuncFPS for usage.
  */
 
 #include "CommandLineInterface/CLIcore.h"
@@ -66,58 +53,19 @@ static errno_t compute_2Dimage_total(
 }
 
 
-/** @brief FPCONF function for updatestreamloop
- *
- * ## Purpose
- *
- * The FPCONF function sets up the FPS and its parameters
- *
- * ## Details
- *
+
+
+
+/** @brief FPS conf function
+ * Sets up the FPS and its parameters.\n
+ * Optional parameter checking can be included.\n
  */
 static errno_t FPSCONFfunction()
 {
-    /** ### INITIALIZE FPS
-     */
     FPS_SETUP_INIT(data.FPS_name, data.FPS_CMDCODE);
+    CMDargs_to_FPSparams_create(&fps);
 
-
-    /** ### ADD PARAMETERS
-     *
-     * The function function_parameter_add_entry() is called to add
-     * each parameter.
-     *
-     * macros are provided for convenience, named "FPS_ADDPARAM_...".\n
-     * The macros are defined in fps_add_entry.h, and provide a function
-     * parameter identifyer variable (int) for each parameter added.
-     *
-     * parameters for FPS_ADDPARAM macros:
-     * - key/variable name
-     * - tag name
-     * - description
-     * - default initial value
-     *
-     * Equivalent code without using macro :
-     *
-     *     function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
-     */
-    CLIargs_to_FPSparams_create(farg, CLIcmddata.nbarg, &fps);
-
-    /** ### START CONFLOOP
-     *
-     * start function parameter conf loop\n
-     * macro defined in function_parameter.h
-     *
-     * Optional code to handle/check parameters is included after this
-     * statement
-     */
     FPS_CONFLOOP_START
-
-    /** ### STOP CONFLOOP
-     *
-     * stop function parameter conf loop\n
-     * macro defined in function_parameter.h
-     */
     FPS_CONFLOOP_END
 
     return RETURN_SUCCESS;
@@ -125,15 +73,7 @@ static errno_t FPSCONFfunction()
 
 
 
-/** @brief Loop process code example
- *
- * ## Purpose
- *
- * Update stream at regular time interval.\n
- * This example demonstrates combined use of processinfo and fps structures.\n
- *
- * ## Details
- *
+/** @brief FPS run function
  */
 static errno_t FPSRUNfunction()
 {
@@ -166,8 +106,6 @@ static errno_t FPSRUNfunction()
      *     long _delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
      */
     char *fps_IDin_name = functionparameter_GetParamPtr_STRING(&fps, ".in_name");
-
-
     double scalingcoeff = functionparameter_GetParamValue_FLOAT64(&fps,
                           ".scaling");
 
@@ -201,8 +139,10 @@ static errno_t FPSCLIfunction(void)
         return RETURN_SUCCESS;
     }
 
+    // otherwise, use non-FPS implementation
     if(CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
     {
+        // pull parameter value from argdata, as it is not in CLI call
         double scalingcoeff = data.cmd[data.cmdindex].argdata[1].val.f;
 
         compute_2Dimage_total(
