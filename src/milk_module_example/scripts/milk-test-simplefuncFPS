@@ -63,8 +63,6 @@ modex.simplefuncFPS .scaling 1.0
 modex.simplefuncFPS imd1
 
 
-
-
 # change scaling parameter for function
 #modex.simplefuncFPS .scaling 0.3
 

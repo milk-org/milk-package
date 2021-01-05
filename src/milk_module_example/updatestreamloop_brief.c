@@ -13,14 +13,21 @@
 
 static CLICMDARGDEF farg[] =
 {
-    { CLIARG_IMG,  ".in_name",   "input stream", "ims1" , CLICMDARG_FLAG_DEFAULT },
-    { CLIARG_LONG, ".delayus",   "delay [us]",   "2000" , CLICMDARG_FLAG_DEFAULT }
+    {
+        CLIARG_IMG,  ".in_name",   "input stream", "ims1",
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+    },
+    {
+        CLIARG_LONG, ".delayus",   "delay [us]",   "2000",
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+    }
 };
 
-static CLICMDDATA CLIcmddata = {
+static CLICMDDATA CLIcmddata =
+{
     "streamupdatebrief",
     "update stream",
-    __FILE__, sizeof(farg)/sizeof(CLICMDARGDEF), farg
+    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg
 };
 
 
@@ -34,11 +41,11 @@ static errno_t FPSCONFfunction()
     CMDargs_to_FPSparams_create(&fps);
 
     long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
-    
+
     FPS_CONFLOOP_START
 
     printf("delayus value inside conf loop: %ld\n", fps_delayus);
-   
+
     FPS_CONFLOOP_END
 
     return RETURN_SUCCESS;
@@ -57,17 +64,17 @@ static errno_t FPSRUNfunction()
 
     FPSPROCINFOLOOP_RUNINIT("streamupdate %.10s", fps_IDin_name);
 
-	imageID IDin = image_ID(fps_IDin_name);
+    imageID IDin = image_ID(fps_IDin_name);
 
-	PROCINFO_TRIGGER_DELAYUS(fps_delayus); 
+    PROCINFO_TRIGGER_DELAYUS(fps_delayus);
 
 
 
     PROCINFOLOOP_START
-    
+
     processinfo_update_output_stream(processinfo, IDin);
-   
-    PROCINFOLOOP_END    
+
+    PROCINFOLOOP_END
     function_parameter_RUNexit(&fps);
 
     return RETURN_SUCCESS;

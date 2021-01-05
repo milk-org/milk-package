@@ -22,12 +22,19 @@
 #include "CommandLineInterface/CLIcore.h"
 
 // List of arguments to function
-// { type, tag, description, pre-set default value, flag }
+// { CLItype, tag, description, initial value, flag, fptype, fpflag}
 //
 static CLICMDARGDEF farg[] =
 {
-    {CLIARG_IMG, ".in_name", "input image", "im1", CLICMDARG_FLAG_DEFAULT},
-    {CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0", CLICMDARG_FLAG_NOCLI} // argument is not part of CLI call
+    {
+        CLIARG_IMG, ".in_name", "input image", "im1",
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+    },
+    {
+        // argument is not part of CLI call, FPFLAG ignored
+        CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0",
+        CLICMDARG_FLAG_NOCLI, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+    }
 };
 
 static CLICMDDATA CLIcmddata =
@@ -104,7 +111,7 @@ static errno_t CLIfunction(void)
  * Called by main module initialization function init_module_CLI().
  */
 errno_t FPSCLIADDCMD_milk_module_example__simplefunc()
-{   
+{
     RegisterCLIcmd(CLIcmddata, CLIfunction);
 
     return RETURN_SUCCESS;
