@@ -3,19 +3,7 @@
  * @brief   simple function example
  *
  * Demonstrates how functions are registered and their arguments processed.
- *
- * Display function info :
- * > cmd? modex.simplefunc
- *
- * run function :
- * > modex.simplefunc im1
- *
- * Change parameters :
- * > modex.simplefunc .in_name im2
- * > modex.simplefunc .scaling 0.3
- *
- * Run function with pre-set parameters :
- * > modex.simplefunc .
+ * See script milk-test-simplefunc for example usage.
  *
  */
 
@@ -41,6 +29,26 @@ static CLICMDARGDEF farg[] =
     }
 };
 
+// Local variables pointers
+// Within this translation unit, these point to the variables values
+static char *inimname;
+static double *scoeff;
+
+
+/** @brief Link local variables to FPS or CLI
+ *
+ * local variable pointers are linked to the appropriate memory location
+ */
+static errno_t variables_link()
+{
+    inimname = get_farg_ptr(".in_name");
+    scoeff   = get_farg_ptr(".scaling");
+
+    return RETURN_SUCCESS;
+}
+
+
+
 static CLICMDDATA CLIcmddata =
 {
     "simplefunc",             // keyword to call function in CLI
@@ -51,9 +59,16 @@ static CLICMDDATA CLIcmddata =
 
 
 
-/** @brief Compute function
+
+
+
+
+/** @brief Compute function code
+ *
+ * Can be made non-static and called from outside this translation unit(TU)
+ * Minimizes use of variables local to this TU.
  */
-static errno_t compute_2Dimage_total(
+static errno_t example_compute_2Dimage_total(
     IMGID img,
     double scalingcoeff)
 {
@@ -76,38 +91,23 @@ static errno_t compute_2Dimage_total(
 }
 
 
-
-
-/** @brief Function call wrapper
- *
- * CLI argument(s) is(are) parsed and checked with CLI_checkarray(), then
- * passed to the compute function call.
- *
- * Custom code may be added for more complex processing of function arguments.
+/** @brief Compute function call
+ * Links local variables to function parameters
  */
-static errno_t CLIfunction(void)
+static errno_t compute_function()
 {
-    if(CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
-    {
-        // If CLI call arguments check out, go ahead with computation.
-        // Arguments not contained in CLI call line are extracted from the
-        // command argument list
-        double scalingcoeff = data.cmd[data.cmdindex].argdata[1].val.f;
-
-        DEBUG_TRACEPOINT("CLI func");
-
-        compute_2Dimage_total(
-            makeIMGID(data.cmdargtoken[1].val.string),
-            scalingcoeff
-        );
-
-        return RETURN_SUCCESS;
-    }
-    else
-    {
-        return CLICMD_INVALID_ARG;
-    }
+    example_compute_2Dimage_total(
+        makeIMGID(inimname),
+        *scoeff
+    );
+    return RETURN_SUCCESS;
 }
+
+
+
+
+
+INSERT_STD_CLIfunction
 
 
 /** @brief Register CLI command
