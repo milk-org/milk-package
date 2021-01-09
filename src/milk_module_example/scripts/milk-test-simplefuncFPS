@@ -64,10 +64,10 @@ modex.simplefuncFPS imd1
 
 
 # change scaling parameter for function
-#modex.simplefuncFPS .scaling 0.3
+modex.simplefuncFPS .scaling 0.3
 
 # run again
-#modex.simplefuncFPS .
+modex.simplefuncFPS .
 
 exitCLI
 EOF

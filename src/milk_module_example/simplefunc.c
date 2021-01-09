@@ -24,6 +24,10 @@
 // List of arguments to function
 // { CLItype, tag, description, initial value, flag, fptype, fpflag}
 //
+// A function variable is named by a tag, which is a hierarchical
+// series of words separated by dot "."
+// For example: .input.xsize (note that first dot is optional)
+//
 static CLICMDARGDEF farg[] =
 {
     {
@@ -46,17 +50,15 @@ static CLICMDDATA CLIcmddata =
 
 
 
+
 /** @brief Compute function
  */
 static errno_t compute_2Dimage_total(
     IMGID img,
     double scalingcoeff)
 {
-    if(resolveIMGID(&img) < 0)
-    {
-        printf("Missing input to function %s\n", __FUNCTION__);
-        return RETURN_FAILURE;
-    }
+    resolveIMGID(&img, ERRMODE_ABORT);
+
     uint_fast32_t xsize = img.md->size[0];
     uint_fast32_t ysize = img.md->size[1];
     uint_fast64_t xysize = xsize * ysize;
@@ -75,6 +77,7 @@ static errno_t compute_2Dimage_total(
 
 
 
+
 /** @brief Function call wrapper
  *
  * CLI argument(s) is(are) parsed and checked with CLI_checkarray(), then
@@ -86,15 +89,17 @@ static errno_t CLIfunction(void)
 {
     if(CLI_checkarg_array(farg, CLIcmddata.nbarg) == RETURN_SUCCESS)
     {
-        // if CLI call arguments check out, go ahead with computation
-
-        // arguments not contained in CLI call line are extracted from the
+        // If CLI call arguments check out, go ahead with computation.
+        // Arguments not contained in CLI call line are extracted from the
         // command argument list
         double scalingcoeff = data.cmd[data.cmdindex].argdata[1].val.f;
 
+        DEBUG_TRACEPOINT("CLI func");
+
         compute_2Dimage_total(
             makeIMGID(data.cmdargtoken[1].val.string),
-            scalingcoeff);
+            scalingcoeff
+        );
 
         return RETURN_SUCCESS;
     }

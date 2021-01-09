@@ -48,10 +48,6 @@
 // required for timespec_diff()
 #include "CommandLineInterface/timeutils.h"
 
-// Command line interface (CLI) arguments
-// A function variable is named by a tag, which is a hierarchical
-// series of words separated by dot "."
-// For example: .input.xsize (note that first dot is optional)
 
 static CLICMDARGDEF farg[] =
 {
@@ -77,67 +73,23 @@ static CLICMDDATA CLIcmddata =
 };
 
 /** @brief FPCONF function for updatestreamloop
- *
- * ## Purpose
- *
- * The FPCONF function sets up the FPS and its parameters
- *
- * ## Details
- *
  */
 static errno_t FPSCONFfunction()
 {
-    /** ### INITIALIZE FPS
-     */
     FPS_SETUP_INIT(data.FPS_name, data.FPS_CMDCODE);
-    /** ### ADD PROCESSINFO STANDARD ENTRIES (optional)
-     */
-    fps_add_processinfo_entries(&fps);
-
-    /** ### ADD PARAMETERS
-     *
-     * The function function_parameter_add_entry() is called to add
-     * each parameter.
-     *
-     * macros are provided for convenience, named "FPS_ADDPARAM_...".\n
-     * The macros are defined in fps_add_entry.h, and provide a function
-     * parameter identifyer variable (int) for each parameter added.
-     *
-     * parameters for FPS_ADDPARAM macros:
-     * - key/variable name
-     * - tag name
-     * - description
-     * - default initial value
-     *
-     * Equivalent code without using macro :
-     *
-     *     function_parameter_add_entry(&fps, ".delayus", "Delay [us]", FPTYPE_INT64, FPFLAG_DEFAULT_INPUT|FPFLAG_WRITERUN, NULL);
-     */
-    CMDargs_to_FPSparams_create(&fps);
+    fps_add_processinfo_entries(&fps); // add processinfo std entries
+    CMDargs_to_FPSparams_create(&fps); // add function arguments
 
     long fps_delayus = functionparameter_GetParamValue_INT64(&fps, ".delayus");
 
-    /** ### START CONFLOOP
-     *
-     * start function parameter conf loop\n
-     * macro defined in function_parameter.h
-     *
-     * Optional code to handle/check parameters is included after this
-     * statement
-     */
     FPS_CONFLOOP_START
-
     printf("delayus value inside conf loop: %ld\n", fps_delayus);
-
-    /** ### STOP CONFLOOP
-     *
-     * stop function parameter conf loop\n
-     * macro defined in function_parameter.h
-     */
     FPS_CONFLOOP_END
 
     return RETURN_SUCCESS;
 }
+
+
 
 /** @brief Loop process code example
  *
@@ -151,14 +103,6 @@ static errno_t FPSCONFfunction()
  */
 static errno_t FPSRUNfunction()
 {
-    /** ### CONNECT TO FPS
-     *
-     * The FPS name is taken from data.FPS_name, which has to
-     * have been set up by either the stand-alone function, or the
-     * CLI.
-     *
-     * Running FPS_CONNECT macro in FPSCONNECT_RUN mode.
-     */
     FPS_CONNECT(data.FPS_name, FPSCONNECT_RUN);
 
     /** ### GET FUNCTION PARAMETER VALUES
