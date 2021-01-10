@@ -47,7 +47,7 @@ listim
 # may then be out of sync)
 modex.simplefuncFPS _FPSINIT_ "03"
 
-modex.simplefuncFPS .scaling 0.5
+#modex.simplefuncFPS .scaling 0.5
 modex.simplefuncFPS _FPSINIT_ "05"
 
 # FPS call, uses last active FPS name

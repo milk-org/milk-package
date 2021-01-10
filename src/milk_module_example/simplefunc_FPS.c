@@ -36,8 +36,10 @@ static CLICMDDATA CLIcmddata =
 {
     "simplefuncFPS",
     "compute total of image using FPS",
-    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg,
-    CLICMDFLAG_FPS|CLICMDFLAG_PROCINFO
+    __FILE__,
+    sizeof(farg) / sizeof(CLICMDARGDEF), farg,
+    CLICMDFLAG_FPS|CLICMDFLAG_PROCINFO,
+    NULL
 };
 
 
@@ -91,14 +93,15 @@ static errno_t compute_function()
 
 
 
-
+// TODO: combine these 3 macros into one
 INSERT_STD_FPSCONFfunction
 INSERT_STD_FPSRUNfunction
 INSERT_STD_FPSCLIfunction
 
 errno_t FPSCLIADDCMD_milk_module_example__simplefunc_FPS()
 {
-    RegisterCLIcmd(CLIcmddata, FPSCLIfunction);
+    int cmdi = RegisterCLIcmd(CLIcmddata, FPSCLIfunction);
+    CLIcmddata.cmdsettings = data.cmd[cmdi].cmdsettings;
 
     return RETURN_SUCCESS;
 }

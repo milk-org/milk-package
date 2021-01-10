@@ -54,7 +54,8 @@ static CLICMDDATA CLIcmddata =
     "simplefunc",             // keyword to call function in CLI
     "compute total of image", // description of what the function does
     __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg,
-    0
+    0,
+    NULL
 };
 
 
