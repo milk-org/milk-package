@@ -69,7 +69,8 @@ static CLICMDDATA CLIcmddata =
 {
     "streamupdate",
     "update stream",
-    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg
+    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg,
+    0
 };
 
 /** @brief FPCONF function for updatestreamloop

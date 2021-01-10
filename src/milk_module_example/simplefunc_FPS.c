@@ -1,6 +1,6 @@
 /**
  * @file    simplefunc_FPS.c
- * @brief   simple function example with FPS support
+ * @brief   simple function example with FPS and processinfo support
  *
  * Demonstrates using FPS to hold function arguments and parameters.
  * See script milk-test-simplefuncFPS for example usage.
@@ -36,7 +36,8 @@ static CLICMDDATA CLIcmddata =
 {
     "simplefuncFPS",
     "compute total of image using FPS",
-    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg
+    __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg,
+    CLICMDFLAG_FPS|CLICMDFLAG_PROCINFO
 };
 
 
@@ -71,10 +72,15 @@ static errno_t example_compute_2Dimage_total(
 
 static errno_t compute_function()
 {
+    INSERT_STD_PROCINFO_COMPUTEFUNC_START
+
     example_compute_2Dimage_total(
         makeIMGID(inimname),
         *scoeff
     );
+
+    INSERT_STD_PROCINFO_COMPUTEFUNC_END
+
     return RETURN_SUCCESS;
 }
 
