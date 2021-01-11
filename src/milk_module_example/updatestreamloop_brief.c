@@ -28,7 +28,8 @@ static CLICMDDATA CLIcmddata =
     "streamupdatebrief",
     "update stream",
     __FILE__, sizeof(farg) / sizeof(CLICMDARGDEF), farg,
-    0
+    0,
+    NULL
 };
 
 
