@@ -37,12 +37,12 @@ static errno_t variables_link()
 // CLI function data
 static CLICMDDATA CLIcmddata =
 {
-    "simplefuncFPS", // keyword (CLI call name)
-    "compute total of image using FPS", // short description
+    "simplefuncFPS",                              // keyword (CLI call name)
+    "compute total of image using FPS",           // short description
     __FILE__,
     sizeof(farg) / sizeof(CLICMDARGDEF), farg,
-    CLICMDFLAG_FPS | CLICMDFLAG_PROCINFO, // capabilities
-    NULL // pointer to command settings (will be assigned when function is registered)
+    CLICMDFLAG_FPS | CLICMDFLAG_PROCINFO,         // supported capabilities
+    NULL                                          // pointer to command settings (will be assigned when function is registered)
 };
 
 
@@ -95,14 +95,7 @@ static errno_t compute_function()
 
 
 
-
-
-
-
-// TODO: combine these 3 macros into one
-INSERT_STD_FPSCONFfunction
-INSERT_STD_FPSRUNfunction
-INSERT_STD_FPSCLIfunction
+INSERT_STD_FPSCLIfunctions
 
 // Register function in CLI
 errno_t FPSCLIADDCMD_milk_module_example__simplefunc_FPS()
@@ -110,7 +103,7 @@ errno_t FPSCLIADDCMD_milk_module_example__simplefunc_FPS()
     int cmdi = RegisterCLIcmd(CLIcmddata, FPSCLIfunction);
     CLIcmddata.cmdsettings = &data.cmd[cmdi].cmdsettings;
 
-    // Optional custom settings
+    // Optional custom settings for this function
     CLIcmddata.cmdsettings->procinfo_loopcntMax = 9;
 
     return RETURN_SUCCESS;
