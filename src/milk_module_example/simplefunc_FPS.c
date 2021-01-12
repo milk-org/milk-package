@@ -8,29 +8,36 @@
 
 #include "CommandLineInterface/CLIcore.h"
 
-// CLI function arguments and parameters
-static CLICMDARGDEF farg[] =
-{
-    {
-        CLIARG_IMG, ".in_name", "input image", "im1",
-        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
-    },
-    {
-        CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0",
-        CLICMDARG_FLAG_NOCLI, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
-    }
-};
 
 // variables local to this translation unit
 static char *inimname;
 static double *scoeff;
 
+
+// CLI function arguments and parameters
+static CLICMDARGDEF farg[] =
+{
+    {
+        CLIARG_IMG, ".in_name", "input image", "im1",
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT,
+        (void **) &inimname
+    },
+    {
+        CLIARG_FLOAT, ".scaling", "scaling coefficient", "1.0",
+        CLICMDARG_FLAG_NOCLI, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT,
+        (void **) &scoeff
+    }
+};
+
+
 // binding between variables and function args/params
 static errno_t variables_link()
 {
-    inimname = get_farg_ptr(".in_name");
-    scoeff   = get_farg_ptr(".scaling");
-
+    for(int i = 0; i < (int) (sizeof(farg) / sizeof(CLICMDARGDEF)); i++)
+    {
+        void *ptr = get_farg_ptr(farg[i].fpstag);
+        *(farg[i].valptr) = ptr;
+    }
     return RETURN_SUCCESS;
 }
 

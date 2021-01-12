@@ -53,15 +53,18 @@ static CLICMDARGDEF farg[] =
 {
     {
         CLIARG_IMG, ".in_name", "input stream", "ims1",
-        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT,
+        NULL
     },
     {
         CLIARG_LONG, ".delayus", "delay [us]", "2000",
-        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+        CLICMDARG_FLAG_DEFAULT, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT,
+        NULL
     },
     {
         CLIARG_FLOAT, ".fpsonly", "test val", "1.2334",
-        CLICMDARG_FLAG_NOCLI, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT
+        CLICMDARG_FLAG_NOCLI, FPTYPE_AUTO, FPFLAG_DEFAULT_INPUT,
+        NULL
     }
 };
 
