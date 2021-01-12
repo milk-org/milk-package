@@ -104,7 +104,7 @@ errno_t FPSCLIADDCMD_milk_module_example__simplefunc_FPS()
     CLIcmddata.cmdsettings = &data.cmd[cmdi].cmdsettings;
 
     // Optional custom settings for this function
-    CLIcmddata.cmdsettings->procinfo_loopcntMax = 9;
+    // CLIcmddata.cmdsettings->procinfo_loopcntMax = 9;
 
     return RETURN_SUCCESS;
 }
