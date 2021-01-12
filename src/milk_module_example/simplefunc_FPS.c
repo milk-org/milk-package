@@ -29,18 +29,6 @@ static CLICMDARGDEF farg[] =
     }
 };
 
-
-// binding between variables and function args/params
-static errno_t variables_link()
-{
-    for(int i = 0; i < (int) (sizeof(farg) / sizeof(CLICMDARGDEF)); i++)
-    {
-        void *ptr = get_farg_ptr(farg[i].fpstag);
-        *(farg[i].valptr) = ptr;
-    }
-    return RETURN_SUCCESS;
-}
-
 // CLI function data
 static CLICMDDATA CLIcmddata =
 {
