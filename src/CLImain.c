@@ -50,8 +50,8 @@ int main(
     }
     else
     {
-		data.quiet = 0;
-	}
+        data.quiet = 0;
+    }
 
     if(data.quiet == 0)
     {
@@ -112,10 +112,11 @@ int main(
 
 
     runCLI(argc, argv, AppName);
-	
-	if(data.quiet == 0) {
-		printf("NORMAL EXIT\n");
-	}
+
+    if(data.quiet == 0)
+    {
+        printf("NORMAL EXIT\n");
+    }
 
 
     // clean-up calling thread

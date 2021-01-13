@@ -37,17 +37,6 @@ static char *inimname;
 static double *scoeff;
 
 
-/** @brief Link local variables to FPS or CLI
- *
- * local variable pointers are linked to the appropriate memory location
- */
-static errno_t variables_link()
-{
-    inimname = get_farg_ptr(".in_name");
-    scoeff   = get_farg_ptr(".scaling");
-
-    return RETURN_SUCCESS;
-}
 
 
 
