@@ -175,6 +175,8 @@ RunExampleCode
 
 examplestring="CREATE FUNCTION FPS"
 CLIinput="mload milkmilkmoduleexample
+imgen.mkdisk imd1 256 256 128 128 50
+modex.simplefuncFPS imd1
 modex.simplefuncFPS .scaling 0.31
 modex.simplefuncFPS _FPSINIT_ \"03\"
 "
@@ -194,54 +196,38 @@ RunExampleCode
 
 
 
-exit
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Create/initialize FPS if it does not exist
-# Default FPS name is function key without namespace.
-# Arguments following _FPSINIT_ are pasted to construct
-# the FPS name.
-# If FPS already exists, do nothing (param values
-# may then be out of sync)
-modex.simplefuncFPS _FPSINIT_ "03"
-
-#modex.simplefuncFPS .scaling 0.5
-modex.simplefuncFPS _FPSINIT_ "05"
-
-# FPS call, uses last active FPS name
-modex.simplefuncFPS _RUNSTART_
-
-# add arg to specify which FPS to use
-modex.simplefuncFPS _RUNSTART_ "03"
-modex.simplefuncFPS _RUNSTART_ "05"
-
-# non-FPS call
-# changing argument value does not change FPS
-modex.simplefuncFPS .scaling 1.0
+examplestring="MULTIPLE FPS INSTANCES"
+CLIinput="mload milkmilkmoduleexample
+imgen.mkdisk imd1 256 256 128 128 50
 modex.simplefuncFPS imd1
-
-
-# change scaling parameter for function
-modex.simplefuncFPS .scaling 0.3
-
-# run again
+modex.simplefuncFPS .scaling 0.31
+modex.simplefuncFPS _FPSINIT_ \"03\"
+modex.simplefuncFPS .scaling 0.5
+modex.simplefuncFPS _FPSINIT_ \"05\"
+modex.simplefuncFPS _RUNSTART_
+modex.simplefuncFPS _RUNSTART_ \"03\"
+modex.simplefuncFPS _RUNSTART_ \"05\"
 modex.simplefuncFPS .
+"
+clear
+echo "Example ${examplestring}
 
-exitCLI
-EOF
+Create/initialize FPS
+"
+ProbeUserContinue
+RunExampleCode
+
+
+
+
+
+
+
+
+
+
+
+
+
 
